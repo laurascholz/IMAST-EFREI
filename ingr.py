@@ -1,11 +1,11 @@
-#this file is used to find the fault in the secon webscraper
+#this file is used to find the fault in the second webscraper
 
 import requests
 #import json
 from bs4 import BeautifulSoup
 import csv
 
-URL = "https://www.douglas.de/de/p/3001047857"
+URL = "https://www.douglas.de/de/p/3001047857"   #specific product examples
 URL = "https://www.douglas.de/de/p/3001048261"
 r = requests.get(URL)   
 soup = BeautifulSoup(r.content, 'html.parser')
