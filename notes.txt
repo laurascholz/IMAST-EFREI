@@ -1,10 +1,8 @@
 
-- ggf. versuchen, mehr als 8 Sucherergebnisse
 - was passiert bei Vergriffenen Produkten bzw. Pop-ups beim anklicken der Produkte
-- gibt es einen unterschied zwischen rabatt / keinen rabatt?
--> ja gibt es, man könnte testen, ob das Rabatt-Feld leer ist und erstmal beides speichern oder nur den UVP angeben
-- wie unterscheide ich bei spezifischem Produkt / Brand, ob ich mehr Ergebnisse anzeige oder nicht? Oder passiert das automatisch
+
+-ist ein headless browser schneller beim berechnen?
 
 
-
-- die Ordnung fuers Speichern der Tupel ueberlegen
+-ggf  pagination ueberwinden, damit mehr als 8 ergebnisse gezeigt werden
+-> filtermoeglichkeiten?

@@ -8,7 +8,6 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
-#import pandas as pd
 from selenium import webdriver
 
 
@@ -23,7 +22,7 @@ from selenium import webdriver
 
 
 #search = "the%20ordinary%20more%20modecules%20niacinamide"               #hier spaeter Eingabe entgegen nehmen
-search = "Makeup"
+search = "parfum"
 URL = "https://www.douglas.de/de/search?q=" + search        #Searchstring is formed for Douglas Website
 
 r = requests.get(URL)               #html request to the url
@@ -41,6 +40,8 @@ table = soup.find("div", attrs= {"class": "product-grid cms-component cms-compon
 for row in table.findAll("div", attrs = {"class":'product-tile product-tile--is-pop-tile'}):   #all product info is saved in this class
     product = {}                 #product is a tupel and stores several elements of the scraped website
     product['name'] = row.find('div', attrs = {'class' : 'text name'}).text
+    if product['name'] == "" and row.find('div', attrs = {'class' : 'text brand-line'}) :
+         product['name'] = row.find('div', attrs = {'class' : 'text brand-line'}).text 
     product['brand'] = row.find('div', attrs = {'class' : 'text top-brand'}).text
     product['category'] = row.find('div', attrs = {'class' : 'text category'}).text
     #check, whether there is a discount price, if yes, it will be saved as the products price
@@ -49,12 +50,12 @@ for row in table.findAll("div", attrs = {"class":'product-tile product-tile--is-
     if len(price_var) == 2:
         product['price'] = price_var[1].text
     else: product['price'] = price_var[0].text
-    product['link'] = row.a['href']       # together with https://www.douglas.de the link leads to the product
+    product['link'] = "https://www.douglas.de" + row.a['href']       # together with https://www.douglas.de the link leads to the product
     product['img'] = row.img['src']  
     products.append(product)              #the product is now part of the product list
 
 filename = 'products.csv'           #products stores the scraped information except for the ingredients
-with open(filename, 'w', newline='') as f:
+with open(filename, 'w', encoding='utf-8', newline='') as f:
     w = csv.DictWriter(f,['name','brand','category','price','link','img'])
     w.writeheader()
     for product in products:
@@ -67,11 +68,10 @@ with open(filename, 'w', newline='') as f:
 driver = webdriver.Firefox()  #executable_path= "C:\Users\laura\OneDrive\Dokumente\GitHub\IMAST-EFREI\ " ) #geckodriver.exe
 
 for product in products:                #die gespeicherten Links werden von der forschleife zu richigen links ergaenzt
-    URL = "https://www.douglas.de"
-    newUrl = URL + product['link']
+    newUrl = product['link']  
     #with newUrl search for ingredients
 
-    #first try: selenium
+    #first try: selenium  -> nur verwenden, wenn es fuer den xpath der ingredients zwingend notwendig ist
     r2 = driver.get(newUrl)
     content = driver.page_source
     soup2 = BeautifulSoup(content, "html5lib")
@@ -83,10 +83,10 @@ for product in products:                #die gespeicherten Links werden von der 
 
     ingr_list = {}  #ingr_list is a tupel with the attributes name and ingredients
     req = soup2.find("div", attrs = { "class" : "second-line"})
-    print(req)
+    #print(req)
     if req.find("span"):
         ingr_list["name2"] = req.span.text
-    else: ingr_list["name2"] = req.a.text
+    else: ingr_list["name2"] = req.a .text
     print(ingr_list)
 
 
