@@ -1,0 +1,7 @@
+CREATE TABLE searchstring
+(
+    id INT NOT NULL PRIMARY KEY IDENTITY(1,1), -- primary key column
+    string VARCHAR(50) NOT NULL,
+   
+);
+GO
