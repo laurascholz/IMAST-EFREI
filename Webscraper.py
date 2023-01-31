@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 import csv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 #Examples for searches:
@@ -68,6 +69,7 @@ with open(filename, 'w', encoding='utf-8', newline='') as f:
 
 driver = webdriver.Firefox()  #executable_path= "C:\Users\laura\OneDrive\Dokumente\GitHub\IMAST-EFREI\ " ) #geckodriver.exe
 
+
 for product in products:                #die gespeicherten Links werden von der forschleife zu richigen links ergaenzt
     newUrl = product['link']  
     #with newUrl search for ingredients
@@ -88,14 +90,35 @@ for product in products:                #die gespeicherten Links werden von der 
     if req.find("span"):
         ingr_list["name2"] = req.span.text
     else: ingr_list["name2"] = req.a.text
-    print(ingr_list)
+    
 
-r2 = driver.get("https://www.douglas.de/de/p/3000054169")
-content = driver.page_source                #hier muss deaktiviert werden, dass die Seiten geoeffnet werden
-soup2 = BeautifulSoup(content, "html5lib")
+    number = 0
+    counter= 0
+    while counter < 100:
+        try:
+            if driver.find_element(by = By.XPATH, value ='//*[@id="react-tabs-' +str(number)+'"]') and driver.find_element(by = By.XPATH, value ='//*[@id="react-tabs-' +str(number)+'"]').text == "INHALTSSTOFFE":
+                driver.find_element(by = By.XPATH, value ='//*[@id="react-tabs-' +str(number)+'"]').click()
+                WebDriverWait(driver, 10).until(lambda driver: driver.find_element(By.CLASS_NAME, "product-detail-other-info__html"))
 
-driver.find_element(by = By.XPATH, value ='//*[@id="react-tabs-34"]').click()
-ingr_list["ingredients"] = driver.find_element(by = By.XPATH, value = '/html/body/div[1]/div[1]/div/div[1]/div[3]/div/div[2]/div/div/div/div[1]/div/div[3]/div/div/p').text
+                ingr_list["ingredients"] = driver.find_element(By.CLASS_NAME, "product-detail-other-info__html").text  
+                                      
+                print(ingr_list)
+        except Exception as err:
+            pass
+        number +=1
+        counter += 1   
+
+
+
+
+    
+
+#r2 = driver.get("https://www.douglas.de/de/p/3000054169")
+#content = driver.page_source                #hier muss deaktiviert werden, dass die Seiten geoeffnet werden
+#soup2 = BeautifulSoup(content, "html5lib")
+
+#driver.find_element(by = By.XPATH, value ='//*[@id="react-tabs-34"]').click()
+#ingr_list["ingredients"] = driver.find_element(by = By.XPATH, value = '/html/body/div[1]/div[1]/div/div[1]/div[3]/div/div[2]/div/div/div/div[1]/div/div[3]/div/div/p').text
     
 
 
