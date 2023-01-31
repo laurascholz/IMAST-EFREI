@@ -2038,3 +2038,1639 @@ JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU
 1675072424315	Marionette	INFO	Stopped listening on port 58514
 Dynamically enable window occlusion 1
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1675073611871	geckodriver	INFO	Listening on 127.0.0.1:63477
+1675073614944	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63478" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofile5CEoZ3"
+1675073615519	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675073615529	Marionette	INFO	Listening on port 63486
+Read port: 63486
+WebDriver BiDi listening on ws://127.0.0.1:63478
+1675073615722	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofile5CEoZ3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:63478/devtools/browser/a300b60e-51d7-4042-9a83-054b109088be
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+SourceActor threw an exception: [Exception... "Failed to open input source 'javascript:false'"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 676"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:676:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:517:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2154:35
+addAllSources@resource://devtools/server/actors/thread.js:1486:14
+watch@resource://devtools/server/actors/resources/sources.js:78:17
+watchResources@resource://devtools/server/actors/resources/index.js:302:19
+addSessionDataEntry@resource://devtools/server/actors/targets/session-data-processors/resources.js:11:21
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:46:25
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:530:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:439:21
+Line: 676, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 676: NS_ERROR_NOT_AVAILABLE: Failed to open input source 'javascript:false'
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error1675074003947	Marionette	INFO	Stopped listening on port 54171
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+olsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1675074002797	Marionette	INFO	Stopped listening on port 63486
+Dynamically enable window occlusion 1
+s://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675074005610	Marionette	INFO	Stopped listening on port 54246
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilezaabrW"
+1675073799031	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675073799037	Marionette	INFO	Listening on port 54323
+Read port: 54323
+WebDriver BiDi listening on ws://127.0.0.1:54315
+1675073799239	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilezaabrW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54315/devtools/browser/3f360a7a-7030-4cad-af72-0d4a97a5493d
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675074006764	Marionette	INFO	Stopped listening on port 54323
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 22864, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:777
+dow occlusion 0
+1675073953224	Marionette	INFO	Listening on port 54561
+Read port: 54561
+WebDriver BiDi listening on ws://127.0.0.1:54554
+1675073953550	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileedbdiG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54554/devtools/browser/35bb576b-ddbe-4a0f-a2e7-37d3e8fa94ee
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675075790352	Marionette	INFO	Stopped listening on port 54561
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilej7C6No"
+1675074121118	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675074121126	Marionette	INFO	Listening on port 49787
+Read port: 49787
+WebDriver BiDi listening on ws://127.0.0.1:49780
+1675074121274	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilej7C6No\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49780/devtools/browser/c7b84fbf-c762-47ba-b811-c158e1a39707
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675074423805	Marionette	INFO	Stopped listening on port 49787
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileLwMZWW"
+1675074238961	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675074238968	Marionette	INFO	Listening on port 49868
+Read port: 49868
+WebDriver BiDi listening on ws://127.0.0.1:49860
+1675074239118	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileLwMZWW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49860/devtools/browser/8b115b6a-ca0f-4fde-bd9a-5c85865d494c
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675074424986	Marionette	INFO	Stopped listening on port 49868
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilerntn64"
+1675074292814	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675074292821	Marionette	INFO	Listening on port 49980
+Read port: 49980
+WebDriver BiDi listening on ws://127.0.0.1:49972
+1675074292977	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilerntn64\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49972/devtools/browser/0f8b82f8-7be2-4efe-a8a0-de7b6955c4d5
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675074426487	Marionette	INFO	Stopped listening on port 49980
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1675074448739	geckodriver	INFO	Listening on 127.0.0.1:57230
+1675074451805	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57231" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilefMeHf1"
+1675074452355	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675074452363	Marionette	INFO	Listening on port 57239
+Read port: 57239
+WebDriver BiDi listening on ws://127.0.0.1:57231
+1675074452563	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilefMeHf1\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57231/devtools/browser/82ff7332-6351-4a34-8ad2-15a79ff6e2a6
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+SourceActor threw an exception: [Exception... "Failed to open input source 'javascript:false'"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 676"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:676:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:517:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2154:35
+addAllSources@resource://devtools/server/actors/thread.js:1486:14
+watch@resource://devtools/server/actors/resources/sources.js:78:17
+watchResources@resource://devtools/server/actors/resources/index.js:302:19
+addSessionDataEntry@resource://devtools/server/actors/targets/session-data-processors/resources.js:11:21
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:46:25
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:530:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:439:21
+Line: 676, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 676: NS_ERROR_NOT_AVAILABLE: Failed to open input source 'javascript:false'
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+JavaSSourceActor threw an exception: [Exception... "Failed to open input source 'javascript:false'"  nsresult: "0x80JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotJavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error1675075793717	Marionette	INFO	Stopped listening on port 57782
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+olsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1675075793064	Marionette	INFO	Stopped listening on port 57522
+Dynamically enable window occlusion 1
+s://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675075794650	Marionette	INFO	Stopped listening on port 62496
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileBNJ2Rp"
+1675075669848	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675075669857	Marionette	INFO	Listening on port 62688
+Read port: 62688
+WebDriver BiDi listening on ws://127.0.0.1:62681
+1675075670147	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileBNJ2Rp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:62681/devtools/browser/658c0b4e-7a13-4e49-9045-688d047a5007
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675075795655	Marionette	INFO	Stopped listening on port 62688
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileRbWXIn"
+1675075748901	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675075748912	Marionette	INFO	Listening on port 58170
+Read port: 58170
+WebDriver BiDi listening on ws://127.0.0.1:58162
+1675075749132	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileRbWXIn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58162/devtools/browser/066fbeb6-4dc2-4110-8029-8b58ccc0e6a1
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+SourceActor threw an exception: [Exception... "Failed to open input source 'javascript:false'"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 676"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:676:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:517:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2154:35
+addAllSources@resource://devtools/server/actors/thread.js:1486:14
+watch@resource://devtools/server/actors/resources/sources.js:78:17
+watchResources@resource://devtools/server/actors/resources/index.js:302:19
+addSessionDataEntry@resource://devtools/server/actors/targets/session-data-processors/resources.js:11:21
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:46:25
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:530:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:439:21
+Line: 676, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 676: NS_ERROR_NOT_AVAILABLE: Failed to open input source 'javascript:false'
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+#onRequestHeader@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:762:29
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:632:28
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: #onResponseHeader@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:1046:5
+#dispatchActivity@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:553:31
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:662:29
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 1046, column: 5
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/shared/network-observer/NetworkObserver.sys.mjs", 1046))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:336:35
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:343:35
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1675076034427	Marionette	INFO	Stopped listening on port 58170
+Dynamically enable window occlusion 1
+1675076059657	geckodriver	INFO	Listening on 127.0.0.1:58399
+1675076062696	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58400" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilegSOelm"
+1675076063277	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675076063287	Marionette	INFO	Listening on port 58407
+Read port: 58407
+WebDriver BiDi listening on ws://127.0.0.1:58400
+1675076063487	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilegSOelm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58400/devtools/browser/05085015-1cab-4a33-bb77-960b4df763e1
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675076373929	Marionette	INFO	Stopped listening on port 58407
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileG85I8L"
+1675076232725	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675076232733	Marionette	INFO	Listening on port 60917
+Read port: 60917
+WebDriver BiDi listening on ws://127.0.0.1:60910
+1675076232901	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileG85I8L\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60910/devtools/browser/cd408e53-1fbc-423a-b94a-b8eb007dff5b
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675076374860	Marionette	INFO	Stopped listening on port 60917
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilehEOXCv"
+1675076285187	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675076285194	Marionette	INFO	Listening on port 60988
+Read port: 60988
+WebDriver BiDi listening on ws://127.0.0.1:60981
+1675076285364	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilehEOXCv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60981/devtools/browser/da5bf400-0ad2-4485-a139-3689794af291
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675076293661	Marionette	INFO	Stopped listening on port 60988
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+sendPing@resource://gre/modules/EventPing.jsm:51:30
+_submitPing@resource://gre/modules/EventPing.jsm:229:12
+shutdown@resource://gre/modules/EventPing.jsm:112:10
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:940:31
+shutdown/<@resource://gre/modules/TelemetryControllerParent.jsm:1010:24
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:982:34
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1232:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:1014:36
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1232:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:1692:7
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:374:30
+_getState@resource://gre/modules/TelemetryControllerParent.jsm:1058:38
+setupTelemetry/<@resource://gre/modules/TelemetryControllerParent.jsm:917:18
+safeGetState@resource://gre/modules/AsyncShutdown.jsm:254:17
+Barrier/_internalAddBlocker/promise<@resource://gre/modules/AsyncShutdown.jsm:773:20
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:721:5
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:249:17
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1235:42
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+1675076328996	geckodriver	INFO	Listening on 127.0.0.1:61053
+1675076332057	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61054" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilezRvygJ"
+1675076332556	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675076332565	Marionette	INFO	Listening on port 61061
+Read port: 61061
+WebDriver BiDi listening on ws://127.0.0.1:61054
+1675076332733	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilezRvygJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61054/devtools/browser/3e1f0230-d124-42c5-9e85-e4be64c2866f
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675076340844	Marionette	INFO	Stopped listening on port 61061
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+sendPing@resource://gre/modules/EventPing.jsm:51:30
+_submitPing@resource://gre/modules/EventPing.jsm:229:12
+shutdown@resource://gre/modules/EventPing.jsm:112:10
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:940:31
+shutdown/<@resource://gre/modules/TelemetryControllerParent.jsm:1010:24
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:982:34
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1232:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:1014:36
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1232:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:1692:7
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:374:30
+_getState@resource://gre/modules/TelemetryControllerParent.jsm:1058:38
+setupTelemetry/<@resource://gre/modules/TelemetryControllerParent.jsm:917:18
+safeGetState@resource://gre/modules/AsyncShutdown.jsm:254:17
+Barrier/_internalAddBlocker/promise<@resource://gre/modules/AsyncShutdown.jsm:773:20
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:721:5
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:249:17
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1235:42
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+1675076671222	geckodriver	INFO	Listening on 127.0.0.1:61218
+1675076674276	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61219" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileCNZSAn"
+1675076674789	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675076674796	Marionette	INFO	Listening on port 61226
+Read port: 61226
+WebDriver BiDi listening on ws://127.0.0.1:61219
+1675076674944	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileCNZSAn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61219/devtools/browser/7dae2f33-f8f0-4d76-8b7f-75883fc7c79e
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675077112883	Marionette	INFO	Stopped listening on port 61226
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilegpjinP"
+1675076754737	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675076754751	Marionette	INFO	Listening on port 61308
+Read port: 61308
+WebDriver BiDi listening on ws://127.0.0.1:61300
+1675076755005	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilegpjinP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61300/devtools/browser/0a450fc7-27de-440e-8d46-04e110a3c650
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675077113988	Marionette	INFO	Stopped listening on port 61308
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilecpVeEE"
+1675076860025	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675076860037	Marionette	INFO	Listening on port 53693
+Read port: 53693
+WebDriver BiDi listening on ws://127.0.0.1:53686
+1675076860275	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilecpVeEE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53686/devtools/browser/1f7f5b79-c807-495b-bf73-1f102ce9e533
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675077115182	Marionette	INFO	Stopped listening on port 53693
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileh8QVGS"
+1675076931948	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675076931962	Marionette	INFO	Listening on port 53788
+Read port: 53788
+WebDriver BiDi listening on ws://127.0.0.1:53781
+1675076932228	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileh8QVGS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53781/devtools/browser/6b48f1e5-f407-46a9-b311-decf3e17ac13
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675093537821	Marionette	INFO	Stopped listening on port 53788
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileba1V4C"
+1675077357397	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675077357415	Marionette	INFO	Listening on port 49871
+Read port: 49871
+WebDriver BiDi listening on ws://127.0.0.1:49863
+1675077357744	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileba1V4C\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49863/devtools/browser/96e1f3bf-00f4-4aa3-a2cb-ba36308a7215
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675077676818	Marionette	INFO	Stopped listening on port 49871
+Dynamically enable window occlusion 1
+[Parent 27700, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:777
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+dow occlusion 0
+1675077395754	Marionette	INFO	Listening on port 49945
+Read port: 49945
+WebDriver BiDi listening on ws://127.0.0.1:49937
+1675077395980	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilebAGmmt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49937/devtools/browser/945d13cf-155d-472f-91e5-9e7aa117e1ce
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675077675402	Marionette	INFO	Stopped listening on port 49945
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilegEQoC0"
+1675077467118	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675077467132	Marionette	INFO	Listening on port 50904
+Read port: 50904
+WebDriver BiDi listening on ws://127.0.0.1:50897
+1675077467399	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilegEQoC0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50897/devtools/browser/e34c091f-f813-45e6-b3e8-d112f0f6bfc5
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Owz44D-IjIjr53DAkSCz2nQa/ELiwLraO/WHU-X10B/GXh9RHEr/Zks, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+SourceActor threw an exception: [Exception... "Failed to open input source 'javascript:false'"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 676"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:676:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:517:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2154:35
+addAllSources@resource://devtools/server/actors/thread.js:1486:14
+watch@resource://devtools/server/actors/resources/sources.js:78:17
+watchResources@resource://devtools/server/actors/resources/index.js:302:19
+addSessionDataEntry@resource://devtools/server/actors/targets/session-data-processors/resources.js:11:21
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:46:25
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:530:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:439:21
+Line: 676, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 676: NS_ERROR_NOT_AVAILABLE: Failed to open input source 'javascript:false'
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+#onRequestHeader@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:762:29
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:632:28
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: #onResponseHeader@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:1046:5
+#dispatchActivity@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:553:31
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:662:29
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 1046, column: 5
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/shared/network-observer/NetworkObserver.sys.mjs", 1046))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:336:35
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:343:35
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1675077674008	Marionette	INFO	Stopped listening on port 50904
+Dynamically enable window occlusion 1
+hivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+sendPing@resource://gre/modules/EventPing.jsm:51:30
+_submitPing@resource://gre/modules/EventPing.jsm:229:12
+shutdown@resource://gre/modules/EventPing.jsm:112:10
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:940:31
+shutdown/<@resource://gre/modules/TelemetryControllerParent.jsm:10JavaScript error: , line 0: NotFoundError: Could not move source file(C:\Users\laura\AppData\Local\Temp\rust_mozprofileRHR4GU\bookmarkbackups\bookmarks-2023-01-30.jsonlz4) because it does not exist
+1675093542289	Marionette	INFO	Stopped listening on port 53714
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+eforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:982:34
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1232:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:1014:36
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1232:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:1692:7
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:374:30
+_getState@resource://gre/modules/TelemetryControllerParent.jsm:1058:38
+setupTelemetry/<@resource://gre/modules/TelemetryControllerParent.jsm:917:18
+safeGetState@resource://gre/modules/AsyncShutdown.jsm:254:17
+Barrier/_internalAddBlocker/promise<@resource://gre/modules/AsyncShutdown.jsm:773:20
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:721:5
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:249:17
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1235:42
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+1675180524778	geckodriver	INFO	Listening on 127.0.0.1:58141
+1675180527927	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58142" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilepoXlm4"
+1675180528861	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675180528876	Marionette	INFO	Listening on port 58149
+Read port: 58149
+WebDriver BiDi listening on ws://127.0.0.1:58142
+1675180529196	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilepoXlm4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58142/devtools/browser/cee75600-65ee-4c53-b8a9-806cb1cc9a00
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675180675058	Marionette	INFO	Stopped listening on port 58149
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofile7ciAjI"
+1675180602936	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675180602947	Marionette	INFO	Listening on port 63915
+Read port: 63915
+WebDriver BiDi listening on ws://127.0.0.1:63907
+1675180603209	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofile7ciAjI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:63907/devtools/browser/8fdf3324-75e6-4088-af29-9cb4d8f8b1fc
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675180677647	Marionette	INFO	Stopped listening on port 63915
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileGY5cQp"
+1675180636100	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675180636116	Marionette	INFO	Listening on port 63987
+Read port: 63987
+WebDriver BiDi listening on ws://127.0.0.1:63979
+1675180636478	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileGY5cQp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:63979/devtools/browser/f88fc0ea-8d4f-4b31-9bae-de200d1998dd
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675181360735	Marionette	INFO	Stopped listening on port 63987
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileLYMjWx"
+1675180991109	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675180991126	Marionette	INFO	Listening on port 56606
+Read port: 56606
+WebDriver BiDi listening on ws://127.0.0.1:56599
+1675180991445	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileLYMjWx\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56599/devtools/browser/25461bf5-85da-40d2-9ab4-fc153a360731
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675181361706	Marionette	INFO	Stopped listening on port 56606
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 19644, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:777
+dow occlusion 0
+1675181058261	Marionette	INFO	Listening on port 56719
+Read port: 56719
+WebDriver BiDi listening on ws://127.0.0.1:56712
+1675181058583	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileUmBzxx\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56712/devtools/browser/9c7f15cb-5e6e-4d21-b8e6-c7b4de836444
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675181071253	Marionette	INFO	Stopped listening on port 56719
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+sendPing@resource://gre/modules/EventPing.jsm:51:30
+_submitPing@resource://gre/modules/EventPing.jsm:229:12
+shutdown@resource://gre/modules/EventPing.jsm:112:10
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:940:31
+shutdown/<@resource://gre/modules/TelemetryControllerParent.jsm:1010:24
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:982:34
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1232:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:1014:36
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1232:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:1692:7
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:374:30
+_getState@resource://gre/modules/TelemetryControllerParent.jsm:1058:38
+setupTelemetry/<@resource://gre/modules/TelemetryControllerParent.jsm:917:18
+safeGetState@resource://gre/modules/AsyncShutdown.jsm:254:17
+Barrier/_internalAddBlocker/promise<@resource://gre/modules/AsyncShutdown.jsm:773:20
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:721:5
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:249:17
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1235:42
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+1675181290987	geckodriver	INFO	Listening on 127.0.0.1:56800
+1675181294085	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56801" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilesEdAuU"
+1675181295000	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675181295023	Marionette	INFO	Listening on port 56809
+Read port: 56809
+WebDriver BiDi listening on ws://127.0.0.1:56801
+1675181295397	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilesEdAuU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56801/devtools/browser/892bce36-3e64-46db-9393-d2b2d5fc0357
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+SourceActor threw an exception: [Exception... "Failed to open input source 'javascript:false'"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 676"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:676:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:517:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2154:35
+addAllSources@resource://devtools/server/actors/thread.js:1486:14
+watch@resource://devtools/server/actors/resources/sources.js:78:17
+watchResources@resource://devtools/server/actors/resources/index.js:302:19
+addSessionDataEntry@resource://devtools/server/actors/targets/session-data-processors/resources.js:11:21
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:46:25
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:530:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:439:21
+Line: 676, column: 0
+console.error: ({})
+JavaScript error: resource://1675182383219	Marionette	INFO	Stopped listening on port 56927
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+l is null
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+#onRequestHeader@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:762:29
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:632:28
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: #onResponseHeader@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:1046:5
+#dispatchActivity@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:553:31
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:662:29
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 1046, column: 5
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/shared/network-observer/NetworkObserver.sys.mjs", 1046))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:336:35
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:343:35
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resourc1675182385652	Marionette	INFO	Stopped listening on port 62552
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1675182379914	Marionette	INFO	Stopped listening on port 56809
+Dynamically enable window occlusion 1
+t warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675182386246	Marionette	INFO	Stopped listening on port 65431
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilenv53lb"
+1675182259236	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675182259253	Marionette	INFO	Listening on port 65511
+Read port: 65511
+WebDriver BiDi listening on ws://127.0.0.1:65504
+1675182259638	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilenv53lb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:65504/devtools/browser/e806587d-1d49-42fd-a759-b15504aa4835
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675182386942	Marionette	INFO	Stopped listening on port 65511
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileUVWSJV"
+1675182349503	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675182349514	Marionette	INFO	Listening on port 49212
+Read port: 49212
+WebDriver BiDi listening on ws://127.0.0.1:49205
+1675182349774	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileUVWSJV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49205/devtools/browser/db590048-bca4-433c-926b-873d8d221057
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+SourceActor threw an exception: [Exception... "Failed to open input source 'javascript:false'"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 676"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:676:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:517:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2154:35
+addAllSources@resource://devtools/server/actors/thread.js:1486:14
+watch@resource://devtools/server/actors/resources/sources.js:78:17
+watchResources@resource://devtools/server/actors/resources/index.js:302:19
+addSessionDataEntry@resource://devtools/server/actors/targets/session-data-processors/resources.js:11:21
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:46:25
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:530:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:439:21
+Line: 676, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 676: NS_ERROR_NOT_AVAILABLE: Failed to open input source 'javascript:false'
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+#onRequestHeader@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:762:29
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:632:28
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: #onResponseHeader@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:1046:5
+#dispatchActivity@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:553:31
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:662:29
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 1046, column: 5
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/shared/network-observer/NetworkObserver.sys.mjs", 1046))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:336:35
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:343:35
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+1675182994810	geckodriver	INFO	Listening on 127.0.0.1:49758
+1675182997881	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49759" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofile7NsnTP"
+1675182998423	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675182998431	Marionette	INFO	Listening on port 49767
+Read port: 49767
+WebDriver BiDi listening on ws://127.0.0.1:49759
+1675182998654	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofile7NsnTP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49759/devtools/browser/5ff9562c-7bf0-4fff-89c3-dc9854cdba15
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675183524169	Marionette	INFO	Stopped listening on port 49767
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileLlqP7V"
+1675183190298	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675183190305	Marionette	INFO	Listening on port 49859
+Read port: 49859
+WebDriver BiDi listening on ws://127.0.0.1:49850
+1675183190468	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileLlqP7V\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49850/devtools/browser/de0fe78e-e639-4bf1-b5f6-4834edb07c59
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675183523245	Marionette	INFO	Stopped listening on port 49859
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileXy3YQi"
+1675183303673	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675183303680	Marionette	INFO	Listening on port 50030
+Read port: 50030
+WebDriver BiDi listening on ws://127.0.0.1:50023
+1675183303833	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileXy3YQi\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50023/devtools/browser/9332d8fd-2819-41a5-b94a-2282f3125de0
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675183522428	Marionette	INFO	Stopped listening on port 50030
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileehe0iu"
+1675183363874	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675183363885	Marionette	INFO	Listening on port 50214
+Read port: 50214
+WebDriver BiDi listening on ws://127.0.0.1:50207
+1675183364078	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileehe0iu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50207/devtools/browser/66425a3b-d197-44b0-bf7e-bd00c693881d
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675183521607	Marionette	INFO	Stopped listening on port 50214
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileu6q1wZ"
+1675183482495	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675183482503	Marionette	INFO	Listening on port 50319
+Read port: 50319
+WebDriver BiDi listening on ws://127.0.0.1:50309
+1675183482656	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileu6q1wZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50309/devtools/browser/291499be-72fc-4134-bf3c-8228f2d604d9
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675183536628	Marionette	INFO	Stopped listening on port 50319
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+sendPing@resource://gre/modules/EventPing.jsm:51:30
+_submitPing@resource://gre/modules/EventPing.jsm:229:12
+shutdown@resource://gre/modules/EventPing.jsm:112:10
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:940:31
+shutdown/<@resource://gre/modules/TelemetryControllerParent.jsm:1010:24
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:982:34
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1232:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
+promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
+_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
+send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:1014:36
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1232:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:1692:7
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:374:30
+_getState@resource://gre/modules/TelemetryControllerParent.jsm:1058:38
+setupTelemetry/<@resource://gre/modules/TelemetryControllerParent.jsm:917:18
+safeGetState@resource://gre/modules/AsyncShutdown.jsm:254:17
+Barrier/_internalAddBlocker/promise<@resource://gre/modules/AsyncShutdown.jsm:773:20
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:721:5
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:249:17
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1235:42
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+1675183605259	geckodriver	INFO	Listening on 127.0.0.1:50614
+1675183608306	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50615" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileWNhwMc"
+1675183608790	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675183608798	Marionette	INFO	Listening on port 50624
+Read port: 50624
+WebDriver BiDi listening on ws://127.0.0.1:50615
+1675183608957	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileWNhwMc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50615/devtools/browser/257baf62-e665-420e-9404-fae74dccfc5c
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675183977142	Marionette	INFO	Stopped listening on port 50624
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileyyeVjz"
+1675183718109	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675183718115	Marionette	INFO	Listening on port 50812
+Read port: 50812
+WebDriver BiDi listening on ws://127.0.0.1:50804
+1675183718297	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileyyeVjz\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50804/devtools/browser/01edf01c-8028-438a-9370-048bfe791fb3
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675183978025	Marionette	INFO	Stopped listening on port 50812
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileWWd2ST"
+1675183892125	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675183892133	Marionette	INFO	Listening on port 61500
+Read port: 61500
+WebDriver BiDi listening on ws://127.0.0.1:61492
+1675183892326	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileWWd2ST\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61492/devtools/browser/992fdd29-e48a-490c-a59c-a057aa77f471
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+SourceActor threw an exception: [Exception... "Failed to open input source 'javascript:false'"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 676"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:676:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:517:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2154:35
+addAllSources@resource://devtools/server/actors/thread.js:1486:14
+watch@resource://devtools/server/actors/resources/sources.js:78:17
+watchResources@resource://devtools/server/actors/resources/index.js:302:19
+addSessionDataEntry@resource://devtools/server/actors/targets/session-data-processors/resources.js:11:21
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:46:25
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:530:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:439:21
+Line: 676, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 676: NS_ERROR_NOT_AVAILABLE: Failed to open input source 'javascript:false'
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+#onRequestHeader@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:762:29
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:632:28
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: #onResponseHeader@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:1046:5
+#dispatchActivity@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:553:31
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:662:29
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 1046, column: 5
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/shared/network-observer/NetworkObserver.sys.mjs", 1046))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:336:35
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:91:1
+createNetworkEvent@resource://devtools/shared/network-observer/NetworkUtils.sys.mjs:179:33
+#createNetworkEvent@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:712:37
+@resource://devtools/shared/network-observer/NetworkObserver.sys.mjs:343:35
+makeInfallible/<@resource://devtools/shared/DevToolsInfaillibleUtils.sys.mjs:43:22
+Line: 91, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/shared/network-observer/NetworkUtils.sys.mjs", 91))
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1675184233056	Marionette	INFO	Stopped listening on port 61500
+Dynamically enable window occlusion 1
+re/modules/TelemetrySend.jsm:374:30
+_getState@resource://gre/modules/TelemetryControllerParent.jsm:1058:38
+setupTelemetry/<@resource://gre/modules/TelemetryControllerParent.jsm:917:18
+safeGetState@resource://gre/modules/AsyncShutdown.jsm:254:17
+Barrier/_internalAddBlocker/promise<@resource://gre/modules/AsyncShutdown.jsm:773:20
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:718:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:462:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:19:28
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:721:5
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:249:17
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1235:42
+observe@resource://gre/modules/AsyncShutdown.jsm:572:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+1675184022637	geckodriver	INFO	Listening on 127.0.0.1:61795
+1675184025734	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61796" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilejpD9bj"
+1675184026350	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675184026359	Marionette	INFO	Listening on port 61803
+Read port: 61803
+WebDriver BiDi listening on ws://127.0.0.1:61796
+1675184026612	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilejpD9bj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61796/devtools/browser/d0cbe92f-bef9-4cf6-b477-222f95bd6fc6
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675184232008	Marionette	INFO	Stopped listening on port 61803
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileeujbvt"
+1675184099877	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675184099886	Marionette	INFO	Listening on port 61904
+Read port: 61904
+WebDriver BiDi listening on ws://127.0.0.1:61897
+1675184100079	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofileeujbvt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61897/devtools/browser/264f2b76-a43a-492d-b422-7ecbb3203ba1
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://tttd.douglas.de/www-douglas-de/prod/utag.sync.js, line 34: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675184231116	Marionette	INFO	Stopped listening on port 61904
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilesxzgkk"
+1675184209824	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675184209833	Marionette	INFO	Listening on port 56520
+Read port: 56520
+WebDriver BiDi listening on ws://127.0.0.1:62116
+1675184210056	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofilesxzgkk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:62116/devtools/browser/84167d80-eb0e-4c94-9375-9dbb7363209b
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675184287325	geckodriver	INFO	Listening on 127.0.0.1:56614
+1675184290385	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56615" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofile4P7Vnf"
+1675184290903	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675184290918	Marionette	INFO	Listening on port 56622
+Read port: 56622
+WebDriver BiDi listening on ws://127.0.0.1:56615
+1675184291110	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofile4P7Vnf\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56615/devtools/browser/6f08cf65-592f-492b-b2e7-548040ca6306
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675184325970	geckodriver	INFO	Listening on 127.0.0.1:56701
+1675184329040	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56702" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofiledGVnkC"
+1675184329532	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675184329539	Marionette	INFO	Listening on port 56710
+Read port: 56710
+WebDriver BiDi listening on ws://127.0.0.1:56702
+1675184329691	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\laura\\AppData\\Local\\Temp\\rust_mozprofiledGVnkC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56702/devtools/browser/1d8425da-3604-440c-bd6c-81e90cd437c8
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: unreachable code after return statement
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.douglas.de/Kmoab/ZE_1G/YO/_KSc/hksi/aYaSfS9JYuEi/EzQmBQE/DxpDcTw/VGzA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.

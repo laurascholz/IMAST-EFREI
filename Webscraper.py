@@ -9,6 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 
 #Examples for searches:
@@ -73,7 +74,7 @@ for product in products:                #die gespeicherten Links werden von der 
 
     #first try: selenium  -> nur verwenden, wenn es fuer den xpath der ingredients zwingend notwendig ist
     r2 = driver.get(newUrl)
-    content = driver.page_source
+    content = driver.page_source                #hier muss deaktiviert werden, dass die Seiten geoeffnet werden
     soup2 = BeautifulSoup(content, "html5lib")
     
     #second try beautyfulSoup
@@ -86,7 +87,15 @@ for product in products:                #die gespeicherten Links werden von der 
     #print(req)
     if req.find("span"):
         ingr_list["name2"] = req.span.text
-    else: ingr_list["name2"] = req.a .text
+    else: ingr_list["name2"] = req.a.text
     print(ingr_list)
+
+r2 = driver.get("https://www.douglas.de/de/p/3000054169")
+content = driver.page_source                #hier muss deaktiviert werden, dass die Seiten geoeffnet werden
+soup2 = BeautifulSoup(content, "html5lib")
+
+driver.find_element(by = By.XPATH, value ='//*[@id="react-tabs-34"]').click()
+ingr_list["ingredients"] = driver.find_element(by = By.XPATH, value = '/html/body/div[1]/div[1]/div/div[1]/div[3]/div/div[2]/div/div/div/div[1]/div/div[3]/div/div/p').text
+    
 
 
