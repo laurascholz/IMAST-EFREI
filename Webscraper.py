@@ -79,11 +79,6 @@ for product in products:                #die gespeicherten Links werden von der 
     content = driver.page_source                #hier muss deaktiviert werden, dass die Seiten geoeffnet werden
     soup2 = BeautifulSoup(content, "html5lib")
     
-    #second try beautyfulSoup
-    #r = requests.get(newUrl)
-    #soup2 = BeautifulSoup(r.content, 'html5lib')
-
-
     ingr_list = {}  #ingr_list is a tupel with the attributes name and ingredients
     req = soup2.find("div", attrs = { "class" : "second-line"})
     #print(req)
@@ -92,13 +87,13 @@ for product in products:                #die gespeicherten Links werden von der 
     else: ingr_list["name2"] = req.a.text
     
 
+#a try to overcome the hidden object behind a react tab, but it doesn't work for all products
     number = 0
-    counter= 0
-    while counter < 100:
+    while number < 100:
         try:
             if driver.find_element(by = By.XPATH, value ='//*[@id="react-tabs-' +str(number)+'"]') and driver.find_element(by = By.XPATH, value ='//*[@id="react-tabs-' +str(number)+'"]').text == "INHALTSSTOFFE":
                 driver.find_element(by = By.XPATH, value ='//*[@id="react-tabs-' +str(number)+'"]').click()
-                WebDriverWait(driver, 10).until(lambda driver: driver.find_element(By.CLASS_NAME, "product-detail-other-info__html"))
+                #WebDriverWait(driver, 10).until(lambda driver: driver.find_element(By.CLASS_NAME, "product-detail-other-info__html"))
 
                 ingr_list["ingredients"] = driver.find_element(By.CLASS_NAME, "product-detail-other-info__html").text  
                                       
@@ -106,19 +101,4 @@ for product in products:                #die gespeicherten Links werden von der 
         except Exception as err:
             pass
         number +=1
-        counter += 1   
-
-
-
-
-    
-
-#r2 = driver.get("https://www.douglas.de/de/p/3000054169")
-#content = driver.page_source                #hier muss deaktiviert werden, dass die Seiten geoeffnet werden
-#soup2 = BeautifulSoup(content, "html5lib")
-
-#driver.find_element(by = By.XPATH, value ='//*[@id="react-tabs-34"]').click()
-#ingr_list["ingredients"] = driver.find_element(by = By.XPATH, value = '/html/body/div[1]/div[1]/div/div[1]/div[3]/div/div[2]/div/div/div/div[1]/div/div[3]/div/div/p').text
-    
-
-
+        
