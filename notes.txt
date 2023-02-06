@@ -1,14 +1,11 @@
 
-- was passiert bei Vergriffenen Produkten bzw. Pop-ups beim anklicken der Produkte
+-wie bekommt man mehr Ergebnisse?
 
--ist ein headless browser schneller beim berechnen?
+-alle Buchstaben entweder groß oder klein schreiben beim Speichern der ingredients
 
+-ggf die Ingredients nach einzelnen Buchstaben trennen
 
--ggf  pagination ueberwinden, damit mehr als 8 ergebnisse gezeigt werden
--> filtermoeglichkeiten?
-
-
--alle Buchstaben entweder groß oder klein schreiben
+-ggf Dinge in CSV speichern
 
 heute:
 -Report Teil ueber Webscraper und API

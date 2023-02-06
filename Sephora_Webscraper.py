@@ -30,6 +30,9 @@ result = r.json()
 #Get all hits from result      
 hits = result["results"][0]["hits"]
 
+# a list to store product URLs to access the ingredients
+products = []
+
 #Get all products details in hits
 for x in hits:
   print("id: "  +  x["id"])      
@@ -38,20 +41,22 @@ for x in hits:
   print("price: " + str(x["price"]["minPrice"]))
   print("url: " +  x["url"])
   print("image: " + x["images"]["productTile"]["url"])
+  url= x["url"]
+  products.append(url)
   print()
 
-
+print(products)
 #------web scraper for ingredients------
 
+for product in products:
+  session = requests.Session()
+  #print(session.headers['User-Agent'])
 
-session = requests.Session()
-#print(session.headers['User-Agent'])
+  #r = session.get("https://www.sephora.fr/p/perfect-hair-day---shampooing-hydratant-587501.html")   
+  r = session.get(product)
 
-#hier später gespeicherte url einfügen?
-r = session.get("https://www.sephora.fr/p/perfect-hair-day---shampooing-hydratant-587501.html")   
+  soup = BeautifulSoup(r.content, 'html.parser')
 
-soup = BeautifulSoup(r.content, 'html.parser')
+  ingredients = soup.find("div", class_ = "ingredients-content").text
 
-ingredients = soup.find("div", class_ = "ingredients-content").text
-
-print(ingredients)
+  print(ingredients)
