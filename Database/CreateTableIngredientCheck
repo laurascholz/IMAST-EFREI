@@ -5,3 +5,4 @@ CREATE TABLE ingredientscheck
     CONSTRAINT FK_ingredientscheck_ingredientslist FOREIGN KEY (ingredientslist_id) REFERENCES ingredientslist(id),
     CONSTRAINT FK_ingredientscheck_badingredients FOREIGN KEY (badingredients_id) REFERENCES badingredients(id)
 );
+
