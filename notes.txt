@@ -1,10 +1,17 @@
 
-- ggf. versuchen, mehr als 8 Sucherergebnisse
 - was passiert bei Vergriffenen Produkten bzw. Pop-ups beim anklicken der Produkte
-- gibt es einen unterschied zwischen rabatt / keinen rabatt?
--> ja gibt es, man könnte testen, ob das Rabatt-Feld leer ist und erstmal beides speichern oder nur den UVP angeben
-- wie unterscheide ich bei spezifischem Produkt / Brand, ob ich mehr Ergebnisse anzeige oder nicht? Oder passiert das automatisch
+
+-ist ein headless browser schneller beim berechnen?
 
 
+-ggf  pagination ueberwinden, damit mehr als 8 ergebnisse gezeigt werden
+-> filtermoeglichkeiten?
 
-- die Ordnung fuers Speichern der Tupel ueberlegen
+
+-alle Buchstaben entweder groß oder klein schreiben
+
+heute:
+-Report Teil ueber Webscraper und API
+-Anerkennungserklärung
+-Sevelte Kit Tutorial
+-Webscraper so bauen, dass die gespeicherten links verwendet werden
