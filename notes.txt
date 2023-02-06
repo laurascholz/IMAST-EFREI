@@ -6,3 +6,12 @@
 
 -ggf  pagination ueberwinden, damit mehr als 8 ergebnisse gezeigt werden
 -> filtermoeglichkeiten?
+
+
+-alle Buchstaben entweder groß oder klein schreiben
+
+heute:
+-Report Teil ueber Webscraper und API
+-Anerkennungserklärung
+-Sevelte Kit Tutorial
+-Webscraper so bauen, dass die gespeicherten links verwendet werden
