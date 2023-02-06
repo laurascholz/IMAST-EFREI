@@ -1,6 +1,5 @@
 CREATE TABLE ingredientscheck
 (
-    id INT NOT NULL PRIMARY KEY IDENTITY(1,1), -- primary key column
     ingredientslist_id INT NOT NULL,
     badingredients_id INT NOT NULL,
     CONSTRAINT FK_ingredientscheck_ingredientslist FOREIGN KEY (ingredientslist_id) REFERENCES ingredientslist(id),
