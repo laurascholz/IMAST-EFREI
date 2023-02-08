@@ -1,4 +1,4 @@
-#!/Users/sarahgronemann/Documents/GitHub/IMAST-EFREI/project_env/bin/python3.11
+#!/Users/sarahgronemann/Documents/GitHub/IMAST-EFREI/venv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys
