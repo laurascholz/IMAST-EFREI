@@ -1,8 +1,9 @@
-pip install pyodbc
-pip install pandas 
+# first created venv for PythonProject
+# python(3) -m venv project_env
+# source project_env/bin/activate
 
-import pypyodbc as odbc # pip install pypyodbc; use libary to connect to MS SQL Server
-import pandas as pd # pip install pandas; clean up the data
+import pyodbc as odbc # pip(3) install pyodbc;  use libary to connect to MS SQL Server
+import pandas as pd # pip(3) install pandas; clean up the data
 
 # Step 1. Importing dataset from CSV
 
