@@ -1,4 +1,4 @@
-pip install pypyodb
+pip install pyodbc
 pip install pandas 
 
 import pypyodbc as odbc # pip install pypyodbc; use libary to connect to MS SQL Server
