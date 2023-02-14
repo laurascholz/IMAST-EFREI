@@ -1,3 +1,10 @@
+-- Create a new table called 'ingredientscheck' 
+-- Drop the table if it already exists
+IF OBJECT_ID('ingredientscheck', 'U') IS NOT NULL
+DROP TABLE ingredientscheck
+GO
+
+-- Create the table 
 CREATE TABLE ingredientscheck
 (
     ingredientslist_id INT NOT NULL,

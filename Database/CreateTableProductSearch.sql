@@ -1,3 +1,10 @@
+-- Create a new table called 'productsearch' 
+-- Drop the table if it already exists
+IF OBJECT_ID('productsearch', 'U') IS NOT NULL
+DROP TABLE productsearch
+GO
+
+-- Create the table
 CREATE TABLE productsearch
 (
     product_id INT NOT NULL,
