@@ -8,8 +8,10 @@ GO
 CREATE TABLE badingredients
 (
     id INT NOT NULL PRIMARY KEY IDENTITY(1,1), -- primary key column
+    chemical_name VARCHAR(100) NOT NULL,
     ingredient_name VARCHAR(100) NOT NULL,
-    explanation_bad VARCHAR(100),
-    source_bad VARCHAR(100)
+    product_type VARCHAR(100),
+    explanation VARCHAR(100),
+    source VARCHAR(100)
     
 );
