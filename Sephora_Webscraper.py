@@ -1,5 +1,10 @@
 #this webscraper uses the same API that the sephora website uses as well to handle their requests
 
+#  -------------------------- necessary packets and imports for vs code----------------------------
+#pip install requests
+#pip install bs4
+#py -m venv env
+
 import requests
 import requests_random_user_agent     #automatically creates a random user
 from bs4 import BeautifulSoup
