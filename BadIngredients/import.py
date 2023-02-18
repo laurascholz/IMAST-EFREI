@@ -26,7 +26,7 @@ except AttributeError as e:
 """
 Step 2.2 Specify columns we want to import
 """
-columns = ['Chemical name / INN', 'Name of Common Ingredients Glossary', 
+columns = ['Chemical name / INN', 'Name of Common Ingredients Glossary',
            'Product Type, body parts']
 
 df_data = df[columns]
@@ -73,19 +73,19 @@ except odbc.Error as e:
 #Step 3.3 Create a cursor connection and insert records
 """
 
-#sql_insert = '''
- #   INSERT INTO Austin_Traffic_Incident 
-  #  VALUES (?, ?, ?, ?, ?, ?, ?, GETDATE())
-#'''
+sql_insert = '''
+    INSERT INTO badingredients(chemical_name,ingredient_name,product_type) 
+        VALUES (?,?,?)
+'''
 
-#try:
- #   cursor = conn.cursor()
-  #  cursor.executemany(sql_insert, records)
-   # cursor.commit();    
-#except Exception as e:
- #   cursor.rollback()
-  #  print(str(e[1]))
-#finally:
- #   print('Task is complete.')
-  #  cursor.close()
-   # conn.close()
+try:
+    cursor = conn.cursor()
+    cursor.executemany(sql_insert, records)
+    cursor.commit();    
+except Exception as e:
+    cursor.rollback()
+    print(str(e))
+finally:
+    print('Task is complete.')
+    cursor.close()
+    conn.close()
