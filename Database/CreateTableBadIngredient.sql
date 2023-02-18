@@ -8,9 +8,9 @@ GO
 CREATE TABLE badingredients
 (
     id INT NOT NULL PRIMARY KEY IDENTITY(1,1), -- primary key column
-    chemical_name VARCHAR(100) NOT NULL,
-    ingredient_name VARCHAR(100) NOT NULL,
-    product_type VARCHAR(100),
+    chemical_name VARCHAR(200) NOT NULL,
+    ingredient_name VARCHAR(300),
+    product_type VARCHAR(500),
     explanation VARCHAR(100),
     source VARCHAR(100)
     
