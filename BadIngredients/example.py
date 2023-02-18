@@ -59,6 +59,7 @@ except odbc.DatabaseError as e:
 except odbc.Error as e:
     print('Connection Error:')
     print(str(e.value[1]))
+# print (conn) # show connnection
 
 
 """
