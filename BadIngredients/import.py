@@ -11,16 +11,28 @@ import pandas as pd # pip(3) install pandas; clean up the data
 Step 1. Importing dataset from CSV
 """
 df = pd.read_csv('BadIngredients/badingredients.csv')
-print(df)
+# print(df) control if csv will be read
 
 """
 Step 2.1 Data clean up
 """
-#df['Published Date'] = pd.to_datetime(df['Published Date']).dt.strftime('%Y-%m-%d %H:%M:%S')
-#df['Status Date'] = pd.to_datetime(df['Published Date']).dt.strftime('%Y-%m-%d %H:%M:%S')
+try:
+   df.drop(df.query('Chemical name / INN'.isnull()).index, inplace=True) # delete data where chemical name is NULL
+except AttributeError as e:
+    print('Dataset is complete:')    
+    print(str(e))
 
-#df.drop(df.query('Location.isnull() | Status.isnull()').index, inplace=True) # delete bad data 
 
+"""
+Step 2.2 Specify columns we want to import
+"""
+columns = ['Chemical name / INN', 'Name of Common Ingredients Glossary', 
+           'Product Type, body parts']
+
+df_data = df[columns]
+records = df_data.values.tolist()
+
+# print(records) # to control if the right columns were selected
 
 
 """
@@ -57,4 +69,23 @@ except odbc.Error as e:
     print(str(e.value[1]))
 # print (conn) - show connnection
 
+"""
+#Step 3.3 Create a cursor connection and insert records
+"""
 
+#sql_insert = '''
+ #   INSERT INTO Austin_Traffic_Incident 
+  #  VALUES (?, ?, ?, ?, ?, ?, ?, GETDATE())
+#'''
+
+#try:
+ #   cursor = conn.cursor()
+  #  cursor.executemany(sql_insert, records)
+   # cursor.commit();    
+#except Exception as e:
+ #   cursor.rollback()
+  #  print(str(e[1]))
+#finally:
+ #   print('Task is complete.')
+  #  cursor.close()
+   # conn.close()
