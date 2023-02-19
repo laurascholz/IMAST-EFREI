@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/laurascholz/IMAST-EFREI/issues"
   },
-  "homepage": "https://github.com/laurascholz/IMAST-EFREI#readme"
+  "homepage": "https://github.com/laurascholz/IMAST-EFREI#readme",
+  "dependencies": {
+    "@picocss/pico": "^1.5.7"
+  }
 }
