@@ -20,3 +20,14 @@
 		<slot />
 	</div>
 </main>
+
+
+<style>
+	/* here CSS code for purple*/
+	:root:not([data-theme="dark"]) {
+ 	--primary: #8e24aa;
+  	--primary-hover: #7b1fa2;
+ 	--primary-focus: rgba(142, 36, 170, 0.125);
+  	--primary-inverse: #FFF;
+	}
+</style>

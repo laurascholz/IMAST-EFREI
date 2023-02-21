@@ -1,21 +1,3 @@
-
--wie bekommt man mehr Ergebnisse?
-
--alle Buchstaben entweder groß oder klein schreiben beim Speichern der ingredients
-
--ggf die Ingredients nach einzelnen Buchstaben trennen
-
--ggf Dinge in CSV speichern
-
--Begruendung fuer bad ingredients als extra route?
-
-heute:
--Report Teil ueber Webscraper und API    x
--Anerkennungserklärung
--Sevelte Kit Tutorial
--Webscraper so bauen, dass die gespeicherten links verwendet werden   x
-
-
 npm init svelte
 
 endung: .svelte
@@ -46,3 +28,19 @@ Your project is ready!
   2: npm install (or pnpm install, etc)
   3: git init && git add -A && git commit -m "Initial commit" (optional)
   4: npm run dev -- --open    #öffnet local host
+
+
+  Tasks:
+  1. richtige API einbinden, also den Webscraper, in die Website
+  - Funktionalität weiter mit Testdaten testen
+  2. Ergebnisdaten aus DB / Suchbegriffen ziehen
+  3. entscheiden, ob results unter den suchbegriffen oder auf extra seite angezeigt werden sollen
+  4. Warum gibt es env und venv? das ist im Prinzip das gleiche
+  5. Wie kann man die Ergebnisse erst erscheinen lassen, wenn der erste Begriff eingegeben worden ist
+
+  venv aktivieren: 
+  py -3 -m venv venv
+  venv\Scripts\activate
+
+  env aktivieren:
+py -m -venv -env
