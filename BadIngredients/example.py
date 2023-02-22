@@ -4,26 +4,25 @@ import pandas as pd # pip install pandas
 """
 Step 1. Importing dataset from CSV
 """
-#df = pd.read_csv('BadIngredients/Real-Time_Traffic_Incident_Reports.csv')
+df = pd.read_csv('BadIngredients/Real-Time_Traffic_Incident_Reports.csv')
 
 """
 Step 2.1 Data clean up
 """
-#df['Published Date'] = pd.to_datetime(df['Published Date']).dt.strftime('%Y-%m-%d %H:%M:%S')
-#df['Status Date'] = pd.to_datetime(df['Published Date']).dt.strftime('%Y-%m-%d %H:%M:%S')
+df['Published Date'] = pd.to_datetime(df['Published Date']).dt.strftime('%Y-%m-%d %H:%M:%S')
+df['Status Date'] = pd.to_datetime(df['Published Date']).dt.strftime('%Y-%m-%d %H:%M:%S')
 
 # delete bad data 
-#df.drop(df.query('Location.isnull() | Status.isnull()').index, inplace=True)
+df.drop(df.query('Location.isnull() | Status.isnull()').index, inplace=True)
 
 
 """
 Step 2.2 Specify columns we want to import
 """
-#columns = ['Traffic Report ID', 'Published Date', 'Issue Reported', 'Location', 
-     #       'Address', 'Status', 'Status Date']
+columns = [ 'Issue Reported', 'Status' ]
 
-#df_data = df[columns]
-#records = df_data.values.tolist()
+df_data = df[columns]
+records = df_data.values.tolist()
 
 
 
@@ -46,7 +45,7 @@ def connection_string(driver, server_name, database_name):
     """
     return conn_string
 
-#print(connection_string(DRIVER,SERVER_NAME,DATABASE_NAME)) # to check the definition
+print(connection_string(DRIVER,SERVER_NAME,DATABASE_NAME)) # to check the definition
 
 """"
 #Step 3.2 Create database connection instance
@@ -59,26 +58,26 @@ except odbc.DatabaseError as e:
 except odbc.Error as e:
     print('Connection Error:')
     print(str(e.value[1]))
-# print (conn) # show connnection
+ # print (conn) # show connnection
 
 
 """
 #Step 3.3 Create a cursor connection and insert records
 """
 
-#sql_insert = '''
- #   INSERT INTO Austin_Traffic_Incident 
-  #  VALUES (?, ?, ?, ?, ?, ?, ?, GETDATE())
-#'''
+sql_insert = '''
+    INSERT INTO ingredientslist(ingredientslist_name, ingredientslist_string) 
+    VALUES (?, ?)
+'''
 
-#try:
- #   cursor = conn.cursor()
-  #  cursor.executemany(sql_insert, records)
-   # cursor.commit();    
-#except Exception as e:
- #   cursor.rollback()
-  #  print(str(e[1]))
-#finally:
- #   print('Task is complete.')
-  #  cursor.close()
-   # conn.close()
+try:
+    cursor = conn.cursor()
+    cursor.executemany(sql_insert, records)
+    cursor.commit();    
+except Exception as e:
+    cursor.rollback()
+    print(str(e[1]))
+finally:
+    print('Task is complete.')
+    cursor.close()
+    conn.close()
