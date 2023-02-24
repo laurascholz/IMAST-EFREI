@@ -44,3 +44,6 @@ Your project is ready!
 
   env aktivieren:
 py -m -venv -env
+
+
+- müssen wir eingaben validieren, z. b. gegen crosssitescripting?

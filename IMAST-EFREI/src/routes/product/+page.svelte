@@ -1,19 +1,21 @@
-<!-- necessary npm installs: axios, -->
-
 <script>
-	// @ts-nocheck
+	$: website = `https://utopia.de/ratgeber/die-schlimmsten-inhaltsstoffe-in-kosmetik/`;
+    //product/<int:api_id></int:api_id>
 
-	import axios from 'axios';     				//library to request API endpoint
+
+    import axios from 'axios';     				//library to request API endpoint
 	import { onMount } from 'svelte';			//hook for the API call
-	import Page from './about/+page.svelte';
+	
 
 	let data = [];
-	let search_string = '';
+	let search_string = '';  //searchstring from other svelte page
 
 	$: getData(search_string); 
 
 	//getData function is used as API caller function
 	
+    search_string = 'parfume';
+
 	async function getData(search_string) {
 		console.log(search_string);     //debug  --delete later!
 		data = [];
@@ -51,39 +53,27 @@
 			console.log(err);
 		}
 	}
+
 </script>
 
-<!-- searchbar with submit button - search string can be entered either with pressing enter oder pressing submit -->
-<!-- search string is saved in variable search and bind: updates the value with every character change-->
+<hgroup>
+	<h1>Results</h1>
+	<p>This page shows the search results for the search for <strong>{search_string}</strong> .</p>
+	<p>On this page, there will be the webscraper results as well as the scores</p>
+</hgroup>
+
 <div class="grid">
-	<div>
-		<!-- the API caller function is used by the search bar when pressing enter-->
-		<label for="search">
-			Add a product, a category or a brand:
-			<input
-				type="search"
-				id="search"
-				name="search"
-				bind:value={search_string}		 
-				placeholder="Search your product here..."
-				required
-			/>  
-		</label>
-	</div>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
 </div>
 
-<!--else:  when clicking on the button, the API request will be sent with the onMount function-->
-<div>
-	<button type="submit" on:click={getData}>Search for the product</button>
-	<a href="/product" role="button" type="submit" on:click={getData}>Search for the product</a>
-</div>
 
-<!-- results beneath the search bar-->
-
-	
 
 {#each data as row, i}
-	<article> <!-- ggf accordion nehmen-->
+	<article>
+		<!-- ggf accordion nehmen-->
 		{row.product}
 
 		{#each row.details as detail, i}
@@ -93,4 +83,9 @@
 	</article>
 {/each}
 
-
+<footer>
+	<p>
+		<!-- KOMMENTAR-->
+		Further information about the bad ingredients can be found <a href={website}> here</a>.
+	</p>
+</footer>
