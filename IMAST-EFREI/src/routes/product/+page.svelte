@@ -62,13 +62,14 @@
 	<p>On this page, there will be the webscraper results as well as the scores</p>
 </hgroup>
 
+<!-- ggf als Grid anordnen fuer Uebersichtlickeit?
 <div class="grid">
 	<div>1</div>
 	<div>2</div>
 	<div>3</div>
 	<div>4</div>
 </div>
-
+-->
 
 
 {#each data as row, i}
@@ -85,7 +86,6 @@
 
 <footer>
 	<p>
-		<!-- KOMMENTAR-->
 		Further information about the bad ingredients can be found <a href={website}> here</a>.
 	</p>
 </footer>

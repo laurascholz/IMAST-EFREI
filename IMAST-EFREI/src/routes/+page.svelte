@@ -3,17 +3,20 @@
 <script>
 	// @ts-nocheck
 
-	import axios from 'axios';     				//library to request API endpoint
+	import axios, { formToJSON } from 'axios';     				//library to request API endpoint
 	import { onMount } from 'svelte';			//hook for the API call
 	import Page from './about/+page.svelte';
+	import {goto} from '$app/navigation';
+	import {redirect} from '@sveltejs/kit';
 
 	let data = [];
 	let search_string = '';
 
+
 	$: getData(search_string); 
 
 	//getData function is used as API caller function
-	
+
 	async function getData(search_string) {
 		console.log(search_string);     //debug  --delete later!
 		data = [];
@@ -24,29 +27,59 @@
 			//const res = await axios.get(`https://api.quotable.io/random`, {});
 			//localhost/q=nyxlippenstift  ->how the api url should look, get request: parameters are saved with the url
 			//data = res.data;
-			//const res = await axios.get('C:\Users\laura\OneDrive\Dokumente\GitHub\IMAST-EFREI\Flask API\__caller__.py', /<string:search_string>);  //localhost ist die Flaskseite zur webscraper datei, hier richtiges einfuegen
+			//const res = await axios.get("/product/<string:search_string>");  //localhost ist die Flaskseite zur webscraper datei, hier richtiges einfuegen
 			//data = res.data;
 
 			//the following is test data
 			data = [
 				{
-					product: 1,
-					details: [{ name: 'NXY', price: '14.29' }]
+					id:  527973,
+					details: [{ brand: 'RARE BEAUTY',
+								name: 'Soft Pinch - Blush liquide',
+								price: '23',
+								url: 'https://www.sephora.fr/p/soft-pinch---liquid-blush-527973.html',
+								image: 'https://www.sephora.fr/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw22da3356/images/hi-res/SKU/SKU_2383/527973_swatch.jpg?sw=240&sh=240&sm=fit' 
+							}]
 				},
 				{ 
-					product: 2, 
-					details: [{ name: 'Maybeline', price: '24.29' }] 
+					id: 206220, 
+					details: [{ brand: 'SEPHORA COLLECTION',
+								name: 'Cream Lip Stain Mat - Rouge À Lèvres Mat',
+								price: '12.99',
+								url: 'https://www.sephora.fr/p/cream-lip-stain-mat---rouge-a-levres-mat-206220.html',
+								image: 'https://www.sephora.fr/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw7f5398c3/images/hi-res/SKU/SKU_1/206220_swatch.jpg?sw=240&sh=240&sm=fit',
+							}] 
 				},
 				{ 
-					product: 3, 
-					details: [{ name: 'Lancome', price: '69.99' }] 
+					id: 446306,
+					details: [{ brand: 'TOO FACED',
+								name: 'Born This Way Super Coverage Concealer - Correcteur anticernes',
+								price: '32',
+								url: 'https://www.sephora.fr/p/born-this-way-super-coverage-concealer---correcteur-anti-cernes-446306.html',
+								image: 'https://www.sephora.fr/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dwd44c6475/images/hi-res/SKU/SKU_6/446306_swatch.jpg?sw=240&sh=240&sm=fit',
+							}] 
 				},
 				{ 
-					product: 4, 
-					details: [{ name: 'Chanel Lipstick', price: '35.69' }] 
+					id: 502359, 
+					details: [{ brand: 'SEPHORA COLLECTION',
+								name: 'Best Skin Ever Anticernes - Anticernes haute couvrance fini naturel',
+								price: '14.99',
+								url: 'https://www.sephora.fr/p/best-skin-ever-anticernes---anticernes-haute-couvrance-fini-naturel-502359.html',
+								image: 'https://www.sephora.fr/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dwe0790338/images/hi-res/SKU/SKU_2013/502359_swatch.jpg?sw=240&sh=240&sm=fit',
+							}] 
+				},
+				{ 
+					id: 451695, 
+					details: [{ brand: 'TARTE',
+								name: 'shape tape - Anticernes',
+								price: '28',
+								url: 'https://www.sephora.fr/p/shape-tape-contour-concealer---anticernes-matte-451695.html',
+								image: 'https://www.sephora.fr/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dwe7008f6c/images/hi-res/SKU/SKU_672/451695_swatch.jpg?sw=240&sh=240&sm=fit',
+							}] 
 				}
 			];
 			console.log(data);
+			
 		} catch (err) {
 			console.log(err);
 		}
@@ -70,27 +103,45 @@
 			/>  
 		</label>
 	</div>
+	<!--<div>
+		<p>              </p>
+		<a href="/product" role="button" type="submit" on:click={getData()}>Search for the product</a>
+	</div> -->
 </div>
+
 
 <!--else:  when clicking on the button, the API request will be sent with the onMount function-->
 <div>
-	<button type="submit" on:click={getData}>Search for the product</button>
-	<a href="/product" role="button" type="submit" on:click={getData}>Search for the product</a>
+	<button type="submit" on:click={getData()}>Search for the product</button>
+	
 </div>
 
-<!-- results beneath the search bar-->
+<!-- results beneath the search bar  
+goto(url: "C:\Users\laura\OneDrive\Dokumente\GitHub\IMAST-EFREI\IMAST-EFREI\src\routes\product")
+, redirect("/product")  
+immer Fehlermeldung identifier expected-->
 
 	
 
 {#each data as row, i}
-	<article> <!-- ggf accordion nehmen-->
-		{row.product}
-
+	<details> 
 		{#each row.details as detail, i}
-			{detail.name}
-			{detail.price}
+			<summary>
+				<b>{detail.name}</b> by
+				<i>{detail.brand}</i>
+				 - The Score of this product is <b>XXXX</b>
+			</summary>
+			<p>	
+				<img src={detail.image} alt="The product as a picture"/>
+				Shop the product <a href= {detail.url}>here</a> for
+				{detail.price} EURO,
+				id: {row.id}
+			</p>
 		{/each}
-	</article>
+	</details>
 {/each}
 
+
+	
+	
 

@@ -47,3 +47,15 @@ py -m -venv -env
 
 
 - müssen wir eingaben validieren, z. b. gegen crosssitescripting?
+
+
+Probleme:
+-wie zeigt die url der product seite die query parameters aka den suchbegriff an? 
+ansonsten keine ahnung wie man an den search string kommt, außer der wird mit den ids uebergeben
+-wie genau muss die url aussehen wenn der query parameter nicht dabei steht? das wird ja als variabler teil mitgeschickt
+-getData mit den ids sollte auch erst auf der results seite berechnet werden oder? wie wird dann zum webscraper unterschieden
+- kann nicht testen, wie die daten auf der website aussehen ohne die echten daten
+
+-bsp api call anschauen bei svelte examples?
+-testdaten durch api daten ersetzen
+-accordion einbauen?

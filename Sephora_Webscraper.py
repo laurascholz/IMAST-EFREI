@@ -15,7 +15,7 @@ session = requests.Session()
 
 #generating a search string that is injected into url
 #urlencode is used to include all special characters and to connect two search words  
-searchstring = urlencode({'query' : 'parfum'})      
+searchstring = urlencode({'query' : 'maquillage'})      
 
 #url to make post request to       
 url = "https://igcrdsruq7-dsn.algolia.net/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.13.1)%3B%20Browser%3B%20instantsearch.js%20(4.49.0)%3B%20JS%20Helper%20(3.11.1)"
