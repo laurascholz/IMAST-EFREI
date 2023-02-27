@@ -5,17 +5,22 @@
 
     import axios from 'axios';     				//library to request API endpoint
 	import { onMount } from 'svelte';			//hook for the API call
-	
+	import { page } from '$app/stores';
 
 	let data = [];
 	let search_string = '';  //searchstring from other svelte page
 
 	$: getData(search_string); 
 
-	//getData function is used as API caller function
-	
+	//get search_string with query parameter
+    //wenn das nicht klappt, dann mit load function
+
+    
+    search_string = $page.url.searchParams.get('search_string')
+	//const search_string = url.searchParams.get('search_string')
     search_string = 'parfume';
 
+    //getData function is used as API caller function
 	async function getData(search_string) {
 		console.log(search_string);     //debug  --delete later!
 		data = [];
@@ -48,6 +53,7 @@
 					details: [{ name: 'Chanel Lipstick', price: '35.69' }] 
 				}
 			];
+
 			console.log(data);
 		} catch (err) {
 			console.log(err);

@@ -54,8 +54,12 @@ Probleme:
 ansonsten keine ahnung wie man an den search string kommt, außer der wird mit den ids uebergeben
 -wie genau muss die url aussehen wenn der query parameter nicht dabei steht? das wird ja als variabler teil mitgeschickt
 -getData mit den ids sollte auch erst auf der results seite berechnet werden oder? wie wird dann zum webscraper unterschieden
-- kann nicht testen, wie die daten auf der website aussehen ohne die echten daten
+
 
 -bsp api call anschauen bei svelte examples?
--testdaten durch api daten ersetzen
--accordion einbauen?
+-braucht man eine zweite Seite fuer die Results? sollte man slug benutzen
+
+-Score berechnen
+-einbauen, dass die Daten genauso geschickt werden, wie sie benötigt werden
+-kann man in der flask api Funktionen auf anderen Seiten aufrufen, z.b. zur Score Berechnung?
+-Readme update
