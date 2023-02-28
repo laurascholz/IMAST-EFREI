@@ -64,7 +64,7 @@ def product_insert(api_id, product_name, product_brand, product_price, product_l
         cursor.close()
         conn.close()        
 
-def search_product(api_id):
+def search_product(api_id, product_name):
 
     """
     Step 1.1 Create SQL Server Connection String
@@ -107,19 +107,28 @@ def search_product(api_id):
     
     sql_select = '''
          SELECT product_name,product_brand,product_price,product_link,product_image FROM product
-            WHERE api_id = ?
+            WHERE api_id = ? AND product_name = ?;
      '''
        
     try:
         cursor = conn.cursor()
-        cursor.execute(sql_select, api_id)
-        for row in cursor:
-            print(row)
+        cursor.execute(sql_select,(api_id, product_name))
+        data_list = cursor.fetchall()
+        if data_list == []:
+            print('404: Not found in Database')
+            return 404
+            
+        else: 
+            for row in data_list:
+                print(data_list)
+                return data_list
+                       
         cursor.commit();    
+       
     except Exception as e:
         cursor.rollback()
         print(str(e))
     finally:
-        print('Product found in Database.')
+        print('Product search completed.')
         cursor.close()
         conn.close()  
