@@ -5,6 +5,7 @@
 import pypyodbc as odbc # pip(3) install pypyodbc;  use libary to connect to MS SQL Server
 import pandas as pd # pip(3) install pandas; clean up the data
 
+
 # pip(3) list ; show the installed packages
 
 """
@@ -16,23 +17,26 @@ df = pd.read_csv('BadIngredients/badingredients.csv')
 """
 Step 2.1 Data clean up
 """
-try:
-   df.drop(df.query('Chemical name / INN'.isnull()).index, inplace=True) # delete data where chemical name is NULL
-except AttributeError as e:
-    print('Dataset is complete:')    
-    print(str(e))
+df = df.fillna(value=0)  # replace NAN with 0 
 
+try:
+   df.drop(df.query('Chemical_name'.isnull()).index, inplace=True) # delete data where chemical name is NULL
+except AttributeError as e:
+    print('Dataset is correct.')    
+    
 
 """
 Step 2.2 Specify columns we want to import
 """
-columns = ['Chemical name / INN', 'Name of Common Ingredients Glossary',
-           'Product Type, body parts']
+
+columns = ['Chemical_name', 'Common_name',
+           'Used_for']
 
 df_data = df[columns]
-records = df_data.values.tolist()
+records = pd.DataFrame(df_data)
 
-# print(records) # to control if the right columns were selected
+#records = df_data.values.tolist()  
+#print(records) # to control if the right columns were selected
 
 
 """
@@ -49,12 +53,11 @@ def connection_string(driver, server_name, database_name):
         DATABASE={database_name};
         Trust_Connection=yes; 
         Uid=azureuser;
-        PwD=Efrei2023;
-               
+        PwD=Efrei2023;          
     """
     return conn_string
 
-#print(connection_string(DRIVER,SERVER_NAME,DATABASE_NAME)) # to check the definition
+# print(connection_string(DRIVER,SERVER_NAME,DATABASE_NAME)) # to check the definition
 
 """"
 #Step 3.2 Create database connection instance
@@ -67,21 +70,27 @@ except odbc.DatabaseError as e:
 except odbc.Error as e:
     print('Connection Error:')
     print(str(e.value[1]))
-# print (conn) - show connnection
+# print (conn) #- show connnection
 
 """
 #Step 3.3 Create a cursor connection and insert records
 """
 
-sql_insert = '''
-    INSERT INTO badingredients(chemical_name,ingredient_name,product_type) 
-        VALUES (?,?,?)
-'''
+#sql_insert = '''
+   # INSERT INTO badingredients(chemical_name,ingredient_name,product_type,explanation,source) 
+    #    VALUES (?,?,?,'Restricted in Cosmetic Products', 'https://ec.europa.eu/growth/tools-databases/cosing/index.cfm?fuseaction=search.results')
+#'''
 
 try:
     cursor = conn.cursor()
-    cursor.executemany(sql_insert, records)
-    cursor.commit();    
+    row = next(records.iterrows())[1]
+    for index, row in records.iterrows():
+        cursor.executemany('''INSERT INTO badingredients(chemical_name,ingredient_name,product_type,explanation,source)  
+                VALUES (?,?,?,'Restricted in Cosmetic Products','https://ec.europa.eu/growth/tools-databases/cosing/index.cfm?fuseaction=search.results')
+                 '''#,
+                 #row['Chemical_name'],row['Common_name'],row['Used_for']
+                 )
+        cursor.commit();    
 except Exception as e:
     cursor.rollback()
     print(str(e))
@@ -89,3 +98,16 @@ finally:
     print('Task is complete.')
     cursor.close()
     conn.close()
+    
+    
+#try:
+  #  cursor = conn.cursor()
+   # cursor.executemany(sql_insert, records)
+   # cursor.commit();    
+#except Exception as e:
+  #  cursor.rollback()
+   # print(str(e))
+#finally:
+  #  print('Task is complete.')
+   # cursor.close()
+   # conn.close()
