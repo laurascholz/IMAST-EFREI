@@ -10,7 +10,7 @@
 		<ul>
 			<li><a href="/">Home</a></li>
 			<li><a href="/about">About</a></li>
-			<li><a href="/check">Ingredients Checker</a></li>
+			<li><a href="/product">Ingredients Checker</a></li>
 		</ul>
 	</nav>
 </div>
