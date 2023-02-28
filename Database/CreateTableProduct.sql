@@ -8,7 +8,7 @@ GO
 CREATE TABLE product
 (
     id INT NOT NULL PRIMARY KEY IDENTITY(1,1), -- primary key column
-    ingredientslist_id INT NOT NULL,
+    ingredientslist_id INT,
     api_id INT NOT NULL,
     product_name VARCHAR(100) NOT NULL,
     product_brand VARCHAR(100) NOT NULL,
