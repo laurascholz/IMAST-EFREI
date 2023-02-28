@@ -120,6 +120,6 @@ def search_product(api_id):
         cursor.rollback()
         print(str(e))
     finally:
-        print('Product saved in Database.')
+        print('Product found in Database.')
         cursor.close()
         conn.close()  
