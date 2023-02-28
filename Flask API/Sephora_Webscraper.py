@@ -65,7 +65,10 @@ def crawl(search):
 
   print(products)
   #------web scraper for ingredients------
+def scrape(id):
+  ingredients = ["Wasser", "Alcohol", "Fragrance"]
 
+  return ingredients
   for product in products:
     session = requests.Session()
     #print(session.headers['User-Agent'])
