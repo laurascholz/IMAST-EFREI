@@ -67,7 +67,7 @@ def crawl(search):
   #------web scraper for ingredients------
 def scrape(id):
   ingredients = ["Wasser", "Alcohol", "Fragrance"]
-
+  #ggf mit map machen 
   return ingredients
   for product in products:
     session = requests.Session()

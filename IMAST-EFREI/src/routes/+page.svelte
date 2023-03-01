@@ -11,9 +11,10 @@
 
 	let search_string = '';
 	let data = [];
-	let loading = false;
+	let loading = false;			//loading sign for bad connection or longer calculation
 	let info = [];
 	
+	//getData function is called for every change of search_string
 	$: getData(search_string);
 	$: if(search_string == "") data=[];
 
@@ -22,7 +23,6 @@
 		search_string = e.target.value;
 	}, 300);
 
-	//getData function is used as API caller function
 	//Flask-API call 1: search_string -> product ids and information without the ingredients and score
 	async function getData() {
 		try {
@@ -59,9 +59,11 @@
 		//use the ids to access the other data from database or website
 		try {
 			await axios
-				.get('http://127.0.0.1:5000/?id=' + id)    //("/<int:api_id>")
+				.get('http://127.0.0.1:5000/products/?id=' + id)    //("/<int:api_id>")
 				.then(function (response) {
 					// handle success
+					//map angucken und damit machen
+					//product id = map id unten im code
 					info = response.data;
 					console.log(info)
 				})
@@ -78,11 +80,9 @@
 	}
 </script>
 
-<!-- searchbar with submit button - search string can be entered either with pressing enter oder pressing submit -->
-<!-- search string is saved in variable search and bind: updates the value with every character change-->
+<!-- searchbar: search_string is saved delayed -->
 <div class="grid">
 	<div>
-		<!-- the API caller function is used by the search bar when pressing enter-->
 		<input
 			type="search"
 			id="search"
@@ -92,23 +92,9 @@
 			required
 		/>
 	</div>
-	<!--<div>
-		<p>              </p>
-		<a href="/product" role="button" type="submit" on:click={getData()}>Search for the product</a>
-	</div> -->
 </div>
 
-<!--else:  when clicking on the button, the API request will be sent with the onMount function-->
-<!--
-<div>
-	<button type="submit" on:click={() => getData()}>Search for the product</button>
-</div>
--->
-<!-- results beneath the search bar  
-goto(url: "C:\Users\laura\OneDrive\Dokumente\GitHub\IMAST-EFREI\IMAST-EFREI\src\routes\product")
-, redirect("/product")  
-immer Fehlermeldung identifier expected-->
-
+<!-- results within accordions-->
 {#if search_string == ""}
 	<p aria-busy={loading}>Check products of your choice for harmful ingredients by adding their name in the searchbar</p>
 {:else}
@@ -123,8 +109,25 @@ immer Fehlermeldung identifier expected-->
 			The Score of this product is {i}
 			- Shop the product <a href={row.url}>here</a> for
 			{row.price.minPrice} EURO, id: {row.id}
-			
+			{info}
 		</p>
 	</details>
 {/each}
 {/if}
+
+
+<!--else:  when clicking on the button, the API request will be sent with the onMount function-->
+<!--
+<div>
+	<button type="submit" on:click={() => getData()}>Search for the product</button>
+</div>
+-->
+<!-- results beneath the search bar  
+goto(url: "C:\Users\laura\OneDrive\Dokumente\GitHub\IMAST-EFREI\IMAST-EFREI\src\routes\product")
+, redirect("/product")  
+immer Fehlermeldung identifier expected-->
+
+<!--<div>
+		<p>              </p>
+		<a href="/product" role="button" type="submit" on:click={getData()}>Search for the product</a>
+	</div> -->

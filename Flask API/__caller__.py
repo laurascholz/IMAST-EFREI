@@ -23,7 +23,7 @@ def index():
         #andererseits ist das programm eh schneller als ein db zugriff
 
 #second api call: id -> ingredients and score
-@app.route('/')
+@app.route('/products/')
 def ingredients():
     id = request.args.get('id')
     print(id)
