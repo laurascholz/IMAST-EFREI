@@ -6,7 +6,7 @@ import pypyodbc as odbc # pip(3) install pypyodbc;  use libary to connect to MS 
 
 # pip(3) list ; show the installed packages
 
-def searchstring_insert(search_string, search_link):
+def searchstring_insert(search_string):
 
     """
     Step 1.1 Create SQL Server Connection String
@@ -47,14 +47,14 @@ def searchstring_insert(search_string, search_link):
     #Step 1.3 Create a cursor connection and insert search string
     """
     #search_date will insert automatically
-    sql_insert = '''
-         INSERT INTO searchstring(search_string,search_link,website_name) 
-             VALUES (?,?,?)
+    sql_insert_searchstring = '''
+         INSERT INTO searchstring(search_string,website_name) 
+             VALUES (?,?)
      '''
        
     try:
         cursor = conn.cursor()
-        cursor.execute(sql_insert,(search_string, search_link, 'Sephora')) #currently we only search on Sephora
+        cursor.execute(sql_insert_searchstring,(search_string, 'Sephora')) #currently we only search on Sephora
         cursor.commit();    
     except Exception as e:
         cursor.rollback()
@@ -65,7 +65,7 @@ def searchstring_insert(search_string, search_link):
         conn.close() 
 
 
-def product_insert(api_id, product_name, product_brand, product_price, product_link, product_image):
+def product_insert(search_string, api_id, product_name, product_brand, product_price, product_link, product_image):
 
     """
     Step 1.1 Create SQL Server Connection String
@@ -103,18 +103,61 @@ def product_insert(api_id, product_name, product_brand, product_price, product_l
 
     
     """
-    #Step 1.3 Create a cursor connection and insert product
+    #Step 1.3 Create a cursor connection and insert product as well as insert product_id and searchstring_id in tabel productsearch
     """
     
-    sql_insert = '''
+    sql_insert_product = '''
          INSERT INTO product(api_id, product_name, product_brand, product_price, product_link, product_image) 
              VALUES (?,?,?,?,?,?)
+     '''
+    
+    sql_select_product_id = '''
+         SELECT id FROM product
+            WHERE api_id = ? AND product_name = ?
+     '''
+    
+    sql_select_searchstring_id = '''
+         SELECT id FROM searchstring
+            WHERE search_string = ? AND website_name = ?
+     '''       
+    
+    sql_insert_productsearch = '''
+         INSERT INTO productsearch(product_id,searchstring_id) 
+             VALUES (?,?)
      '''
        
     try:
         cursor = conn.cursor()
-        cursor.execute(sql_insert,(api_id,product_name,product_brand,product_price,product_link,product_image))
-        cursor.commit();    
+        cursor.execute(sql_insert_product,(api_id,product_name,product_brand,product_price,product_link,product_image))
+        cursor.commit(); 
+        # product saved
+        
+        cursor.execute(sql_select_product_id,(api_id,product_name))
+        product = cursor.fetchone()
+        if product == []:   
+            print('404: Product not found in Database')
+            return 404
+        else:  
+            product_id = product[0]
+            print(product_id)
+        #cursor.commit();      
+        # product_id searched
+        
+        cursor.execute(sql_select_searchstring_id,(search_string,'Sephora'))
+        searchstring = cursor.fetchone()
+        if searchstring == []:
+            print('404: Search String not found in Database')
+            return 404
+        else: 
+            searchstring_id = searchstring[0]
+            print(searchstring_id)
+        #cursor.commit(); 
+        # searchstring_id searched   
+        
+        cursor.execute(sql_insert_productsearch,(product_id,searchstring_id))
+        # productsearch inserted
+        cursor.commit(); 
+        
     except Exception as e:
         cursor.rollback()
         print(str(e))
