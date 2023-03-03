@@ -6,7 +6,7 @@ import pypyodbc as odbc # pip(3) install pypyodbc;  use libary to connect to MS 
 
 # pip(3) list ; show the installed packages
 
-def searchstring_insert(search_string):
+def searchstring_insert(search_string): #method to save search string in database
 
     """
     Step 1.1 Create SQL Server Connection String
@@ -65,7 +65,7 @@ def searchstring_insert(search_string):
         conn.close() 
 
 
-def product_insert(search_string, api_id, product_name, product_brand, product_price, product_link, product_image):
+def product_insert(search_string, api_id, product_name, product_brand, product_price, product_link, product_image): #method to save product in database with relation to search string
 
     """
     Step 1.1 Create SQL Server Connection String
@@ -166,7 +166,111 @@ def product_insert(search_string, api_id, product_name, product_brand, product_p
         cursor.close()
         conn.close()        
 
-def search_product(api_id, product_name):
+
+def ingredients_insert(api_id, product_name, ingredients_list): #method to save ingredients in database with relation to product
+
+    """
+    Step 1.1 Create SQL Server Connection String
+    """
+
+    DRIVER = 'ODBC Driver 18 for SQL Server' 
+    SERVER_NAME = 'mysqlserverefrei.database.windows.net'
+    DATABASE_NAME = 'efrei'
+
+    def connection_string(driver, server_name, database_name):
+        conn_string = f"""
+            DRIVER={{{driver}}};
+            SERVER={server_name};
+            DATABASE={database_name};
+            Trust_Connection=yes; 
+            Uid=azureuser;
+            PwD=Efrei2023;         
+        
+        """
+        return conn_string
+    #print(connection_string(DRIVER,SERVER_NAME,DATABASE_NAME)) # to check the definition  
+
+    """"
+    #Step 1.2 Create database connection instance
+    """
+    try:
+        conn = odbc.connect(connection_string(DRIVER, SERVER_NAME, DATABASE_NAME))
+    except odbc.DatabaseError as e:
+        print('Database Error:')    
+        print(str(e.value[1]))
+    except odbc.Error as e:
+        print('Connection Error:')
+        print(str(e.value[1]))
+    # print (conn) #- show connnection
+
+    
+    """
+    #Step 1.3 Create a cursor connection and insert ingredients as well as insert product_id and ingredient_id in tabel ingredientcheck
+    """
+    
+    sql_insert_ingredients = '''
+         INSERT INTO ingredientslist(ingredientslist_name,ingredientslist_string) 
+             VALUES (?,?)
+     '''
+    
+    sql_select_product_id = '''
+         SELECT id FROM product
+            WHERE api_id = ? AND product_name = ?
+     '''
+    
+    sql_select_ingredientslist_id = '''
+         SELECT id FROM ingredientslist
+            WHERE ingredientslist_name = ? AND ingredientslist_string = ? 
+     '''       
+    
+    sql_insert_ingredientscheck = '''
+         INSERT INTO ingredientscheck(product_id,ingredientslist_id) 
+             VALUES (?,?)
+     '''
+       
+    try:
+        cursor = conn.cursor()
+        cursor.execute(sql_insert_ingredients, product_name, ingredients_list)
+        cursor.commit(); 
+        # ingredients saved
+        
+       # cursor.execute(sql_select_product_id,(api_id,product_name))
+       # product = cursor.fetchone()
+       # if product == []:   
+        #    print('404: Product not found in Database')
+         #   return 404
+       # else:  
+        #    product_id = product[0]
+        #    print(product_id)
+        #cursor.commit();      
+        # product_id searched
+        
+        #cursor.execute(sql_select_ingredientslist_id,(product_name,ingredients_list))
+        #ingredientslist = cursor.fetchone()
+        #if ingredientslist == []:
+         #   print('404: Search String not found in Database')
+         #   return 404
+        #else: 
+         #   ingredientslist_id = ingredientslist[0]
+          #  print(ingredientslist_id)
+        #cursor.commit(); 
+        # ingredientslist_id searched   
+        
+       # cursor.execute(sql_insert_ingredientscheck,(product_id,ingredientslist_id))
+        # ingredientscheck inserted
+        #cursor.commit(); 
+        
+    except Exception as e:
+        cursor.rollback()
+        print(str(e))
+    finally:
+        print('Ingredients saved in Database.')
+        cursor.close()
+        conn.close()
+
+
+
+def search_product(api_id, product_name): 
 
     """
     Step 1.1 Create SQL Server Connection String
