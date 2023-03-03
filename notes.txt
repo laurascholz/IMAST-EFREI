@@ -42,6 +42,5 @@ py -m -venv -env
 -Score berechnen
 -db abfrage
 -report zu flask
--db methode einbauen
 -ing check loeschen
 -server einrichten

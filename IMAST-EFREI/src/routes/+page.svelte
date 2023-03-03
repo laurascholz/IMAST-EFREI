@@ -15,8 +15,6 @@
 	let data = [];
 	let loading = false;			//loading sign for bad connection or longer calculation
 	let info = [];
-	let url = "";
-	let id = "";
 	
 	//getData function is called for every change of search_string
 	$: getData(search_string);
@@ -33,7 +31,7 @@
 			if(search_string == "") return
 			loading = true
 			await axios
-				.get('http://127.0.0.1:5000/?search=' + search_string)    //<string:search_string>
+				.get('http://127.0.0.1:5000/?search=' + search_string)    
 				.then(function (response) {
 					// handle success
 					loading = false
@@ -42,7 +40,6 @@
 				.catch(function (error) {
 					// handle error
 					loading = false
-
 					console.log(error);
 				})
 				.finally(function () {
@@ -56,22 +53,20 @@
 
 	//Flask-API call 2: product ids -> check if product in database
 	//		ELSE 		product url -> product ingredients scraping and score calculation
-	async function getScore(id, url, search_string) {
+	async function getScore(id, url, name) {
 		//console.log("Active")
 		info = [];
 		url = url;
 		id = id;
-		search_string = search_string
-		console.log(search_string)
+		name = name 
 		//use the ids to access the other data from database or the url to use the webscraper 
 		try {
 			loading = true
-			await axios.post('http://127.0.0.1:5000/products', {id: id, url: url, search: search_string}) 	  
+			await axios.post('http://127.0.0.1:5000/products', {id: id, url: url, name: name}) 	  
 				.then(function (response) {
 					// handle success
 					loading = false
 					info = response.data;
-					//console.log(info)
 				})
 				.catch(function (error) {
 					// handle error
@@ -108,11 +103,11 @@
 {:else}
 {#each data as row, i}
 	<details>
-		<summary on:focus={() => getScore(row.id, row.url, search_string)}>		<!-- whenever a product is selected, the Score is calculated and shown-->
+		<summary on:focus={() => getScore(row.id, row.url, row.name)}>		<!-- whenever a product is selected, the Score is calculated and shown-->
 			<b>{row.name}</b> by
 			<i>{row.brand}</i>
 		</summary>
-		<p>
+		<p aria-busy={loading}>
 			<img src={row.images.productTile.url} alt="" />
 			The Score of this product is {i} 
 			- Shop the product <a href={row.url}>here</a> for
