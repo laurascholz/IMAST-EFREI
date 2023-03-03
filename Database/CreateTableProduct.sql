@@ -14,6 +14,6 @@ CREATE TABLE product
     product_brand VARCHAR(100) NOT NULL,
     product_price VARCHAR(100) NOT NULL,
     product_link VARCHAR(500) NOT NULL,
-    product_image VARCHAR(100) NOT NULL,
+    product_image VARCHAR(500) NOT NULL,
     CONSTRAINT FK_product_ingredientslist FOREIGN KEY (ingredientslist_id) REFERENCES ingredientslist(id)
 );
