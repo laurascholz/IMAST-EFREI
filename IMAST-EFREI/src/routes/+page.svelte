@@ -45,7 +45,6 @@
 				})
 				.finally(function () {
 					loading = false
-
 					// always executed
 				});
 		} catch (err) {
@@ -53,31 +52,33 @@
 		}
 	}
 
-
 	//Flask-API call 2: product ids -> check if product in database
 	//		ELSE 		product url -> product ingredients scraping and score calculation
-	async function getScore(id, url) {
+	async function getScore(id, url, search_string) {
 		//console.log("Active")
 		info = [];
 		url = url;
 		id = id;
+		search_string = search_string
+		console.log(search_string)
 		//use the ids to access the other data from database or the url to use the webscraper 
 		try {
-			await axios.post('http://127.0.0.1:5000/products', {id: id, url: url}) //products/?id=' + id, {	("/<int:api_id>")	
-   
+			loading = true
+			await axios.post('http://127.0.0.1:5000/products', {id: id, url: url, search: search_string}) 	  
 				.then(function (response) {
 					// handle success
-					//map angucken und damit machen
-					//product id = map id unten im code
+					loading = false
 					info = response.data;
 					//console.log(info)
 				})
 				.catch(function (error) {
 					// handle error
+					loading = false
 					console.log(error);
 				})
 				.finally(function () {
 					// always executed
+					loading = false
 				});
 		} catch (err) {
 			console.log(err);
@@ -105,14 +106,14 @@
 {:else}
 {#each data as row, i}
 	<details>
-		<summary on:focus={() => getScore(row.id, row.url)}>		<!-- whenever a product is selected, the Score is calculated and shown-->
+		<summary on:focus={() => getScore(row.id, row.url, search_string)}>		<!-- whenever a product is selected, the Score is calculated and shown-->
 			<b>{row.name}</b> by
 			<i>{row.brand}</i>
 		</summary>
 		<p>
 			<img src={row.images.productTile.url} alt="" />
 			The Score of this product is {i} 
-			- Shop the {row.url} product <a href={row.url}>here</a> for
+			- Shop the product <a href={row.url}>here</a> for
 			{row.price.minPrice} EURO
 			{info}
 		</p>
