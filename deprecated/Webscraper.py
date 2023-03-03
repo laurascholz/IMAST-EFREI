@@ -1,3 +1,8 @@
+
+#----This WAS a first try for a webscraper but it is too slow  -----  find the new scraper in the Flask API folder
+
+
+
 #  -------------------------- necessary packets and imports for vs code----------------------------
 #pip install html5lib
 #pip install requests

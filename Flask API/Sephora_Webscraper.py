@@ -6,7 +6,7 @@
 #py -m venv env
 
 import requests
-import requests_random_user_agent     #automatically creates a random user
+import requests_random_user_agent     #automatically creates a random user for every session
 from bs4 import BeautifulSoup
 from urllib.parse import urlencode
 
@@ -39,44 +39,24 @@ def crawl(search):
 
   return hits
 
-  # a list to store product URLs to access the ingredients
-  products = []
 
-  #Get all products details in hits
-  for x in hits:
-    id = x["id"]
-    details = [{}]
-    brand = x["brand"]     
-    name = x["name"]
-    price = str(x["price"]["minPrice"])
-    url = x["url"]
-    image = x["images"]["productTile"]["url"]
-    print("id: "  +  x["id"])      
-    print("brand: " + x["brand"])     
-    print("name: " + x["name"])
-    print("price: " + str(x["price"]["minPrice"]))
-    print("url: " +  x["url"])
-    print("image: " + x["images"]["productTile"]["url"])
-    url= x["url"]
-    products.append(url)
-    print()
 
-  print(products)
   #------web scraper for ingredients------
-def scrape(url):
-  ingredients = ["Wasser", "Alcohol", "Fragrance"]
-  #ggf mit map machen 
-  
-  #for product in products:
+def scrape(url):   
+  ingredients = ""
   session = requests.Session()
   #print(session.headers['User-Agent'])
 
-  #r = session.get("https://www.sephora.fr/p/perfect-hair-day---shampooing-hydratant-587501.html")   
+  #the product page is saved and parsed into html code
   r = session.get(url)
-
   soup = BeautifulSoup(r.content, 'html.parser')
 
+  #the ingredients are accessed from their div container called "ingredients-content"
   ingredients = soup.find("div", class_ = "ingredients-content").text
 
-  #print(ingredients)
+  #remove sentence at the end of the ingredients list
+  substring = "Cette liste d'ingrédients peut faire l'objet de modifications, veuillez consulter l'emballage du produit acheté."
+  if substring in ingredients:
+    ingredients = ingredients.replace(substring, "")
+    
   return ingredients
