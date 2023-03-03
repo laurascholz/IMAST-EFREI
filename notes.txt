@@ -39,11 +39,9 @@ py -m -venv -env
 
 - müssen wir eingaben validieren, z. b. gegen crosssitescripting?
 
-
 -Score berechnen
--Readme update
-
 -db abfrage
-
 -report zu flask
 -db methode einbauen
+-ing check loeschen
+-server einrichten

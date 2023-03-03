@@ -1,4 +1,6 @@
-<!-- necessary npm installs: axios -->
+<!--                              The Main Page of the Website                            -->
+
+<!-- necessary npm install: axios -->
 <script>
 	// @ts-nocheck
 
