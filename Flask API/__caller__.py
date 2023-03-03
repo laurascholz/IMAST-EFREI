@@ -5,26 +5,34 @@ from flask import Flask
 from flask import request
 from flask_cors import CORS
 import Sephora_Webscraper as sephora 
+import json
 
-#create an instance of Flask
+#create an instance of Flask and enables Cross Origin Resource Sharing (CORS) for the sephora website
 app = Flask(__name__)
 CORS(app)
 
-
 #api call search_string -> product details and id
 @app.route('/')
-def index():
-    search = request.args.get('search')
-    print(search)
-    return sephora.crawl(search)
-        #test, ob bereits in db vorhanden   ->oder sowas wie preise immer aktuell verwenden, weil sich sowas schnell aendert
-        #wenn ja, dann db zugriff
-        #wenn nein, dann api zugriff, webscraper und score Berechnung
-        #andererseits ist das programm eh schneller als ein db zugriff
+def search():
+  search = request.args.get('search')
+  print(search)
+  return sephora.crawl(search)
 
-#second api call: id -> ingredients and score
-@app.route('/')
-def ingredients():
-    id = request.args.get('id')
+#api call id -> database entry   OR     url -> web scraper results
+#to get the ingredients
+@app.route('/products', methods = ['GET', 'POST'])  
+def ingredients_post():
+  if request.method == 'POST':
+    data = request.get_json()      
+    print(data)
+    id = data['id']
+    #test, ob bereits in db vorhanden  
+    #wenn ja, dann db zugriff
+    #wenn nein, dann api zugriff, webscraper und score Berechnung
+    url = data['url']
+    
     print(id)
-    return sephora.scrape(id) 
+    print(url)
+    return sephora.scrape(url)  #später url
+  else:  return "hello"
+

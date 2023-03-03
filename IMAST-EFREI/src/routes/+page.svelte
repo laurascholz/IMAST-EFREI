@@ -11,9 +11,12 @@
 
 	let search_string = '';
 	let data = [];
-	let loading = false;
+	let loading = false;			//loading sign for bad connection or longer calculation
 	let info = [];
+	let url = "";
+	let id = "";
 	
+	//getData function is called for every change of search_string
 	$: getData(search_string);
 	$: if(search_string == "") data=[];
 
@@ -22,7 +25,6 @@
 		search_string = e.target.value;
 	}, 300);
 
-	//getData function is used as API caller function
 	//Flask-API call 1: search_string -> product ids and information without the ingredients and score
 	async function getData() {
 		try {
@@ -43,7 +45,6 @@
 				})
 				.finally(function () {
 					loading = false
-
 					// always executed
 				});
 		} catch (err) {
@@ -51,38 +52,43 @@
 		}
 	}
 
-
-	//Flask-API call 2: product ids -> product ingresdients scraping and score calculation
-	async function getScore(id) {
-		console.log("Active")
+	//Flask-API call 2: product ids -> check if product in database
+	//		ELSE 		product url -> product ingredients scraping and score calculation
+	async function getScore(id, url, search_string) {
+		//console.log("Active")
 		info = [];
-		//use the ids to access the other data from database or website
+		url = url;
+		id = id;
+		search_string = search_string
+		console.log(search_string)
+		//use the ids to access the other data from database or the url to use the webscraper 
 		try {
-			await axios
-				.get('http://127.0.0.1:5000/?id=' + id)    //("/<int:api_id>")
+			loading = true
+			await axios.post('http://127.0.0.1:5000/products', {id: id, url: url, search: search_string}) 	  
 				.then(function (response) {
 					// handle success
+					loading = false
 					info = response.data;
-					console.log(info)
+					//console.log(info)
 				})
 				.catch(function (error) {
 					// handle error
+					loading = false
 					console.log(error);
 				})
 				.finally(function () {
 					// always executed
+					loading = false
 				});
 		} catch (err) {
 			console.log(err);
-		}
+		}  
 	}
 </script>
 
-<!-- searchbar with submit button - search string can be entered either with pressing enter oder pressing submit -->
-<!-- search string is saved in variable search and bind: updates the value with every character change-->
+<!-- searchbar: search_string is saved delayed -->
 <div class="grid">
 	<div>
-		<!-- the API caller function is used by the search bar when pressing enter-->
 		<input
 			type="search"
 			id="search"
@@ -92,11 +98,29 @@
 			required
 		/>
 	</div>
-	<!--<div>
-		<p>              </p>
-		<a href="/product" role="button" type="submit" on:click={getData()}>Search for the product</a>
-	</div> -->
 </div>
+
+<!-- results within accordions-->
+{#if search_string == ""}
+	<p aria-busy={loading}>Check products of your choice for harmful ingredients by adding their name in the searchbar</p>
+{:else}
+{#each data as row, i}
+	<details>
+		<summary on:focus={() => getScore(row.id, row.url, search_string)}>		<!-- whenever a product is selected, the Score is calculated and shown-->
+			<b>{row.name}</b> by
+			<i>{row.brand}</i>
+		</summary>
+		<p>
+			<img src={row.images.productTile.url} alt="" />
+			The Score of this product is {i} 
+			- Shop the product <a href={row.url}>here</a> for
+			{row.price.minPrice} EURO
+			{info}
+		</p>
+	</details>
+{/each}
+{/if}
+
 
 <!--else:  when clicking on the button, the API request will be sent with the onMount function-->
 <!--
@@ -109,22 +133,7 @@ goto(url: "C:\Users\laura\OneDrive\Dokumente\GitHub\IMAST-EFREI\IMAST-EFREI\src\
 , redirect("/product")  
 immer Fehlermeldung identifier expected-->
 
-{#if search_string == ""}
-	<p aria-busy={loading}>Check products of your choice for harmful ingredients by adding their name in the searchbar</p>
-{:else}
-{#each data as row, i}
-	<details>
-		<summary on:focus={() => getScore(row.id)}>
-			<b>{row.name}</b> by
-			<i>{row.brand}</i>
-		</summary>
-		<p>
-			<img src={row.images.productTile.url} alt="" />
-			The Score of this product is {i}
-			- Shop the product <a href={row.url}>here</a> for
-			{row.price.minPrice} EURO, id: {row.id}
-			
-		</p>
-	</details>
-{/each}
-{/if}
+<!--<div>
+		<p>              </p>
+		<a href="/product" role="button" type="submit" on:click={getData()}>Search for the product</a>
+	</div> -->

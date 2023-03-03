@@ -34,8 +34,6 @@ def crawl(search):
   #convert to json object, results will be returned to the website
   result = r.json()
 
-
-
   #Get all hits from result      
   hits = result["results"][0]["hits"]
 
@@ -65,19 +63,20 @@ def crawl(search):
 
   print(products)
   #------web scraper for ingredients------
-def scrape(id):
+def scrape(url):
   ingredients = ["Wasser", "Alcohol", "Fragrance"]
+  #ggf mit map machen 
+  
+  #for product in products:
+  session = requests.Session()
+  #print(session.headers['User-Agent'])
 
+  #r = session.get("https://www.sephora.fr/p/perfect-hair-day---shampooing-hydratant-587501.html")   
+  r = session.get(url)
+
+  soup = BeautifulSoup(r.content, 'html.parser')
+
+  ingredients = soup.find("div", class_ = "ingredients-content").text
+
+  #print(ingredients)
   return ingredients
-  for product in products:
-    session = requests.Session()
-    #print(session.headers['User-Agent'])
-
-    #r = session.get("https://www.sephora.fr/p/perfect-hair-day---shampooing-hydratant-587501.html")   
-    r = session.get(product)
-
-    soup = BeautifulSoup(r.content, 'html.parser')
-
-    ingredients = soup.find("div", class_ = "ingredients-content").text
-
-    print(ingredients)
