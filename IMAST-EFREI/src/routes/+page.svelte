@@ -13,6 +13,8 @@
 	let data = [];
 	let loading = false;			//loading sign for bad connection or longer calculation
 	let info = [];
+	let url = "";
+	let id = "";
 	
 	//getData function is called for every change of search_string
 	$: getData(search_string);
@@ -52,20 +54,23 @@
 	}
 
 
-	//Flask-API call 2: product ids -> product ingresdients scraping and score calculation
-	async function getScore(id) {
-		console.log("Active")
+	//Flask-API call 2: product ids -> check if product in database
+	//		ELSE 		product url -> product ingredients scraping and score calculation
+	async function getScore(id, url) {
+		//console.log("Active")
 		info = [];
-		//use the ids to access the other data from database or website
+		url = url;
+		id = id;
+		//use the ids to access the other data from database or the url to use the webscraper 
 		try {
-			await axios
-				.get('http://127.0.0.1:5000/products/?id=' + id)    //("/<int:api_id>")
+			await axios.post('http://127.0.0.1:5000/products', {id: id, url: url}) //products/?id=' + id, {	("/<int:api_id>")	
+   
 				.then(function (response) {
 					// handle success
 					//map angucken und damit machen
 					//product id = map id unten im code
 					info = response.data;
-					console.log(info)
+					//console.log(info)
 				})
 				.catch(function (error) {
 					// handle error
@@ -76,7 +81,7 @@
 				});
 		} catch (err) {
 			console.log(err);
-		}
+		}  
 	}
 </script>
 
@@ -100,15 +105,15 @@
 {:else}
 {#each data as row, i}
 	<details>
-		<summary on:focus={() => getScore(row.id)}>
+		<summary on:focus={() => getScore(row.id, row.url)}>		<!-- whenever a product is selected, the Score is calculated and shown-->
 			<b>{row.name}</b> by
 			<i>{row.brand}</i>
 		</summary>
 		<p>
 			<img src={row.images.productTile.url} alt="" />
-			The Score of this product is {i}
-			- Shop the product <a href={row.url}>here</a> for
-			{row.price.minPrice} EURO, id: {row.id}
+			The Score of this product is {i} 
+			- Shop the {row.url} product <a href={row.url}>here</a> for
+			{row.price.minPrice} EURO
 			{info}
 		</p>
 	</details>
