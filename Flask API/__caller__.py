@@ -15,12 +15,17 @@ CORS(app)
 #api call search_string -> product details and id
 @app.route('/')
 def search():
-  #search string is saved in database
+  
+  #insert search string in database if it doesn't already exist
   search = request.args.get('search')
-  insert.searchstring_insert(search)
+  if insert.searchstring_select(search) == 404:
+    insert.searchstring_insert(search)
+  #else update search_date
+  else: insert.searchstring_update(search)
+  
   
   #Get all products details for the database
-  results =sephora.crawl(search) 
+  results = sephora.crawl(search) 
   for x in results:
     api_id = x["id"]
     product_brand = x["brand"]     
@@ -28,7 +33,11 @@ def search():
     product_price = str(x["price"]["minPrice"])
     product_url = x["url"]
     product_image = x["images"]["productTile"]["url"]
-    insert.product_insert(search, api_id, product_name, product_brand, product_price, product_url, product_image)
+    #only add products to database that don't already exist
+    if insert.product_select(api_id, product_name) == 404:
+      insert.product_insert(search, api_id, product_name, product_brand, product_price, product_url, product_image)
+    #else update product url, image and price in database
+    else: insert.product_update(search, api_id, product_name, product_price, product_url, product_image)
   return results
 
 #api call id -> database entry   OR     url -> web scraper results   to get the ingredients
@@ -37,15 +46,18 @@ def ingredients_post():
   if request.method == 'POST':
     data = request.get_json()      
     #print(data)
-    id = data['id']
+    api_id = data['id']
+    product_name = data['name']
     #test, ob bereits in db vorhanden 
-     
+    print(product_name)
     #wenn ja, dann db zugriff
     #wenn nein, dann api zugriff, webscraper und score Berechnung
     url = data['url']
 
     #print(id)
     #print(url)
-    return sephora.scrape(url)  
+    ingredients_list = sephora.scrape(url)  
+    insert.ingredients_insert(api_id, product_name, ingredients_list)
+    return sephora.scrape(url)
   else:  return "Error"
 
