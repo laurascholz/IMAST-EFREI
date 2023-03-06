@@ -7,6 +7,10 @@ from datetime import datetime
 
 # pip(3) list ; show the installed packages
 
+"""
+    Methods for search string
+"""
+
 def searchstring_insert(search_string): #method to save search string in database
 
     """
@@ -297,7 +301,7 @@ def product_insert(search_string, api_id, product_name, product_brand, product_p
         cursor.close()
         conn.close()        
 
-def search_product(api_id, product_name): 
+def product_select(api_id, product_name): 
 
     """
     Step 1.1 Create SQL Server Connection String
