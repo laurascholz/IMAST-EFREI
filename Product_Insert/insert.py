@@ -490,7 +490,10 @@ def product_update(search_string, api_id, product_name, product_price, product_l
         print('Product and Relation to searchstring updated.')
         cursor.close()
         conn.close()        
-        
+
+"""
+    Methods for product
+"""        
 
 def ingredients_insert(api_id, product_name, ingredients_list): #method to save ingredients in database with relation to product
 
@@ -544,13 +547,13 @@ def ingredients_insert(api_id, product_name, ingredients_list): #method to save 
     
     sql_select_ingredientslist_id = '''
          SELECT id FROM ingredientslist
-            WHERE ingredientslist_name = ? AND ingredientslist_string = ? 
-     '''       
-    
+            WHERE ingredientslist_name = ? AND ingredientslist_string LIKE ?
+     '''
+
     sql_update_product = '''
          UPDATE product 
              SET ingredientslist_id = ?
-                WHERE id = ? 
+                WHERE id = ? AND product_name = ?
      '''
        
     try:
@@ -581,7 +584,10 @@ def ingredients_insert(api_id, product_name, ingredients_list): #method to save 
         cursor.commit(); 
         # ingredientslist_id searched   
         
-        cursor.execute(sql_update_product(ingredientslist_id,product_id))
+        print(type(product_id))
+        print(type(ingredientslist_id))
+        print(type(product_name))
+        cursor.execute(sql_update_product,(ingredientslist_id,product_id, product_name))
         cursor.commit(); 
         # ingredientlist_id added to table product
         
