@@ -57,7 +57,15 @@ def ingredients_post():
     #print(id)
     #print(url)
     ingredients_list = sephora.scrape(url)  
-    insert.ingredients_insert(api_id, product_name, ingredients_list)
+
+    #if ingredients doesnt exist for the product, insert ingredientslist in relation
+    if insert.ingredients_select(api_id, product_name) == 404:
+      insert.ingredients_insert(api_id, product_name, ingredients_list)
+    #else update ingredientlis of product
+    else: insert.ingredients_update(api_id, product_name, ingredients_list)
+
+    harmless = "5"
+    harmfull = "13"
     return sephora.scrape(url)
   else:  return "Error"
 
