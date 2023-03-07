@@ -492,7 +492,7 @@ def product_update(search_string, api_id, product_name, product_price, product_l
         conn.close()        
 
 """
-    Methods for product
+    Methods for ingredients
 """        
 
 def ingredients_insert(api_id, product_name, ingredients_list): #method to save ingredients in database with relation to product
