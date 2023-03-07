@@ -18,9 +18,10 @@ try:
         #      insert.product_insert(searchstring,api_id,product_name,product_brand,product_price,product_link,product_image) # insert in database
        #else: 
           #    insert.product_update(searchstring, api_id, product_name, product_price, product_link,product_image)  # else update product_price, product_link and insert a new relation if neccessary
-       
-       insert.ingredients_insert(api_id, product_name, ingredients_list)
-       
+       if insert.ingredients_select(api_id, product_name) == 404:
+              insert.ingredients_insert(api_id, product_name, ingredients_list)
+       else:
+              print('Ingredients already exists.')
 except:
        print("Fehler bei Suche.")
     
