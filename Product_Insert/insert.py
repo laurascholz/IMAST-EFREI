@@ -547,7 +547,7 @@ def ingredients_insert(api_id, product_name, ingredients_list): #method to save 
     
     sql_select_ingredientslist_id = '''
          SELECT id FROM ingredientslist
-            WHERE ingredientslist_name = ? AND ingredientslist_string LIKE ?
+            WHERE ingredientslist_name = ? AND ingredientslist_string = CONVERT(NVARCHAR(MAX),?)
      '''
 
     sql_update_product = '''
@@ -558,7 +558,7 @@ def ingredients_insert(api_id, product_name, ingredients_list): #method to save 
        
     try:
         cursor = conn.cursor()
-        cursor.execute(sql_insert_ingredients, (product_name, ingredients_list))
+        cursor.execute(sql_insert_ingredients,(product_name, ingredients_list))
         cursor.commit(); 
         # ingredients saved
         
@@ -572,11 +572,13 @@ def ingredients_insert(api_id, product_name, ingredients_list): #method to save 
             print(product_id)
         cursor.commit();      
         # product_id searched
-        
+            
         cursor.execute(sql_select_ingredientslist_id,(product_name,ingredients_list))
         ingredientslist = cursor.fetchone()
-        if ingredientslist == []:
-            print('404: Search String not found in Database')
+        print(ingredientslist)
+        cursor.commit() 
+        if ingredientslist == None:
+            print('404: Ingredients_ID not found in Database')
             return 404
         else: 
             ingredientslist_id = ingredientslist[0]
@@ -584,9 +586,6 @@ def ingredients_insert(api_id, product_name, ingredients_list): #method to save 
         cursor.commit(); 
         # ingredientslist_id searched   
         
-        print(type(product_id))
-        print(type(ingredientslist_id))
-        print(type(product_name))
         cursor.execute(sql_update_product,(ingredientslist_id,product_id, product_name))
         cursor.commit(); 
         # ingredientlist_id added to table product
