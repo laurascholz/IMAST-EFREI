@@ -11,7 +11,7 @@ import pandas as pd # pip(3) install pandas; clean up the data
 """
 Step 1. Importing dataset from CSV
 """
-df = pd.read_csv('BadIngredients/badingredients.csv')
+df = pd.read_csv('BadIngredients/ingredients_restricted.csv')
 # print(df) control if csv will be read
 
 """
@@ -29,7 +29,7 @@ except AttributeError as e:
 Step 2.2 Specify columns we want to import
 """
 
-columns = ['Chemical_name', 'Common_name']
+columns = ['Chemical name / INN', 'Name of Common Ingredients Glossary']
 
 df_data = df[columns]
 #print(df_data)
@@ -78,7 +78,7 @@ except odbc.Error as e:
 
 sql_insert = '''
     INSERT INTO badingredients(chemical_name,ingredient_name,explanation,source) 
-        VALUES (?,?,'Restricted in Cosmetic Products', 'https://ec.europa.eu/growth/tools-databases/cosing/index.cfm?fuseaction=search.results')
+        VALUES (?,?,'Restricted', 'https://ec.europa.eu/growth/tools-databases/cosing/index.cfm?fuseaction=search.results')
 '''
 
 try:
