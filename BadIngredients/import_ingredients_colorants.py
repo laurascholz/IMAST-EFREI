@@ -11,7 +11,7 @@ import pandas as pd # pip(3) install pandas; clean up the data
 """
 Step 1. Importing dataset from CSV
 """
-df = pd.read_csv('BadIngredients/ingredients_restricted.csv')
+df = pd.read_csv('BadIngredients/ingredients_colorants.csv') #colorants ingredients
 # print(df) control if csv will be read
 
 """
@@ -20,7 +20,7 @@ Step 2.1 Data clean up
 df = df.fillna(value=0)  # replace NAN with 0 
 
 try:
-   df.drop(df.query('Chemical_name'.isnull()).index, inplace=True) # delete data where chemical name is NULL
+   df.drop(df.query('Chemical name'.isnull()).index, inplace=True) # delete data where chemical name is NULL
 except AttributeError as e:
     print('Dataset is correct.')    
     
@@ -29,11 +29,10 @@ except AttributeError as e:
 Step 2.2 Specify columns we want to import
 """
 
-columns = ['Chemical name / INN', 'Name of Common Ingredients Glossary']
+columns = ['Chemical name', 'Colour index Number / Name of Common Ingredients Glossary']
 
 df_data = df[columns]
 #print(df_data)
-#records = pd.DataFrame(df_data)
 
 records = df_data.values.tolist()  
 #print(records) # to control if the right columns were selected
@@ -78,13 +77,11 @@ except odbc.Error as e:
 
 sql_insert = '''
     INSERT INTO badingredients(chemical_name,ingredient_name,explanation,source) 
-        VALUES (?,?,'Restricted', 'https://ec.europa.eu/growth/tools-databases/cosing/index.cfm?fuseaction=search.results')
+        VALUES (?,?,'Colorant', 'https://ec.europa.eu/growth/tools-databases/cosing/pdf/COSING_Annex%20IV_v2.csv')
 '''
 
 try:
     cursor = conn.cursor()
-    #row = next(records.iterrows())[1]
-    #for index, row in records.iterrows():
     for i in records:
                 print(i)
                 cursor.execute(sql_insert,(i))
@@ -96,16 +93,3 @@ finally:
     print('Task is complete.')
     cursor.close()
     conn.close()
-    
-    
-#try:
-  #  cursor = conn.cursor()
-   # cursor.executemany(sql_insert, records)
-   # cursor.commit();    
-#except Exception as e:
-  #  cursor.rollback()
-   # print(str(e))
-#finally:
-  #  print('Task is complete.')
-   # cursor.close()
-   # conn.close()
