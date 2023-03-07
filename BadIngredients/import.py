@@ -29,13 +29,13 @@ except AttributeError as e:
 Step 2.2 Specify columns we want to import
 """
 
-columns = ['Chemical_name', 'Common_name',
-           'Used_for']
+columns = ['Chemical_name', 'Common_name']
 
 df_data = df[columns]
-records = pd.DataFrame(df_data)
+#print(df_data)
+#records = pd.DataFrame(df_data)
 
-#records = df_data.values.tolist()  
+records = df_data.values.tolist()  
 #print(records) # to control if the right columns were selected
 
 
@@ -76,21 +76,19 @@ except odbc.Error as e:
 #Step 3.3 Create a cursor connection and insert records
 """
 
-#sql_insert = '''
-   # INSERT INTO badingredients(chemical_name,ingredient_name,product_type,explanation,source) 
-    #    VALUES (?,?,?,'Restricted in Cosmetic Products', 'https://ec.europa.eu/growth/tools-databases/cosing/index.cfm?fuseaction=search.results')
-#'''
+sql_insert = '''
+    INSERT INTO badingredients(chemical_name,ingredient_name,explanation,source) 
+        VALUES (?,?,'Restricted in Cosmetic Products', 'https://ec.europa.eu/growth/tools-databases/cosing/index.cfm?fuseaction=search.results')
+'''
 
 try:
     cursor = conn.cursor()
-    row = next(records.iterrows())[1]
-    for index, row in records.iterrows():
-        cursor.executemany('''INSERT INTO badingredients(chemical_name,ingredient_name,product_type,explanation,source)  
-                VALUES (?,?,?,'Restricted in Cosmetic Products','https://ec.europa.eu/growth/tools-databases/cosing/index.cfm?fuseaction=search.results')
-                 '''#,
-                 #row['Chemical_name'],row['Common_name'],row['Used_for']
-                 )
-        cursor.commit();    
+    #row = next(records.iterrows())[1]
+    #for index, row in records.iterrows():
+    for i in records:
+                print(i)
+                cursor.execute(sql_insert,(i))
+                cursor.commit();    
 except Exception as e:
     cursor.rollback()
     print(str(e))
