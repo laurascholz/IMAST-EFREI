@@ -600,7 +600,7 @@ def ingredients_insert(api_id, product_name, ingredients_list): #method to save 
         conn.close()
         
 
-def ingredients_select(api_id, product_name): 
+def ingredients_select(api_id, product_name): #Method to check if a product contains an ingredientslist
 
     """
     Step 1.1 Create SQL Server Connection String
@@ -655,14 +655,14 @@ def ingredients_select(api_id, product_name):
         cursor = conn.cursor()
         cursor.execute(sql_select_ingredientslist_id,(api_id, product_name))
         ingredientslist = cursor.fetchone()
-        if ingredientslist == []:     # check if ingredientslist exists for product
+        ingredientslist_id = ingredientslist[0]
+        print(ingredientslist_id)
+        cursor.commit()  
+        if ingredientslist_id == None:     # check if ingredientslist exists for product
             print('404: Not found in Database')
             return 404
             
-        else: 
-            ingredientslist_id = ingredientslist[0]
-            print(ingredientslist_id)              
-            cursor.commit();   
+        else:              
             cursor.execute(sql_select_ingredients,(ingredientslist_id,product_name)) 
             ingredients = cursor.fetchone()
             print(ingredients)
@@ -672,6 +672,78 @@ def ingredients_select(api_id, product_name):
         cursor.rollback()
         print(str(e))
     finally:
-        print('Product search completed.')
+        print('Ingredients search completed.')
         cursor.close()
         conn.close() 
+        
+def ingredients_update(api_id, product_name, ingredients_list): #method to update ingredients in database with relation to product
+
+    """
+    Step 1.1 Create SQL Server Connection String
+    """
+
+    DRIVER = 'ODBC Driver 18 for SQL Server' 
+    SERVER_NAME = 'mysqlserverefrei.database.windows.net'
+    DATABASE_NAME = 'efrei'
+
+    def connection_string(driver, server_name, database_name):
+        conn_string = f"""
+            DRIVER={{{driver}}};
+            SERVER={server_name};
+            DATABASE={database_name};
+            Trust_Connection=yes; 
+            Uid=azureuser;
+            PwD=Efrei2023;         
+        
+        """
+        return conn_string
+    #print(connection_string(DRIVER,SERVER_NAME,DATABASE_NAME)) # to check the definition  
+
+    """"
+    #Step 1.2 Create database connection instance
+    """
+    try:
+        conn = odbc.connect(connection_string(DRIVER, SERVER_NAME, DATABASE_NAME))
+    except odbc.DatabaseError as e:
+        print('Database Error:')    
+        print(str(e.value[1]))
+    except odbc.Error as e:
+        print('Connection Error:')
+        print(str(e.value[1]))
+    # print (conn) #- show connnection
+    
+    """
+    #Step 1.3 Create a cursor connection and select ingredient_id from tabel product and update ingredientslist
+    """
+    
+    sql_update_ingredients = '''
+         UPDATE ingredientslist
+            SET ingredientslist_string = ?
+             WHERE id = ? AND ingredientslist_name = ?
+     '''
+
+    sql_select_ingredientslist_id = '''
+         SELECT ingredientslist_id FROM product
+            WHERE api_id = ? AND product_name = ?
+     '''
+       
+    try:
+        cursor = conn.cursor()
+        cursor.execute(sql_select_ingredientslist_id,(api_id, product_name))
+        ingredientslist = cursor.fetchone()
+        ingredientslist_id = ingredientslist[0]
+        print(ingredientslist_id)
+        cursor.commit()  
+        if ingredientslist_id == None:     # check if ingredientslist exists for product
+            print('404: Not found in Database')
+            return 404    
+        else:  
+            cursor.execute(sql_update_ingredients,(ingredients_list,ingredientslist_id,product_name)) #update ingredientslist
+        
+    except Exception as e:
+        cursor.rollback()
+        print(str(e))
+    finally:
+        print('Ingredients updated in Database.')
+        cursor.close()
+        conn.close()
