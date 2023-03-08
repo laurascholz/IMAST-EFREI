@@ -4,20 +4,22 @@
 	import { onMount } from 'svelte';
 	import Chart from 'chart.js/auto';
 
-	export let harmful_initial; //= ["0"];
-	export let harmless_initial; //= ["1"];
-	export let loading;
+	//export let harmful_initial; //= ["0"];
+	//export let harmless_initial; //= ["1"];
+	export let harmful; //= ["0"];
+	export let harmless; //= ["1"];
+	//export let loading;
 
 	let loaded = false;
 
-	let harmful = harmful_initial;
-	let harmless = harmless_initial;
+	//let harmful = harmful_initial;
+	//let harmless = harmless_initial;
 
-	$: if (loading == false && loaded == false) {
+	/*$: if (loading == false && loaded == false) {
 		loaded = true;
 		harmful = harmful_initial;
 		harmless = harmless_initial;
-	}
+	}*/
 
 
 	let portfolio = document.getElementById('canvas');
@@ -75,8 +77,10 @@
 	onMount(createDoughnut);
 </script>
 
-{#if loaded == false}
+<!--{#if loaded == false}
 	<p aria-busy="true" />
 {:else}
 	<canvas id="canvas" bind:this={portfolio} width={3} height={3} />
-{/if}
+{/if}-->
+
+<canvas id="canvas" bind:this={portfolio} width={3} height={3} />

@@ -60,10 +60,13 @@ def scrape(url):
   substring3 = "Ingrediente"
   substring4 = "INGREDIENTS"
   substring5 = "(1)certified organic ingredient"
-  sub_list = [substring, substring2, substring3, substring4, substring5]
+  substring6 = "AVANT D’UTILISER UN PRODUIT DE NOTRE MARQUE, VOUS ÊTES INVITÉS À LIRE LA LISTE D’INGRÉDIENTS FIGURANT SUR SON EMBALLAGE AFIN DE VOUS ASSURER QUE LES INGRÉDIENTS SONT ADAPTÉS À VOTRE UTILISATION PERSONNELLE"
+  sub_list = [substring, substring2, substring3, substring4, substring5, substring6]
   for sub in sub_list:
     if sub in ingredients:
       ingredients = ingredients.replace(sub, "")    
+  ingredients = ingredients.replace("•",",")
+  
   
   #ingredients are saved all caps
   ingredients = ingredients.upper()
