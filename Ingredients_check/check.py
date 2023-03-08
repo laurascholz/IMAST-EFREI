@@ -54,18 +54,17 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
     
     sql_select_badingredient_id = '''
          SELECT id FROM badingredients
-            WHERE chemical_name = CONVERT(NVARCHAR(MAX),?) OR ingredient_name = CONVERT(NVARCHAR(MAX),?)
+            WHERE chemical_name LIKE CONVERT(NVARCHAR(MAX),?) OR ingredient_name LIKE CONVERT(NVARCHAR(MAX),?)    
      '''
-    
      
     sql_insert_ingredientscheck = '''
          INSERT INTO ingredientscheck(ingredientslist_id,badingredients_id) 
-             VALUES (%?%,%?%)
+             VALUES (?,?)
      '''
      
     sql_update_ingredients = '''
          UPDATE ingredientslist
-            SET ingredientslist_harmfull = ? AND ingredientslist_harmless
+            SET ingredientslist_harmfull = ?, ingredientslist_harmless = ?
              WHERE id = ? AND ingredientslist_name = ?
      '''
        
@@ -89,24 +88,37 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
             for  i in ingredientslist:
                  #print(i)
                  ingredients = str(i)
-                 print(ingredients)
+                 #print(ingredients)
 
-            ingredient = ingredients.split(',')
-            #print(ingredient)
+            ingredient = ingredients.split(',') #', '
+            print(ingredient)
+            counter_harmfull = 0
+            counter_harmless = 0
             for i in ingredient:
                 print(i)
-                cursor.execute(sql_select_badingredient_id,(i,i))
+                remove = i.strip()    #Whitespeace removed at the beginning and end of string
+                insert = "%" + remove + "%"  #search for word in a string 
+                #print(insert)
+                cursor.execute(sql_select_badingredient_id,(insert,insert))
                 badingredient = cursor.fetchone()  
-                #print(badingredient)
+                #print(badingredient)s
                 
                 if badingredient == None:     # check if ingredientslist exists for product
                           print('404: Not found in Database')
+                          counter_harmless += 1
                           
-                else:  print("Bad ingredient found")  
-                #cursor.commit()          
-            
-           
-            #return ingredients
+                else: 
+                       #print("Bad ingredient found") 
+                        counter_harmfull +=1
+                        badingredient_id = badingredient[0]
+                        print(badingredient_id)
+                        cursor.execute(sql_insert_ingredientscheck,(ingredientslist_id,badingredient_id))
+                        cursor.commit()  
+                                
+        print(counter_harmfull)
+        print(counter_harmless)   
+        cursor.execute(sql_update_ingredients,(counter_harmfull,counter_harmless,ingredientslist_id,product_name))
+        cursor.commit()    
        
     except Exception as e:
         cursor.rollback()
