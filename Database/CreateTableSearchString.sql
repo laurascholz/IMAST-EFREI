@@ -8,8 +8,7 @@ GO
 CREATE TABLE searchstring
 (
     id INT NOT NULL PRIMARY KEY IDENTITY(1,1), -- primary key column
-    string VARCHAR(100) NOT NULL,
-    search_link VARCHAR(100) NOT NULL,
+    search_string VARCHAR(1000) NOT NULL,
     search_date datetime default CURRENT_TIMESTAMP NOT NULL,
     website_name VARCHAR(100)
 
