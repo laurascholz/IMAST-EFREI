@@ -60,7 +60,7 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
      
     sql_insert_ingredientscheck = '''
          INSERT INTO ingredientscheck(ingredientslist_id,badingredients_id) 
-             VALUES (?,?)
+             VALUES (%?%,%?%)
      '''
      
     sql_update_ingredients = '''
@@ -97,10 +97,11 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
                 print(i)
                 cursor.execute(sql_select_badingredient_id,(i,i))
                 badingredient = cursor.fetchone()  
-                print(badingredient)
+                #print(badingredient)
+                
                 if badingredient == None:     # check if ingredientslist exists for product
                           print('404: Not found in Database')
-                          return 404
+                          
                 else:  print("Bad ingredient found")  
                 #cursor.commit()          
             
