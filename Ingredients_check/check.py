@@ -51,6 +51,12 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
          SELECT ingredientslist_string FROM ingredientslist
             WHERE id = ? AND ingredientslist_name = ?
      '''
+    
+    sql_select_badingredient_id = '''
+         SELECT id FROM badingredients
+            WHERE chemical_name = CONVERT(NVARCHAR(MAX),?) OR ingredient_name = CONVERT(NVARCHAR(MAX),?)
+     '''
+    
      
     sql_insert_ingredientscheck = '''
          INSERT INTO ingredientscheck(ingredientslist_id,badingredients_id) 
@@ -88,8 +94,16 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
             ingredient = ingredients.split(',')
             #print(ingredient)
             for i in ingredient:
-               print(i)
-             
+                print(i)
+                cursor.execute(sql_select_badingredient_id,(i,i))
+                badingredient = cursor.fetchone()  
+                print(badingredient)
+                if badingredient == None:     # check if ingredientslist exists for product
+                          print('404: Not found in Database')
+                          return 404
+                else:  print("Bad ingredient found")  
+                #cursor.commit()          
+            
            
             #return ingredients
        

@@ -3,13 +3,14 @@
 #die Berechnung  eines Scores ist nicht moeglich, da nicht alle Produkte mit Kommas getrennt sind 
 #bisher kann deshalb nur ausgegeben werden, welche schlechten Stoffe enthalten sind
 
-ing_list= ["Hallo Wasser Niacinamid Luft BHA Tea Tree Extract AHA Glycerin"]  # List of ingredients of cosmetic product
+ing_list= ["Hallo ,Wasser, Niacinamid : Luft, Erde BHA Tea Tree Extract AHA Glycerin"]  # List of ingredients of cosmetic product
 bad = ["Niacinamid", "Luft", "Erde", "AHA"]                                # List of bad ingredients
  
 counter = 0             #counter of bad ingredients found
 j = 0  
 k = 0
-ing_number = len(ing_list)     #number of ingredients in ing_Liste
+ing_number = len(ing_list)  #number of ingredients in ing_Liste
+#print(ing_number)
 while  len(bad)  > j:                        #as long as there are ingredients in the bad List left,...
     while ing_number > k:                   #the ingredients list of the product is checked for the bad ingredient
         if bad[j] in ing_list[k]:
@@ -20,7 +21,7 @@ while  len(bad)  > j:                        #as long as there are ingredients i
     k = 0   
     
     #print(j + counter)
-
+    print(counter)
 #score = counter / ing_number              #a score is calculated
 #print(score)
 
