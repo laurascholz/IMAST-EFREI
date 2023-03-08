@@ -54,9 +54,20 @@ def scrape(url):
   #the ingredients are accessed from their div container called "ingredients-content"
   ingredients = soup.find("div", class_ = "ingredients-content").text
 
-  #remove sentence at the end of the ingredients list
+  #removes all non ingredient words from ingredients list
   substring = "Cette liste d'ingrédients peut faire l'objet de modifications, veuillez consulter l'emballage du produit acheté."
-  if substring in ingredients:
-    ingredients = ingredients.replace(substring, "")
-    
+  substring2 = "Les listes d’ingrédients entrant dans la composition des produits de notre marque sont régulièrement mises à jour. Avant d’utiliser un produit de notre marque, vous êtes invités à lire la liste d’ingrédients figurant sur son emballage afin de vous assurer que les ingrédients sont adaptés à votre utilisation personnelle "
+  substring3 = "Ingrediente"
+  substring4 = "INGREDIENTS"
+  substring5 = "(1)certified organic ingredient"
+  substring6 = "AVANT D’UTILISER UN PRODUIT DE NOTRE MARQUE, VOUS ÊTES INVITÉS À LIRE LA LISTE D’INGRÉDIENTS FIGURANT SUR SON EMBALLAGE AFIN DE VOUS ASSURER QUE LES INGRÉDIENTS SONT ADAPTÉS À VOTRE UTILISATION PERSONNELLE"
+  sub_list = [substring, substring2, substring3, substring4, substring5, substring6]
+  for sub in sub_list:
+    if sub in ingredients:
+      ingredients = ingredients.replace(sub, "")    
+  ingredients = ingredients.replace("•",",")
+  
+  
+  #ingredients are saved all caps
+  ingredients = ingredients.upper()
   return ingredients

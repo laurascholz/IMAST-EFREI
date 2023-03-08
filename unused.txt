@@ -1,0 +1,78 @@
+Submit Buttons with redirects:
+
+import { goto } from '$app/navigation';
+import { redirect } from '@sveltejs/kit';
+
+<!--else: {info} when clicking on the button, the API request will be sent with the onMount function-->
+<!--
+<div>
+	<button type="submit" on:click={() => getData()}>Search for the product</button>
+</div>
+-->
+<!-- results beneath the search bar  
+goto(url: "C:\Users\laura\OneDrive\Dokumente\GitHub\IMAST-EFREI\IMAST-EFREI\src\routes\product")
+, redirect("/product")  
+immer Fehlermeldung identifier expected-->
+
+<!--<div>
+		<p>              </p>
+		<a href="/product" role="button" type="submit" on:click={getData()}>Search for the product</a>
+	</div> -->
+
+
+
+Version of Donut-Chart in the homepage, not as an extra component:
+import Chart from 'chart.js/auto';
+
+//let assessment;
+
+//the doughnut element illustrates the assessment of the ingredients
+	//data2 has the data to the Doughnut Chart.js Element
+	/*const data2 = {
+		labels: ['Harmful', 'Harmless'],
+		datasets: [
+			{
+				label: 'Ingredients Assessment',
+				data: [100, 300], // these values will be the ingredients
+				backgroundColor: ['#FF0000', '#00ff00'],
+				//hoverOffset: 4,    keine ahnung was das macht
+				borderWidth: 0
+			}
+		]
+	};
+	const config = {
+		//config defines the type of chart, here doughnut
+		type: 'doughnut',
+		data: data2,
+		options: {
+			borderRadius: '30',
+			responsive: true,
+			cutout: '65%',
+			spacing: 2,
+			plugins: {
+				legend: {
+					position: 'bottom',
+					display: true,
+					labels: {
+						usePointStyle: true,
+						padding: 20,
+						font: {
+							size: 14
+						}
+					}
+				},
+				title: {
+					display: true,
+					text: 'Ingredients Assessment'
+				}
+			}
+		}
+	};
+	onMount(()=> {
+        const ctx = assessment.getContext('2d');
+        // Initialize chart using default config set
+        var myChart = new Chart(ctx, config);
+      })*/
+
+
+<canvas bind:this={assessment} width={3} height={3} />

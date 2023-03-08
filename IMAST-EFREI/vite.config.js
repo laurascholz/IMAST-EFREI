@@ -5,7 +5,10 @@ const config = {
 	plugins: [sveltekit()],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
-	}
+	}, 
+	ssr: {
+		noExternal: ['chart.js'],  //added for the chart
+	},
 };
 
-export default config;
+export default config;  

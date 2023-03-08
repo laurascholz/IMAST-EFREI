@@ -44,3 +44,8 @@ py -m -venv -env
 -report zu flask
 -ing check loeschen
 -server einrichten
+-caller so ändern, das bei bereits gespeicherten ingredients nichts erneut gespeichert wird?
+
+
+https://fontsource.org/docs/getting-started
+https://dev.to/wesleymutwiri/create-beautiful-charts-with-svelte-and-chart-js-512n
