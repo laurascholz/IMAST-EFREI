@@ -1,0 +1,13 @@
+import check
+
+#ingredients_list = ' DIMETHICONE, MICA, POLYMETHYLSILSESQUIOXANE, POLYSORBATE 20, ZINC STEARATE, SYNTHETIC FLUORPHLOGOPITE, DIISOSTEARYL MALATE, CAPRYLYL GLYCOL, PHENOXYETHANOL, SODIUM DEHYDROACETATE, POTASSIUM SORBATE, TIN OXIDE, HEXYLENE GLYCOL, RICINUS COMMUNIS SEED OIL, SODIUM HYALURONATE, HYDROGENATED CASTOR OIL  '
+api_id = 506128
+product_name = 'Bloom highlighting - Blush enlumineur'
+
+
+try:
+       check.ingredients_check(api_id, product_name)
+       
+
+except:
+       print("Fehler beim Check.")
