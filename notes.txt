@@ -45,6 +45,8 @@ py -m -venv -env
 -ing check loeschen
 -server einrichten
 -caller so ändern, das bei bereits gespeicherten ingredients nichts erneut gespeichert wird?
+-flask api so ändern, das das gecheckt wird nach vorhandenen ingredients
+-zweite zahl in rot anstatt als highlight
 
 
 https://fontsource.org/docs/getting-started

@@ -4,7 +4,8 @@
 from flask import Flask
 from flask import request
 from flask_cors import CORS
-import Sephora_Webscraper as sephora 
+import Sephora_Webscraper as sephora
+import check 
 import json
 import insert 
 
@@ -66,6 +67,14 @@ def ingredients_post():
 
     harmless = "5"
     harmfull = "13"
-    return sephora.scrape(url)
+    try:
+       if check.select_ingredientsscore(api_id, product_name) == 404:  #if count of harmfull and harmless ingredients dosnt exist in database
+              results = check.ingredients_check(api_id, product_name)   
+              print(results)
+              harmfull = [results[0], results[1]]
+              print(harmfull)
+    except:
+       print("Fehler beim Check.") 
+    return harmfull
   else:  return "Error"
 

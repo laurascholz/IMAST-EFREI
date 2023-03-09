@@ -65,6 +65,7 @@
 		id = id;
 		name = name;
 		err = false;
+		dataComplete = false;
 		//use the ids to access the other data from database or the url to use the webscraper
 		try {
 			loading = true;
@@ -73,10 +74,12 @@
 				.then(function (response) {
 					// handle success
 					ingrs = response.data;
-
+					console.log(ingrs)
 					//results values 
-					harmful = 15;
-					harmless = 100;
+					harmful = ingrs[0];
+					harmless = ingrs[1];
+					console.log(harmful);
+					console.log(harmless);
 					loading = false;
 					dataComplete = true;
 				})
@@ -133,12 +136,21 @@
 					<img src={row.images.productTile.url} alt="" />
 				</p>
 				{#if !err}  
-					<p>
-						The product includes <b><mark> XX </mark></b> harmful and <b><ins> YY </ins></b> harmless
-						ingredients.
-						<br />
-						- Shop the product <a href={row.url}>here</a> for {row.price.minPrice} EURO
-					</p>
+					{#if !dataComplete}
+						<p aria-busy=true>
+							Checking your products ingredients
+							<br />
+							- Shop the product <a href={row.url}>here</a> for {row.price.minPrice} EURO
+						</p>
+					{:else}
+						<p>
+							The product includes <b><mark> {harmful} </mark></b> harmful and <b><ins> {harmless} </ins></b> harmless
+							ingredients.
+							<br />
+							- Shop the product <a href={row.url}>here</a> for {row.price.minPrice} EURO
+						</p>
+					{/if}
+					
 					<p>
 						{#if dataComplete} <!-- Doughnut Chart is only created when the variables are updated -->
 						<!--<Doughnut bind:loading bind:harmful_initial={harmful} bind:harmless_initial={harmless} />-->
