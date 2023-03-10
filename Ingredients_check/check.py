@@ -76,7 +76,11 @@ def select_ingredientsscore(api_id, product_name): #Method to get the count of h
                     return 404
                 else:
                     print(i)
-            return ingredientscheck
+            harmfull = ingredientscheck[0]
+            harmless = ingredientscheck[1]
+            #print(harmfull)
+            #print(harmless)
+            return harmfull,harmless
 
             
        
