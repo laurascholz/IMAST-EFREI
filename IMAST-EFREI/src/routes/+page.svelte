@@ -16,6 +16,7 @@
 	let harmless = 1;				//results of ingredients check
 	let harmful = 0;
 	let dataComplete = false;		//variable for the doughnut chart
+	let number = 0;
 	
 	//variables in case of error
 	let err = false;				
@@ -66,6 +67,7 @@
 		name = name;
 		err = false;
 		dataComplete = false;
+		number = 0;
 		//use the ids to access the other data from database or the url to use the webscraper
 		try {
 			loading = true;
@@ -78,6 +80,7 @@
 					//results values 
 					harmful = ingrs[0];
 					harmless = ingrs[1];
+					number = harmful + harmless;
 					console.log(harmful);
 					console.log(harmless);
 					loading = false;
@@ -119,7 +122,20 @@
 </div>
 
 <!-- results within accordions-->
-{#if loading_string}
+{#if search_string == ""}
+	<br />
+	<h3>Welcome to <b> Cosmetic Checker </b>, our website that enables everyone to life live the healthiest! </h3>
+	
+	<p>
+		This app will help you evaluate your products and check if the ingredients are healthy. Our results are based of the <a href= "https://www.sephora.fr/" > Sephora </a> website. 
+		We use an API and web scraping to collect our results. Whether or not an ingredient is healthy is decided by comparing it to a list !LINK! published by the EU??.
+		We than show you how many potentially harmful ingredients are included in the product you searched for so that you can choose the healthy option!
+		<br /> <br />
+		Further information can be found in the <a href="/about"> about </a> section of our website.
+
+
+	</p>
+{:else if loading_string}
 	<p aria-busy=true>
 		Checking for products of your choice for harmful ingredients 
 	</p>
@@ -144,15 +160,19 @@
 						</p>
 					{:else}
 						<p>
-							The product includes <b><mark> {harmful} </mark></b> harmful and <b><ins> {harmless} </ins></b> harmless
-							ingredients.
+							The product consists of <b> {number}</b> ingredients: 
 							<br />
-							- Shop the product <a href={row.url}>here</a> for {row.price.minPrice} EURO
+							- <b><ins> {harmless} </ins></b> harmless <br/>
+							- <b><mark> {harmful} </mark></b> harmful 
+							
+							
+							<br /><br /><br /><br />
+							Shop the product <a href={row.url}>here</a> for <b>{row.price.minPrice}</b> € EURO
 						</p>
 					{/if}
 					
 					<p>
-						{#if dataComplete} <!-- Doughnut Chart is only created when the variables are updated -->
+						{#if dataComplete} <!-- ansonsten await function() nehmen? Doughnut Chart is only created when the variables are updated -->
 						<!--<Doughnut bind:loading bind:harmful_initial={harmful} bind:harmless_initial={harmless} />-->
 						<Doughnut bind:harmful bind:harmless />
 						{/if}
@@ -164,3 +184,50 @@
 		</details>
 	{/each}
 {/if}
+
+
+<style>
+	mark {
+		color:crimson;
+		background-color:white;
+	}
+	
+	b {
+		color:indigo;
+	}
+	a {
+		color:darkmagenta;
+	}
+
+	h3 {
+		text-align:center;
+	}
+	/*
+	p {
+		
+		background-color:honeydew;
+		border: 2px solid cadetblue;
+	
+	}
+	summary {
+		color:darkslateblue;
+	}
+	
+	mark {
+		color:crimson;
+		background-color:white;
+	}
+	p {
+		border-bottom: 2px solid limegreen;
+		padding: 10px;
+	}*/
+	 
+	/*button {
+		color: hotpink;
+		font-size: 20px;
+		font-weight: bold;
+		background-color: black;
+	}*/
+
+
+</style>

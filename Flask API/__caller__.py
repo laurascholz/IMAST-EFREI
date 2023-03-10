@@ -46,17 +46,15 @@ def search():
 def ingredients_post():
   if request.method == 'POST':
     data = request.get_json()      
-    #print(data)
     api_id = data['id']
     product_name = data['name']
-    #test, ob bereits in db vorhanden 
-    print(product_name)
+    url = data['url']
+    #test ob in db
     #wenn ja, dann db zugriff
     #wenn nein, dann api zugriff, webscraper und score Berechnung
-    url = data['url']
+    
 
-    #print(id)
-    #print(url)
+    #get ingredients through webscraping
     ingredients_list = sephora.scrape(url)  
 
     #if ingredients doesnt exist for the product, insert ingredientslist in relation
@@ -65,14 +63,16 @@ def ingredients_post():
     #else update ingredientlis of product
     else: insert.ingredients_update(api_id, product_name, ingredients_list)
 
-    harmless = "5"
     harmfull = "13"
     try:
-       if check.select_ingredientsscore(api_id, product_name) == 404:  #if count of harmfull and harmless ingredients dosnt exist in database
-              results = check.ingredients_check(api_id, product_name)   
-              print(results)
-              harmfull = [results[0], results[1]]
-              print(harmfull)
+      if check.select_ingredientsscore(api_id, product_name) == 404:  #if count of harmfull and harmless ingredients dosnt exist in database
+              results = check.ingredients_check(api_id, product_name)   #saves the values in database          
+
+      else: results = check.select_ingredientsscore(api_id, product_name) 
+              
+      print(results)
+      harmfull = [results[0], results[1]]
+              #print(harmfull)
     except:
        print("Fehler beim Check.") 
     return harmfull

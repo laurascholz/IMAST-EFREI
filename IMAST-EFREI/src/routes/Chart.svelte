@@ -39,7 +39,7 @@
 			{
 				label: 'Ingredients Assessment',
 				data: [harmful, harmless], // these values will be the ingredients
-				backgroundColor: ['#FF0000', '#00ff00'],
+				backgroundColor: ['#FF0000', '#228B22'],
 				//hoverOffset: 4,    keine ahnung was das macht
 				borderWidth: 0
 			}

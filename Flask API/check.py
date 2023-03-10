@@ -12,7 +12,7 @@ def select_ingredientsscore(api_id, product_name): #Method to get the count of h
 
     def connection_string(driver, server_name, database_name):
         conn_string = f"""
-            DRIVER={{{driver}}}; 
+            DRIVER={{{driver}}};
             SERVER={server_name};
             DATABASE={database_name};
             Trust_Connection=yes; 
@@ -76,7 +76,11 @@ def select_ingredientsscore(api_id, product_name): #Method to get the count of h
                     return 404
                 else:
                     print(i)
-            return ingredientscheck
+            harmfull = ingredientscheck[0]
+            harmless = ingredientscheck[1]
+            #print(harmfull)
+            #print(harmless)
+            return harmfull,harmless
 
             
        
@@ -218,5 +222,4 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
     finally:
         print('Ingredients check completed.')
         cursor.close()
-        conn.close() 
-        
+        conn.close()

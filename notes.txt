@@ -39,15 +39,88 @@ py -m -venv -env
 
 - müssen wir eingaben validieren, z. b. gegen crosssitescripting?
 
--Score berechnen
--db abfrage
--report zu flask
--ing check loeschen
+
 -server einrichten
 -caller so ändern, das bei bereits gespeicherten ingredients nichts erneut gespeichert wird?
 -flask api so ändern, das das gecheckt wird nach vorhandenen ingredients
 -zweite zahl in rot anstatt als highlight
+- text farbig machen
+- website aufhübschen
+-about seite ergänzen mit business plan
+-präsentation machen
+-report zuende machen
+-chart gleichmäßig groß erstellen
+-fehler mit den undefined finden
+- homepage information ändern
+
+-ggf database löschen
+-
+
+IDEEN für das anzeigen verschiedener Charts:
+
+.mehrere zeitgleich:
+- Ergebnisse in einem Array zeigen und nicht nur auf eine variable zugreifen? 
+mit der variablen i und einem hidden paragraph der die harmful variablen zuordnet?  => chart würde trotzdem immer verändert werden
+- einen timer nutzen, z.b. um von active auf inactive zu stellen?
+- chart über andere seite laufen lassen mit 10 leeren, die sich ggf. anpassen und dann nur die gefragten einbauen?
+
+.nur eins auf einmal:
+- schließen eines Accordions erzwingen, z. b. mit timer oder click count
 
 
 https://fontsource.org/docs/getting-started
 https://dev.to/wesleymutwiri/create-beautiful-charts-with-svelte-and-chart-js-512n
+
+
+let list = [{
+		id: 0
+	}, {
+		id: 1
+	}, {
+		id: 2
+	}, {
+		id: 3
+	}, {
+		id: 4
+	}, {
+		id: 5
+	}, {
+		id: 6
+	}];
+
+
+für jeden Klick / kauf geld bekommen
+  sephora affiliation program   wie viel genau man pro verkauf / werbung bekommen kann
+  2 examples of competitors
+
+  consumer segments -> young people, ads on social media, influencer marketing
+  ->everyone needs to buy cosmetic products
+  ->high interest in environment, healthyness
+  ->increase in organic and natural products
+  ->app would be usefull, as people like me might not understand the meaning of different ingredients
+  ->helps them
+
+  disruption  in Niche beginnen später größter, weil später größerer markt mit verbesserungen
+  -> schwieriger start, vielleicht crowd funding / werbung für customer traffic
+  -> big competitors like sephora
+
+  yuka vergleich 
+  vergleich mit competitor über kernzahlen -> pdf Datei
+  datenbank aufbau, speichern von daten bei competitions
+
+  preisvergleich o. ä. preisentwicklungen, günstigster preis bei verschiedenen websites
+  nachhaltige marken hervorheben, tierversuche
+
+  business to business möglichkeiten? sephora api algolia einfügen
+
+besonders harmful sachen hervorheben, ggf kategorie und score einbauen
+
+do we need to pay sephora? Algolia?
+
+
+
+
+wir können einen vergleich zu yuka im report machen
+
+
+
