@@ -83,4 +83,4 @@
 	<canvas id="canvas" bind:this={portfolio} width={3} height={3} />
 {/if}-->
 
-<canvas id="canvas" bind:this={portfolio} width={3} height={3} />
+<canvas id="canvas" bind:this={portfolio} width={300} height={300} />

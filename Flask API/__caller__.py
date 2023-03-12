@@ -49,10 +49,6 @@ def ingredients_post():
     api_id = data['id']
     product_name = data['name']
     url = data['url']
-    #test ob in db
-    #wenn ja, dann db zugriff
-    #wenn nein, dann api zugriff, webscraper und score Berechnung
-    
 
     #get ingredients through webscraping
     ingredients_list = sephora.scrape(url)  
@@ -63,11 +59,12 @@ def ingredients_post():
     #else update ingredientlis of product
     else: insert.ingredients_update(api_id, product_name, ingredients_list)
 
-    harmfull = "13"
+    harmfull = "1"
     try:
       if check.select_ingredientsscore(api_id, product_name) == 404:  #if count of harmfull and harmless ingredients dosnt exist in database
               results = check.ingredients_check(api_id, product_name)   #saves the values in database          
-
+      
+      #else the already saved score is returned
       else: results = check.select_ingredientsscore(api_id, product_name) 
               
       print(results)

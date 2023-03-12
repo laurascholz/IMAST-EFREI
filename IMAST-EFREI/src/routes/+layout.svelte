@@ -37,7 +37,7 @@
 
 	}
 	strong {
-		color:blueviolet;
+		color:darkmagenta;
 		text-align:center;
 	}
 	a {

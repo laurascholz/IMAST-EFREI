@@ -37,35 +37,35 @@ Your project is ready!
 py -m -venv -env
 
 
-- müssen wir eingaben validieren, z. b. gegen crosssitescripting?
-
-
 -server einrichten
 -caller so ändern, das bei bereits gespeicherten ingredients nichts erneut gespeichert wird?
 -flask api so ändern, das das gecheckt wird nach vorhandenen ingredients
--zweite zahl in rot anstatt als highlight
 - text farbig machen
 - website aufhübschen
 -about seite ergänzen mit business plan
 -präsentation machen
 -report zuende machen
 -chart gleichmäßig groß erstellen
--fehler mit den undefined finden
 - homepage information ändern
+- ordner in website umbenennen
+-ergänzende einordnung der ingredients entweder nach Kategorie oder direkt die tatsächlichen inhaltsstoffe
 
 -ggf database löschen
--
+
 
 IDEEN für das anzeigen verschiedener Charts:
 
 .mehrere zeitgleich:
-- Ergebnisse in einem Array zeigen und nicht nur auf eine variable zugreifen? 
+- Ergebnisse in einem Array zeigen/speichern mit 2 variablen und nicht nur auf eine variable zugreifen? 
+-> einen array/dict erstellen, wenn nach etwas gesucht wird mit zwei Variablen für 9, i ist erste variable, zweite sind die zwei werte
 mit der variablen i und einem hidden paragraph der die harmful variablen zuordnet?  => chart würde trotzdem immer verändert werden
+- Werte doch in einem array speichern mit der id?
+
+
 - einen timer nutzen, z.b. um von active auf inactive zu stellen?
 - chart über andere seite laufen lassen mit 10 leeren, die sich ggf. anpassen und dann nur die gefragten einbauen?
 
-.nur eins auf einmal:
-- schließen eines Accordions erzwingen, z. b. mit timer oder click count
+
 
 
 https://fontsource.org/docs/getting-started
@@ -121,6 +121,10 @@ do we need to pay sephora? Algolia?
 
 
 wir können einen vergleich zu yuka im report machen
+
+ethical regulations / consideration, legal aspects
+
+profit / non profit
 
 
 
