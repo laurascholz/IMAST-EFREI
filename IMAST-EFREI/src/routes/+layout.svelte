@@ -6,7 +6,7 @@
 <div class="container">
 	<nav>
 		<ul>
-			<li><strong>Cosmetic Checker</strong></li>
+			<li><strong>Cosmetic Checker </strong> </li>
 		</ul>
 		<ul>
 			<li><a href="/">Home</a></li>
@@ -32,15 +32,19 @@
  	--primary-focus: rgba(142, 36, 170, 0.125);
   	--primary-inverse: #FFF;
 	}
+	nav{
+		display: flex;
+    	justify-content: right;
+	}
 	li {
 		color:darkmagenta;
-
 	}
 	strong {
 		color:darkmagenta;
-		text-align:center;
+		
 	}
 	a {
 		color:dimgray;
 	}
+	
 </style>

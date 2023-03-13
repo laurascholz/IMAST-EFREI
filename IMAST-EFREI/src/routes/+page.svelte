@@ -130,20 +130,19 @@
 {#if search_string == ''}
 	<br />
 	<hgroup>
-		<h2>Welcome to <b> Cosmetic Checker!</b></h2>
-		<h3>Subtitle for heading 2</h3>
+		<h1>Welcome to <b> Cosmetic Checker!</b></h1>
+		<h2>We will show you up to 10 results and check their ingredients</h2>
 	</hgroup>
-	<h3>our website that enables everyone to life live the healthiest!</h3>
 
 	<p>
-		This app will help you evaluate your products and check if the ingredients are healthy. Our
+		This website will help you evaluate your cosmetic products and check if the ingredients are healthy. Our
 		results are based of the <a href="https://www.sephora.fr/"> Sephora </a> website. We use an API
 		and web scraping to collect our results. Whether or not an ingredient is healthy is decided by
-		comparing it to a list !LINK! published by the EU??. We than show you how many potentially
-		harmful ingredients are included in the product you searched for so that you can choose the
+		comparing it to the <a href="https://ec.europa.eu/growth/tools-databases/cosing/index.cfm">  CosIng Database </a> published by the European Commission. We then show you how many potentially
+		harmful ingredients are included in the product you searched for. At the end, you can choose the
 		healthy option!
 		<br /> <br />
-		Further information can be found in the <a href="/about"> about </a> section of our website.
+		Further information about our website, our vision and the sources can be found in the <a href="/about"> about </a> section of our website.
 	</p>
 {:else if loading_string}
 	<p aria-busy="true">Checking for products of your choice for harmful ingredients</p>
@@ -206,9 +205,13 @@
 	}
 	a {
 		color: darkmagenta;
+		font-weight: bold;
 	}
 
-	h3 {
+	h1 {
+		text-align: center;
+	}
+	h2 {
 		text-align: center;
 	}
 	/*
