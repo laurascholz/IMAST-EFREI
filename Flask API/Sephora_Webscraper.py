@@ -10,13 +10,11 @@ import requests_random_user_agent     #automatically creates a random user for e
 from bs4 import BeautifulSoup
 from urllib.parse import urlencode
 
-def crawl(search):
-
-  #request session with individual browser agent using random user agent
-  session = requests.Session()      
+# -------- search_string -> get search results ----------------------
+def crawl(search):  
 
   #generating a search string that is injected into url
-  #urlencode is used to include all special characters and to connect two search words  
+  #urlencode is used to include all special characters and to connect two or more search words  
   searchstring = urlencode({'query' : search})      
 
   #url to make post request to       
@@ -31,21 +29,22 @@ def crawl(search):
   #Make request to API and safe in r
   r = requests.post(url, headers=headers, json=json)
 
-  #convert to json object, results will be returned to the website
+  #convert to json object
   result = r.json()
 
-  #Get all hits from result      
+  #Get all hits from result, the products are saved inside the hits     
   hits = result["results"][0]["hits"]
 
   return hits
 
 
-
   #------web scraper for ingredients------
+  #product's url -> ingredients of product
 def scrape(url):   
   ingredients = ""
+
+  #request session with individual browser agent using random user agent
   session = requests.Session()
-  #print(session.headers['User-Agent'])
 
   #the product page is saved and parsed into html code
   r = session.get(url)
@@ -64,10 +63,11 @@ def scrape(url):
   sub_list = [substring, substring2, substring3, substring4, substring5, substring6]
   for sub in sub_list:
     if sub in ingredients:
-      ingredients = ingredients.replace(sub, "")    
+      ingredients = ingredients.replace(sub, "") 
+  #change dots to commas   
   ingredients = ingredients.replace("•",",")
-  
-  
+    
   #ingredients are saved all caps
   ingredients = ingredients.upper()
+
   return ingredients

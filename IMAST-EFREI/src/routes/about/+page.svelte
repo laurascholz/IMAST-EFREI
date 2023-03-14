@@ -1,6 +1,6 @@
 <hgroup> 
     <h1>About us</h1>
-    <h2>On this page, you can find further information </h2>
+    <h2>On this page, you can find further information for different topics</h2>
 </hgroup>
 
 
@@ -43,3 +43,20 @@
     You can access all our code in our <a href="https://github.com/laurascholz/IMAST-EFREI"> github repository </a>.<br />
     We would like to hear about your thoughts! Let us now under EMAIL.
 </article>
+
+
+<style>
+    b {
+		color:darkmagenta;
+	}
+    a {
+		color:darkmagenta ;
+		font-weight: bold;
+	}
+    h1 {
+        color:indigo;
+    }
+    h3 {
+        color:indigo;
+    }
+</style>

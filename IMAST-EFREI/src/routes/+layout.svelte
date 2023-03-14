@@ -6,7 +6,7 @@
 <div class="container">
 	<nav>
 		<ul>
-			<li><strong>Cosmetic Checker </strong> </li>
+			<li><strong>COSMETIC CHECKER </strong> </li>
 		</ul>
 		<ul>
 			<li><a href="/">Home</a></li>

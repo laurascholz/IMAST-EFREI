@@ -38,55 +38,12 @@ py -m -venv -env
 
 
 -server einrichten
--caller so ändern, das bei bereits gespeicherten ingredients nichts erneut gespeichert wird?
--flask api so ändern, das das gecheckt wird nach vorhandenen ingredients
-- text farbig machen
-- website aufhübschen
--about seite ergänzen mit business plan
+-about seite ergänzen mit business plan, github link
 -präsentation machen
 -report zuende machen
--chart gleichmäßig groß erstellen
 - homepage information ändern
 - ordner in website umbenennen
 -ergänzende einordnung der ingredients entweder nach Kategorie oder direkt die tatsächlichen inhaltsstoffe
-
--ggf database löschen
-
-
-IDEEN für das anzeigen verschiedener Charts:
-
-.mehrere zeitgleich:
-- Ergebnisse in einem Array zeigen/speichern mit 2 variablen und nicht nur auf eine variable zugreifen? 
--> einen array/dict erstellen, wenn nach etwas gesucht wird mit zwei Variablen für 9, i ist erste variable, zweite sind die zwei werte
-mit der variablen i und einem hidden paragraph der die harmful variablen zuordnet?  => chart würde trotzdem immer verändert werden
-- Werte doch in einem array speichern mit der id?
-
-
-- einen timer nutzen, z.b. um von active auf inactive zu stellen?
-- chart über andere seite laufen lassen mit 10 leeren, die sich ggf. anpassen und dann nur die gefragten einbauen?
-
-
-
-
-https://fontsource.org/docs/getting-started
-https://dev.to/wesleymutwiri/create-beautiful-charts-with-svelte-and-chart-js-512n
-
-
-let list = [{
-		id: 0
-	}, {
-		id: 1
-	}, {
-		id: 2
-	}, {
-		id: 3
-	}, {
-		id: 4
-	}, {
-		id: 5
-	}, {
-		id: 6
-	}];
 
 
 für jeden Klick / kauf geld bekommen
