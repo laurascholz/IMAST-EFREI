@@ -1,25 +1,28 @@
 <!-- necessary npm install: axios -->
 <script lang="ts">
-	// @ts-nocheck
+	// @ts-nocheck 
 
-	import axios, { formToJSON } from 'axios'; //library to request API endpoint
-	import { onMount } from 'svelte'; //hook for the API call
-	import Page from './about/+page.svelte';
-	import debounce from 'lodash/debounce'; //enables delayed searches
-	import Doughnut from './Chart.svelte'; //Doughnut-Chart shows the results
+	import axios, { formToJSON } from 'axios'; 	//library to request API endpoint
+	import { onMount } from 'svelte'; 			//hook for the API call
+	import debounce from 'lodash/debounce'; 	//enables delayed searches
+	import Doughnut from './Chart.svelte'; 		//Doughnut-Chart shows the results
 
 	let search_string = '';
-	let data = [];					//product details
-	let loading = false; 			//loading sign for bad connection or longer calculation
+	let data = []; 		//product details
+	let loading = false; //loading sign for bad connection or longer calculation
 	let loading_string = false;
-	let ingrs = [];					//inrgedients
-	let harmless = 1;				//results of ingredients check
+	let ingrs = []; 	//ingredients
+	let harmless = 1; 	//result values of ingredients check
 	let harmful = 0;
-	let dataComplete = false;		//variable for the doughnut chart
-	
+	let dataComplete = {}; //variable for the doughnut chart
+	let number = 0;		//number of total ingredients
+
+	var ingredients = {};
+
 	//variables in case of error
-	let err = false;				
-	let msg = "";
+	let err = false;
+	let err2 = false;
+	let msg = '';	
 
 	//getData function is called for every change of search_string
 	$: getData(search_string);
@@ -34,7 +37,8 @@
 	async function getData() {
 		try {
 			if (search_string == '') return;
-			loading_string = true;
+			loading_string = true;		
+			dataComplete = {};
 			await axios
 				.get('http://127.0.0.1:5000/?search=' + search_string)
 				.then(function (response) {
@@ -48,24 +52,25 @@
 					console.log(error);
 				})
 				.finally(function () {
-					loading_string = false;
 					// always executed
+					loading_string = false;
+					
 				});
 		} catch (err) {
 			console.log(err);
 		}
 	}
 
-	//Flask-API call 2: product ids -> check if product in database
-	//		ELSE 		product url -> product ingredients scraping and score calculation
+	//Flask-API call 2: product url -> product ingredients scraping and assessment
 	async function getResults(id, url, name) {
 		ingrs = [];
-		err = "";
 		url = url;
 		id = id;
 		name = name;
-		err = false;
-		//use the ids to access the other data from database or the url to use the webscraper
+		err = false;		//error while webscraping
+		err2 = false;		//error: undefined values
+		dataComplete[id] = false;
+		number = 0;
 		try {
 			loading = true;
 			await axios
@@ -73,19 +78,29 @@
 				.then(function (response) {
 					// handle success
 					ingrs = response.data;
+					harmful = ingrs[0];
+					harmless = ingrs[1];
+					number = harmful + harmless;
 
-					//results values 
-					harmful = 15;
-					harmless = 100;
+					//if no values are available, show error message
+					if (harmful == undefined && harmless == undefined) {
+						err2 = true; 
+						msg = "Sadly, the ingredients for this product couldn't be assessed. Please try another one."
+					}
+					
+					//values of harmful and harmless ingredients are saved in a map with their id
+					ingredients[id] = { number: number, harmful: harmful, harmless: harmless };
+					
 					loading = false;
-					dataComplete = true;
+					dataComplete[id] = true;
 				})
 				.catch(function (error) {
 					// handle error
 					loading = false;
 					console.log(error);
 					//error message
-					msg ="Sadly, no product information could be aquired for this product. Please try a different one.";
+					msg =
+						'Sadly, no product information could be aquired for this product. Please try a different one.';
 					err = true;
 				})
 				.finally(function () {
@@ -96,10 +111,10 @@
 			console.log(err);
 		}
 	}
+
 </script>
 
-
-<!--                              The Main Page of the Website                            -->
+<!--      -------------------- The Main Page of the Website -----------------------         -->
 
 <!-- searchbar: search_string is saved delayed -->
 <div class="grid">
@@ -116,39 +131,110 @@
 </div>
 
 <!-- results within accordions-->
-{#if loading_string}
-	<p aria-busy=true>
-		Checking for products of your choice for harmful ingredients 
-	</p>
+{#if search_string == ''}   
+<!-- home page is shown with information about our website when no search string was entered-->
+	<br />
+	<hgroup>
+		<h1>Welcome to <b> Cosmetic Checker!</b></h1>
+		<h2>We will show you up to 10 results and check their ingredients</h2>
+	</hgroup>
+
+	<h5>
+		This website will help you evaluate your cosmetic products and check if the ingredients are healthy. Our
+		results are based of the <a href="https://www.sephora.fr/"> Sephora </a> website. We use an API
+		and web scraping to collect our results. Whether or not an ingredient is healthy is decided by
+		comparing it to the <a href="https://ec.europa.eu/growth/tools-databases/cosing/index.cfm">  CosIng Database </a> published by the European Commission. We then show you how many potentially
+		harmful ingredients are included in the product you searched for. At the end, you can choose the
+		healthy option!
+		<br /> <br />
+		Further information about our website, our vision and the sources can be found in the <a href="/about"> about </a> section of our website.
+	</h5>
+{:else if loading_string}
+<!-- after a search string is entered, a loading message is shown-->
+	<p aria-busy="true">Checking products of your choice for harmful ingredients</p>
 {:else}
+<!-- after the search string has completely loaded, the results are shown-->
 	{#each data as row, i}
 		<details>
+			
 			<!-- whenever a product is selected, the Ingredients are checked-->
 			<summary on:focus={() => getResults(row.id, row.url, row.name)}>
-				<b>{row.name}</b> by
-				<i>{row.brand}</i>
+				<!-- Title of product:-->
+				<b>{row.name}</b> by  <i>{row.brand}</i>
 			</summary>
-			<div class="grid">  <!-- information shown when accordion is opened:-->
-				<p>
-					<img src={row.images.productTile.url} alt="" />
-				</p>
-				{#if !err}  
-					<p>
-						The product includes <b><mark> XX </mark></b> harmful and <b><ins> YY </ins></b> harmless
-						ingredients.
-						<br />
-						- Shop the product <a href={row.url}>here</a> for {row.price.minPrice} EURO
-					</p>
-					<p>
-						{#if dataComplete} <!-- Doughnut Chart is only created when the variables are updated -->
-						<!--<Doughnut bind:loading bind:harmful_initial={harmful} bind:harmless_initial={harmless} />-->
-						<Doughnut bind:harmful bind:harmless />
-						{/if}
-					</p>
-				{:else} <!-- if there is an error while scraping ingredients, msg is shown-->
-					<p> {msg}</p>
+
+			<!-- further information of a product is shown in divs, when the accordion is opened-->
+			<div class="grid">
+				
+				{#if err}
+					<!-- if there is an error while scraping ingredients, msg is shown-->
+					<p>{msg}</p>
 				{/if}
+				
+				<!-- loading screen when the ingredient values are not yet calculated-->
+				{#if dataComplete[row.id] == false}
+					<p aria-busy="true">
+						Checking your product's ingredients ...
+					</p>
+				{/if}
+				
+				<!-- when the values are returned from the Flask API-->
+				{#if ingredients[row.id] != null}
+					
+					<p>
+						<img src={row.images.productTile.url} alt="" />
+					</p>
+					{#if err2}
+					<!-- if the ingredients values are undefined, msg is shown-->
+						<p>{msg}</p>
+					{:else }
+					<p>
+						The product consists of <b> {ingredients[row.id].number}</b> ingredients:
+						<br />
+						- <b><ins> {ingredients[row.id].harmless} </ins></b> harmless <br />
+						- <b><mark> {ingredients[row.id].harmful} </mark></b> harmful
+
+						<br /><br /><br />
+						Shop the product <a href={row.url}>here</a> for <b>{row.price.minPrice}</b> €
+					</p>
+					<!-- doughnut chart which illustrates the ingredient values-->
+					<p>
+						<Doughnut
+							bind:harmful={ingredients[row.id].harmful}
+							bind:harmless={ingredients[row.id].harmless}
+						/>
+					</p>
+					{/if}
+				{/if}
+				
 			</div>
 		</details>
 	{/each}
 {/if}
+
+<style>
+	mark {
+		color: crimson;
+		background-color: white;
+	}
+
+	b {
+		color: indigo;
+	}
+	a {
+		color: darkmagenta;
+		font-weight: bold;
+	}
+
+	h1 {
+		text-align: center;
+	}
+	h2 {
+		text-align: center;
+	}
+	h5 {
+		text-align: center;
+		font-weight:normal;
+	}
+	
+</style>

@@ -6,7 +6,7 @@
 <div class="container">
 	<nav>
 		<ul>
-			<li><strong>Cosmetic Checker</strong></li>
+			<li><strong>COSMETIC CHECKER </strong> </li>
 		</ul>
 		<ul>
 			<li><a href="/">Home</a></li>
@@ -25,11 +25,26 @@
 
 
 <style>
-	/* here CSS code for purple*/
+	/* here CSS code for purple */
 	:root:not([data-theme="dark"]) {
  	--primary: #8e24aa;
   	--primary-hover: #7b1fa2;
  	--primary-focus: rgba(142, 36, 170, 0.125);
   	--primary-inverse: #FFF;
 	}
+	nav{
+		display: flex;
+    	justify-content: right;
+	}
+	li {
+		color:darkmagenta;
+	}
+	strong {
+		color:darkmagenta;
+		
+	}
+	a {
+		color:dimgray;
+	}
+	
 </style>

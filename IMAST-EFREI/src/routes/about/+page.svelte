@@ -1,6 +1,7 @@
-<h1>About us</h1>
-
-<p>On this page, you can find information about our vision, our business plan and the source we use to identify bad ingredients.</p>
+<hgroup> 
+    <h1>About us</h1>
+    <h2>On this page, you can find further information for different topics</h2>
+</hgroup>
 
 
 <h3>Our Vision</h3>
@@ -13,5 +14,49 @@
 
 <h3>Our Sources</h3>
 <article>
-    The Cosmectic Checker uses a database....
+    The <b> CosIng Database </b> is used for the classification of a cosmetic product's ingredients into harmful and harmless ingredients. This database from the European Commission contains information on cosmetic substances and ingredients. <br /> 
+    <i>Article 19(1)(g) of Regulation (EC) No 1223/2009 </i> requires that the information on the label of cosmetic products must include a list of ingredients. The ingredients should be indicated using the common name of the ingredients listed in a glossary established and updated by the Commission in accordance with Article 33 of that Regulation. <br />
+    As these common ingredient names can also be found in the CosIng Database, it is suitable for the evaluation of ingredients of cosmetic products. Cometic Check accesses the data on restricted ingredients, colorants, UV filters and preservatives to categorize harmful or harmless ingredients.  
 </article>
+
+<h3>Our Website</h3>
+<article>
+    Our Website works like a search engine for cosmetic products accessing all products in the catalog from <a href="https://www.sephora.fr/"> Sephora </a>, as our website uses their <a href="https://www.algolia.com/fr/"> API "Algolia"</a> to collect data. Therefore, we can offer results to more than 13000 products and 200 brands sold by Sephora as statet by their <a href="https://www.sephora.com/beauty/affiliates"> Affiliate Program </a>. <br />
+    When you get the up to 10 results beneath the search bar, you can than click on every product, that interests you. We will then show you a chart and the numbers of the harmful and harmless ingredients included in the cosmetic product. <br />
+    
+</article>
+
+<h3>Our Business Plan</h3>
+<article>
+    Our Business Plan can be accessed here.
+</article>
+
+<h3>Legal and Ethical Aspects</h3>
+<article>
+    We are a non-profit?
+    Therefore, we only use <a href="https://www.sephora.com/beauty/affiliates"> Sephora's Affiliate Program </a> to ?
+    We want to build a relationship of trust with you, our customer, and enable you to see how our website works.
+</article>
+
+<h3> URLS and Links</h3>
+<article>
+    You can access all our code in our <a href="https://github.com/laurascholz/IMAST-EFREI"> github repository </a>.<br />
+    We would like to hear about your thoughts! Let us now under EMAIL.
+</article>
+
+
+<style>
+    b {
+		color:darkmagenta;
+	}
+    a {
+		color:darkmagenta ;
+		font-weight: bold;
+	}
+    h1 {
+        color:indigo;
+    }
+    h3 {
+        color:indigo;
+    }
+</style>

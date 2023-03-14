@@ -4,43 +4,30 @@
 	import { onMount } from 'svelte';
 	import Chart from 'chart.js/auto';
 
-	//export let harmful_initial; //= ["0"];
-	//export let harmless_initial; //= ["1"];
-	export let harmful; //= ["0"];
-	export let harmless; //= ["1"];
-	//export let loading;
+	// variables that will be the ingredient values of the product
+	export let harmful; 
+	export let harmless; 
 
-	let loaded = false;
+	//assessment is the doughnut chart of that product
+	let assessment = document.getElementById('canvas');
 
-	//let harmful = harmful_initial;
-	//let harmless = harmless_initial;
-
-	/*$: if (loading == false && loaded == false) {
-		loaded = true;
-		harmful = harmful_initial;
-		harmless = harmless_initial;
-	}*/
-
-
-	let portfolio = document.getElementById('canvas');
-
-	//the doughnut element illustrates the portfolio of the ingredients
-	//data has the data to the Doughnut Chart.js Element
+	
 
 	function createDoughnut() {
-		const ctx = portfolio.getContext('2d');
+		const ctx = assessment.getContext('2d');
 		// Initialize chart using default config set
 		var myChart = new Chart(ctx, config);
 	}
 
+	//data includes the ingredient values for the Doughnut Chart.js Element
 	const data = {
 		labels: ['Harmful', 'Harmless'],
 		datasets: [
 			{
 				label: 'Ingredients Assessment',
-				data: [harmful, harmless], // these values will be the ingredients
-				backgroundColor: ['#FF0000', '#00ff00'],
-				//hoverOffset: 4,    keine ahnung was das macht
+				data: [harmful, harmless], 		// these values will be the ingredients
+				backgroundColor: ['#FF0000', '#228B22'],
+				hoverOffset: 4,   
 				borderWidth: 0
 			}
 		]
@@ -52,7 +39,7 @@
 		options: {
 			borderRadius: '30',
 			responsive: true,
-			cutout: '65%',
+			cutout: '65%',			//how big the free space in doughnut is
 			spacing: 2,
 			plugins: {
 				legend: {
@@ -74,13 +61,10 @@
 		}
 	};
 
+	//when component is rendered, Doughnut chart is created
 	onMount(createDoughnut);
+
 </script>
 
-<!--{#if loaded == false}
-	<p aria-busy="true" />
-{:else}
-	<canvas id="canvas" bind:this={portfolio} width={3} height={3} />
-{/if}-->
-
-<canvas id="canvas" bind:this={portfolio} width={3} height={3} />
+<!-- the canvas object is the canvas to the doughnut-->
+<canvas id="canvas" bind:this={assessment} width={300} height={300} />
