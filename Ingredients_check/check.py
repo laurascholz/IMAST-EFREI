@@ -1,6 +1,6 @@
 import pypyodbc as odbc # pip(3) install pypyodbc;  use libary to connect to MS SQL Server
 
-def select_ingredientsscore(api_id, product_name): #Method to get the count of harmfull and harmless ingredients
+def select_ingredientsscore(api_id, product_name): #Method to get the count of harmful and harmless ingredients
     
     """
     Step 1.1 Create SQL Server Connection String
@@ -38,7 +38,7 @@ def select_ingredientsscore(api_id, product_name): #Method to get the count of h
 
     
     """
-    #Step 1.3 Create a cursor connection and search if ingredients consits of bad ingredients then harmfull and harmless ingredients
+    #Step 1.3 Create a cursor connection and search if ingredients consits of bad ingredients then harmful and harmless ingredients
     """
 
     
@@ -48,7 +48,7 @@ def select_ingredientsscore(api_id, product_name): #Method to get the count of h
      '''
     
     sql_select_ingredients = '''
-         SELECT ingredientslist_harmfull, ingredientslist_harmless FROM ingredientslist
+         SELECT ingredientslist_harmful, ingredientslist_harmless FROM ingredientslist
             WHERE id = ? AND ingredientslist_name = ?
      '''
 
@@ -76,11 +76,11 @@ def select_ingredientsscore(api_id, product_name): #Method to get the count of h
                     return 404
                 else:
                     print(i)
-            harmfull = ingredientscheck[0]
+            harmful = ingredientscheck[0]
             harmless = ingredientscheck[1]
-            #print(harmfull)
+            #print(harmful)
             #print(harmless)
-            return harmfull,harmless
+            return harmful,harmless
 
             
        
@@ -133,7 +133,7 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
 
     
     """
-    #Step 1.3 Create a cursor connection and search if ingredients consits of bad ingredients then harmfull and harmless ingredients
+    #Step 1.3 Create a cursor connection and search if ingredients consits of bad ingredients then harmful and harmless ingredients
     """
 
     
@@ -159,7 +159,7 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
      
     sql_update_ingredients = '''
          UPDATE ingredientslist
-            SET ingredientslist_harmfull = ?, ingredientslist_harmless = ?
+            SET ingredientslist_harmful = ?, ingredientslist_harmless = ?
              WHERE id = ? AND ingredientslist_name = ?
      '''
        
@@ -187,7 +187,7 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
 
             ingredient = ingredients.split(',') #', '
             print(ingredient)
-            counter_harmfull = 0
+            counter_harmful = 0
             counter_harmless = 0
             for i in ingredient:
                 print(i)
@@ -204,17 +204,17 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
                           
                 else: 
                        #print("Bad ingredient found") 
-                        counter_harmfull +=1
+                        counter_harmful +=1
                         badingredient_id = badingredient[0]
                         print(badingredient_id)
                         cursor.execute(sql_insert_ingredientscheck,(ingredientslist_id,badingredient_id))
                         cursor.commit()  
                                 
-        print(counter_harmfull)
+        print(counter_harmful)
         print(counter_harmless)   
-        cursor.execute(sql_update_ingredients,(counter_harmfull,counter_harmless,ingredientslist_id,product_name))
+        cursor.execute(sql_update_ingredients,(counter_harmful,counter_harmless,ingredientslist_id,product_name))
         cursor.commit()  
-        return counter_harmfull,counter_harmless 
+        return counter_harmful,counter_harmless 
        
     except Exception as e:
         cursor.rollback()
