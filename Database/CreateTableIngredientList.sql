@@ -8,7 +8,7 @@ GO
 CREATE TABLE ingredientslist
 (
     id INT NOT NULL PRIMARY KEY IDENTITY(1,1), -- primary key column
-    ingredientslist_name VARCHAR(500) NOT NULL,
+    ingredientslist_name VARCHAR(1000) NOT NULL,
     ingredientslist_string NVARCHAR(4000) NOT NULL,
     ingredientslist_harmfull INT,
     ingredientslist_harmless INT,

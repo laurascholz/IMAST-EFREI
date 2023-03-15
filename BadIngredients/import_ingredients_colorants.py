@@ -21,6 +21,7 @@ df = df.fillna(value=0)  # replace NAN with 0
 
 try:
    df.drop(df.query('Chemical name'.isnull()).index, inplace=True) # delete data where chemical name is NULL
+   df.drop(df.query('Colour index Number / Name of Common Ingredients Glossary'.isnull()).index, inplace=True) # delete data where Common Ingredient Name is NULL
 except AttributeError as e:
     print('Dataset is correct.')    
     
