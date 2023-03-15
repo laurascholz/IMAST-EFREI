@@ -17,10 +17,11 @@ df = pd.read_csv('BadIngredients/ingredients_preservatives.csv') #preservatives 
 """
 Step 2.1 Data clean up
 """
-df = df.fillna(value=0)  # replace NAN with 0 
+
 
 try:
-   df.drop(df.query('Chemical name / INN'.isnull()).index, inplace=True) # delete data where chemical name is NULL
+   df = df.dropna(subset=['Name of Common Ingredients Glossary']) #drop rows where common ingredient name doesnt exist 
+
 except AttributeError as e:
     print('Dataset is correct.')    
     
@@ -32,7 +33,7 @@ Step 2.2 Specify columns we want to import
 columns = ['Chemical name / INN', 'Name of Common Ingredients Glossary']
 
 df_data = df[columns]
-#print(df_data)
+print(df_data)
 
 records = df_data.values.tolist()  
 #print(records) # to control if the right columns were selected
