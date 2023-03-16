@@ -70,4 +70,7 @@ def scrape(url):
   #ingredients are saved all caps
   ingredients = ingredients.upper()
 
+  #limits characters to 4000 for the database
+  ingredients = ingredients[:4000]
+
   return ingredients

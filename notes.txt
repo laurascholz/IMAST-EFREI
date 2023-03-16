@@ -1,28 +1,4 @@
-npm init svelte
-
-endung: .svelte
-
- Which Svelte app template? » SvelteKit demo app
-√ Add type checking with TypeScript? » Yes, using JavaScript with JSDoc comments
-√ Add ESLint for code linting? ... No / Yes
-√ Add Prettier for code formatting? ... No / Yes
-√ Add Playwright for browser testing? ... No / Yes
-√ Add Vitest for unit testing? ... No / Yes
-
-Your project is ready!
-✔ Type-checked JavaScript
-  https://www.typescriptlang.org/tsconfig#checkJs
-✔ ESLint
-  https://github.com/sveltejs/eslint-plugin-svelte3
-✔ Prettier
-  https://prettier.io/docs/en/options.html
-  https://github.com/sveltejs/prettier-plugin-svelte#options
-✔ Playwright
-  https://playwright.dev
-✔ Vitest
-  https://vitest.dev
-
-
+  Website:
   Next steps:
   1: cd IMAST-EFREI
   2: npm install (or pnpm install, etc)
