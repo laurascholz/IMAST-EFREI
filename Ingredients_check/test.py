@@ -6,9 +6,9 @@ product_name = 'Dior Backstage Rosy Glow - Blush-rose à joues universel rehauss
 
 
 try:
-       if check.select_ingredientsscore(api_id, product_name) == 404:  #if count of harmfull and harmless ingredients dosnt exist in database
-              check.ingredients_check(api_id, product_name)    
-       #check.select_explanation(api_id, product_name)
+       #if check.select_ingredientsscore(api_id, product_name) == 404:  #if count of harmfull and harmless ingredients dosnt exist in database
+          #    check.ingredients_check(api_id, product_name)    
+       check.select_explanation(api_id, product_name)
 
 except:
        print("Fehler beim Check.")
