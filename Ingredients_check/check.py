@@ -276,15 +276,22 @@ def select_explanation(api_id, product_name): #Method to get the explanation of 
     
     sql_select_badingredients = '''
          SELECT badingredients_id FROM ingredientscheck
-            WHERE ingredientslist_id = ?
+            WHERE ingredientslist_id = ? AND product_name = ?
      '''
-
+    sql_select_explanation = '''
+         SELECT explanation FROM badingredients
+            WHERE id = ? AND (explanation = ? OR explanation = ? OR explanation = ? OR explanation = ?)
+     '''
        
     try:
         cursor = conn.cursor()
         cursor.execute(sql_select_ingredientslist_id,(api_id, product_name))
         ingredientslist = cursor.fetchone()
         #cursor.commit()  
+        counter_colorant = 0
+        counter_restricted = 0
+        counter_preservatives = 0
+        counter_uvfilter = 0
         if ingredientslist == None:     # check if ingredientslist exists for product
             print('404: ID found in Database')
             return 404
@@ -292,14 +299,31 @@ def select_explanation(api_id, product_name): #Method to get the explanation of 
         else:
             ingredientslist_id = ingredientslist[0]
             print(ingredientslist_id)              
-            cursor.execute(sql_select_badingredients,(ingredientslist_id,0))
+            cursor.execute(sql_select_badingredients,(ingredientslist_id,product_name))
             badingredients = cursor.fetchall()
             cursor.commit() 
-            print(badingredients)
+            #print(badingredients)
             #return 
-
+            for [i] in badingredients:  
+                print(i)
+                cursor.execute(sql_select_explanation,(i,'Colorant','Restricted','Preservatives','UV Filter'))
+                explanation = cursor.fetchone()
+                cursor.commit()
+                print(explanation)
+                if explanation == ('Colorant',):
+                    counter_colorant += 1 
+                if explanation == ('Restricted',):
+                    counter_restricted += 1
+                if explanation == ('Preservatives',):
+                    counter_preservatives +=1
+                if explanation == ('UV Filter',):
+                    counter_uvfilter += 1
+                    
+            #print(counter_colorant, counter_restricted, counter_preservatives, counter_uvfilter)  
+            return counter_colorant,counter_restricted,counter_preservatives,counter_uvfilter 
+                    
+                
             
-       
     except Exception as e:
         cursor.rollback()
         print(str(e))
