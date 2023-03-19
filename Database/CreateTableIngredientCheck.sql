@@ -9,6 +9,7 @@ CREATE TABLE ingredientscheck
 (
    ingredientslist_id INT NOT NULL,
    badingredients_id INT NOT NULL,
+   product_name VARCHAR(1000) NOT NULL, 
    CONSTRAINT FK_ingredientscheck_ingredientslist FOREIGN KEY (ingredientslist_id) REFERENCES ingredientslist(id),
    CONSTRAINT FK_ingredientscheck_badingredients FOREIGN KEY (badingredients_id) REFERENCES badingredients(id)
 );
