@@ -1,6 +1,6 @@
 import pypyodbc as odbc # pip(3) install pypyodbc;  use libary to connect to MS SQL Server
 
-def select_ingredientsscore(api_id, product_name): #Method to get the count of harmfull and harmless ingredients
+def select_ingredientsscore(api_id, product_name): #Method to get the count of harmful and harmless ingredients
     
     """
     Step 1.1 Create SQL Server Connection String
@@ -38,7 +38,7 @@ def select_ingredientsscore(api_id, product_name): #Method to get the count of h
 
     
     """
-    #Step 1.3 Create a cursor connection and search if ingredients consits of bad ingredients then harmfull and harmless ingredients
+    #Step 1.3 Create a cursor connection and search if ingredients consits of bad ingredients then harmful and harmless ingredients
     """
 
     
@@ -48,7 +48,7 @@ def select_ingredientsscore(api_id, product_name): #Method to get the count of h
      '''
     
     sql_select_ingredients = '''
-         SELECT ingredientslist_harmfull, ingredientslist_harmless FROM ingredientslist
+         SELECT ingredientslist_harmful, ingredientslist_harmless FROM ingredientslist
             WHERE id = ? AND ingredientslist_name = ?
      '''
 
@@ -76,11 +76,11 @@ def select_ingredientsscore(api_id, product_name): #Method to get the count of h
                     return 404
                 else:
                     print(i)
-            harmfull = ingredientscheck[0]
+            harmful = ingredientscheck[0]
             harmless = ingredientscheck[1]
-            #print(harmfull)
+            #print(harmful)
             #print(harmless)
-            return harmfull,harmless
+            return harmful,harmless
 
             
        
@@ -133,7 +133,7 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
 
     
     """
-    #Step 1.3 Create a cursor connection and search if ingredients consits of bad ingredients then harmfull and harmless ingredients
+    #Step 1.3 Create a cursor connection and search if ingredients consits of bad ingredients then harmful and harmless ingredients
     """
 
     
@@ -153,15 +153,16 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
      '''
      
     sql_insert_ingredientscheck = '''
-         INSERT INTO ingredientscheck(ingredientslist_id,badingredients_id) 
-             VALUES (?,?)
+         INSERT INTO ingredientscheck(ingredientslist_id,badingredients_id, product_name) 
+             VALUES (?,?,?)
      '''
      
     sql_update_ingredients = '''
          UPDATE ingredientslist
-            SET ingredientslist_harmfull = ?, ingredientslist_harmless = ?
+            SET ingredientslist_harmful = ?, ingredientslist_harmless = ?
              WHERE id = ? AND ingredientslist_name = ?
      '''
+    
        
     try:
         cursor = conn.cursor()
@@ -187,7 +188,7 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
 
             ingredient = ingredients.split(',') #', '
             print(ingredient)
-            counter_harmfull = 0
+            counter_harmful = 0
             counter_harmless = 0
             for i in ingredient:
                 print(i)
@@ -204,17 +205,18 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
                           
                 else: 
                        #print("Bad ingredient found") 
-                        counter_harmfull +=1
+                        counter_harmful +=1
                         badingredient_id = badingredient[0]
                         print(badingredient_id)
-                        cursor.execute(sql_insert_ingredientscheck,(ingredientslist_id,badingredient_id))
-                        cursor.commit()  
-                                
-        print(counter_harmfull)
+                        cursor.execute(sql_insert_ingredientscheck,(ingredientslist_id,badingredient_id, product_name))
+                        cursor.commit() 
+
+        print(counter_harmful)
         print(counter_harmless)   
-        cursor.execute(sql_update_ingredients,(counter_harmfull,counter_harmless,ingredientslist_id,product_name))
+        cursor.execute(sql_update_ingredients,(counter_harmful,counter_harmless,ingredientslist_id,product_name))
         cursor.commit()  
-        return counter_harmfull,counter_harmless 
+        
+        return counter_harmful,counter_harmless 
        
     except Exception as e:
         cursor.rollback()
@@ -222,4 +224,110 @@ def ingredients_check(api_id, product_name): #Method to check if a ingredientsli
     finally:
         print('Ingredients check completed.')
         cursor.close()
-        conn.close()
+        conn.close() 
+
+
+def select_explanation(api_id, product_name): #Method to get the explanation of bad ingredients 
+    
+    """
+    Step 1.1 Create SQL Server Connection String
+    """
+
+    DRIVER = 'ODBC Driver 18 for SQL Server' 
+    SERVER_NAME = 'mysqlserverefrei.database.windows.net'
+    DATABASE_NAME = 'efrei'
+
+    def connection_string(driver, server_name, database_name):
+        conn_string = f"""
+            DRIVER={{{driver}}};
+            SERVER={server_name};
+            DATABASE={database_name};
+            Trust_Connection=yes; 
+            Uid=azureuser;
+            PwD=Efrei2023;         
+        
+        """
+        return conn_string
+    #print(connection_string(DRIVER,SERVER_NAME,DATABASE_NAME)) # to check the definition  
+
+    """"
+    #Step 1.2 Create database connection instance
+    """
+    try:
+        conn = odbc.connect(connection_string(DRIVER, SERVER_NAME, DATABASE_NAME))
+    except odbc.DatabaseError as e:
+        print('Database Error:')    
+        print(str(e.value[1]))
+    except odbc.Error as e:
+        print('Connection Error:')
+        print(str(e.value[1]))
+    # print (conn) #- show connnection
+
+    
+    """
+    #Step 1.3 Create a cursor connection and search if ingredients consits of bad ingredients then harmful and harmless ingredients
+    """
+
+    
+    sql_select_ingredientslist_id = '''
+         SELECT ingredientslist_id FROM product
+            WHERE api_id = ? AND product_name = ?
+     '''
+    
+    sql_select_badingredients = '''
+         SELECT badingredients_id FROM ingredientscheck
+            WHERE ingredientslist_id = ? AND product_name = ?
+     '''
+    sql_select_explanation = '''
+         SELECT explanation FROM badingredients
+            WHERE id = ? AND (explanation = ? OR explanation = ? OR explanation = ? OR explanation = ?)
+     '''
+       
+    try:
+        cursor = conn.cursor()
+        cursor.execute(sql_select_ingredientslist_id,(api_id, product_name))
+        ingredientslist = cursor.fetchone()
+        #cursor.commit()  
+        counter_colorant = 0
+        counter_restricted = 0
+        counter_preservatives = 0
+        counter_uvfilter = 0
+        if ingredientslist == None:     # check if ingredientslist exists for product
+            print('404: ID found in Database')
+            return 404
+            
+        else:
+            ingredientslist_id = ingredientslist[0]
+            print(ingredientslist_id)              
+            cursor.execute(sql_select_badingredients,(ingredientslist_id,product_name))
+            badingredients = cursor.fetchall()
+            cursor.commit() 
+            #print(badingredients)
+            #return 
+            for [i] in badingredients:  
+                print(i)
+                cursor.execute(sql_select_explanation,(i,'Colorant','Restricted','Preservatives','UV Filter'))
+                explanation = cursor.fetchone()
+                cursor.commit()
+                print(explanation)
+                if explanation == ('Colorant',):
+                    counter_colorant += 1 
+                if explanation == ('Restricted',):
+                    counter_restricted += 1
+                if explanation == ('Preservatives',):
+                    counter_preservatives +=1
+                if explanation == ('UV Filter',):
+                    counter_uvfilter += 1
+                    
+            #print(counter_colorant, counter_restricted, counter_preservatives, counter_uvfilter)  
+            return counter_colorant,counter_restricted,counter_preservatives,counter_uvfilter 
+                    
+                
+            
+    except Exception as e:
+        cursor.rollback()
+        print(str(e))
+    finally:
+        print('Explanation for bad ingredients delivered.')
+        cursor.close()
+        conn.close() 

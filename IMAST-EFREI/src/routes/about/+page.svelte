@@ -33,8 +33,9 @@
 
 <h3>Legal and Ethical Aspects</h3>
 <article>
-    We are a non-profit?
-    Therefore, we only use <a href="https://www.sephora.com/beauty/affiliates"> Sephora's Affiliate Program </a> to ?
+    We are a non-profit organisation and developed our website as a guide for everyone interested in ingredients.
+    Therefore, we only use our income to pay our employees and to maintain our infrastructure.
+    Our main source of income is <a href="https://www.sephora.com/beauty/affiliates"> Sephora's Affiliate Program </a>.
     We want to build a relationship of trust with you, our customer, and enable you to see how our website works.
 </article>
 

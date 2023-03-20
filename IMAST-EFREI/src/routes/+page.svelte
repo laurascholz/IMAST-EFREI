@@ -24,6 +24,12 @@
 	let err2 = false;
 	let msg = '';	
 
+	let colorant = "";
+	let restricted = "" ;
+	let perservatives = "";
+	let	uv_filter = "";
+
+
 	//getData function is called for every change of search_string
 	$: getData(search_string);
 	$: if (search_string == '') data = [];
@@ -71,6 +77,11 @@
 		err2 = false;		//error: undefined values
 		dataComplete[id] = false;
 		number = 0;
+		harmful = 0;
+		colorant = "";
+		restricted = "" ;
+		perservatives = "";
+		uv_filter ="";
 		try {
 			loading = true;
 			await axios
@@ -81,16 +92,26 @@
 					harmful = ingrs[0];
 					harmless = ingrs[1];
 					number = harmful + harmless;
+					
 
 					//if no values are available, show error message
 					if (harmful == undefined && harmless == undefined) {
 						err2 = true; 
 						msg = "Sadly, the ingredients for this product couldn't be assessed. Please try another one."
 					}
-					
+					if (harmful > 0){
+						colorant = ingrs[2];
+						restricted = ingrs[3] ;
+						perservatives = ingrs[4];
+						uv_filter = ingrs[5];
+					}
+
+
 					//values of harmful and harmless ingredients are saved in a map with their id
-					ingredients[id] = { number: number, harmful: harmful, harmless: harmless };
-					
+					ingredients[id] = { number: number, harmful: harmful, harmless: harmless,
+						colorant: colorant, restricted: restricted, perservatives: perservatives, uv_filter: uv_filter
+					};
+					console.log(ingredients);
 					loading = false;
 					dataComplete[id] = true;
 				})
@@ -140,14 +161,14 @@
 	</hgroup>
 
 	<h5>
-		This website will help you evaluate your cosmetic products and check if the ingredients are healthy. Our
-		results are based of the <a href="https://www.sephora.fr/"> Sephora </a> website. We use an API
+		This website will help you evaluate your cosmetic products and check if the ingredients are healthy. <br />
+		Our results are based of the <a href="https://www.sephora.fr/"> Sephora </a> website. We use an API
 		and web scraping to collect our results. Whether or not an ingredient is healthy is decided by
-		comparing it to the <a href="https://ec.europa.eu/growth/tools-databases/cosing/index.cfm">  CosIng Database </a> published by the European Commission. We then show you how many potentially
-		harmful ingredients are included in the product you searched for. At the end, you can choose the
+		comparing it to the <a href="https://ec.europa.eu/growth/tools-databases/cosing/index.cfm">  CosIng Database </a> published by the European Commission. 
+		We then show you how many potentially harmful ingredients are included in the product you searched for and to which category they count. At the end, you can choose the
 		healthy option!
 		<br /> <br />
-		Further information about our website, our vision and the sources can be found in the <a href="/about"> about </a> section of our website.
+		Further information about our website, our business model and the sources can be found in the <a href="/about"> about </a> section of our website.
 	</h5>
 {:else if loading_string}
 <!-- after a search string is entered, a loading message is shown-->
@@ -193,8 +214,21 @@
 						<br />
 						- <b><ins> {ingredients[row.id].harmless} </ins></b> harmless <br />
 						- <b><mark> {ingredients[row.id].harmful} </mark></b> harmful
+						
+						<br /> <br />
+						{#if harmful != 0}
+							<details open>
+								<summary>The product includes ...</summary>
+								<ul>
+								{#if colorant != ""} <li> {ingredients[row.id].colorant} <b>colorants</b></li> {/if}
+								{#if restricted != ""} <li> {ingredients[row.id].restricted} <b>restricted ingredients</b></li> {/if}
+								{#if perservatives != ""} <li>{ingredients[row.id].perservatives} <b>perservatives</b></li> {/if}
+								{#if uv_filter != ""} <li>{ingredients[row.id].uv_filter} <b>UV filter</b></li> {/if}
+								</ul>
+							</details>
+						{/if}
 
-						<br /><br /><br />
+						<br />
 						Shop the product <a href={row.url}>here</a> for <b>{row.price.minPrice}</b> €
 					</p>
 					<!-- doughnut chart which illustrates the ingredient values-->

@@ -66,6 +66,7 @@ def ingredients_post():
 
     #call of check.py to assess the ingredients
     harmfull = ""
+    results2 = [0,0,0,0]
     try:
       #if count of harmfull and harmless ingredients doesnt exist in database
       if check.select_ingredientsscore(api_id, product_name) == 404: 
@@ -73,10 +74,15 @@ def ingredients_post():
       
       #else the already saved values are returned
       else: results = check.select_ingredientsscore(api_id, product_name) 
-
-      harmfull = [results[0], results[1]] #both values are saved in array
+      
+      #if there are harmul ingredients included, get the explanation what kind of harmful they are
+      if results[0] > 0:
+        results2 = check.select_explanation(api_id, product_name) #selects the explanation
+      
+      #all values are saved in array
+      harmfull = [results[0], results[1], results2[0], results2[1], results2[2], results2[3]] 
     except:
-       print("Fehler beim Check.") 
+       print("Error while checking") 
     return harmfull
   else:  return "Error"
 
