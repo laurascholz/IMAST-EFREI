@@ -1,0 +1,26 @@
+  start Website:
+  Next steps:
+  1: cd IMAST-EFREI 
+  2: npm install (or pnpm install, etc)
+  3: git init && git add -A && git commit -m "Initial commit" (optional)
+  
+  when already installed:
+  4: npm run dev -- --open    #öffnet local host
+
+  venv aktivate for flask: 
+  py -3 -m venv venv
+  venv\Scripts\activate
+
+  flask --app flaskapp.py run
+
+
+
+
+
+
+
+  env aktivate:  (no longer needed)
+  py -m -venv -env
+
+
+

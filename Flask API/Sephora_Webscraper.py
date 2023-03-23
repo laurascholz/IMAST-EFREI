@@ -51,7 +51,7 @@ def scrape(url):
   soup = BeautifulSoup(r.content, 'html.parser')
 
   #the ingredients are accessed from their div container called "ingredients-content"
-  ingredients = soup.find("div", class_ = "ingredients-content").text
+  ingredients = soup.find("div", class_ = "accordion-content ingredients-content").text
 
   #removes all non ingredient words from ingredients list
   substring = "Cette liste d'ingrédients peut faire l'objet de modifications, veuillez consulter l'emballage du produit acheté."
