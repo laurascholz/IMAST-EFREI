@@ -1,3 +1,5 @@
+<!----------------------- this is the about page ----------------------->
+
 <hgroup> 
     <h1>About us</h1>
     <h2>On this page, you can find further information for different topics</h2>

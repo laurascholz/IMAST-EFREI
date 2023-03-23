@@ -37,11 +37,10 @@ def search():
     product_price = str(x["price"]["minPrice"])
     product_url = x["url"]
     product_image = x["images"]["productTile"]["url"]
-    print(api_id)   #test for server
+   
 
     #only add products to database that don't already exist
     if insert.product_select(api_id, product_name) == 404:
-      print("neuer eintrag")   #test server
       insert.product_insert(search, api_id, product_name, product_brand, product_price, product_url, product_image)
 
     #else update product url, image and price in database
@@ -59,17 +58,14 @@ def search():
 def ingredients_post():
   if request.method == 'POST':
     data = request.get_json()  
-    print(data)   ###servertest    
     api_id = data['id']
     product_name = data['name']
     url = data['url']
 
     #if ingredients don't exist for the product, 
     if insert.ingredients_select(api_id, product_name) == 404:
-      print("ingredients suchen")
       #get ingredients through web scraping
       ingredients_list = sephora.scrape(url)  
-      print(ingredients_list)
       #insert ingredientslist in relation
       insert.ingredients_insert(api_id, product_name, ingredients_list)
 

@@ -93,12 +93,12 @@
 					harmless = ingrs[1];
 					number = harmful + harmless;
 					
-
 					//if no values are available, show error message
 					if (harmful == undefined && harmless == undefined) {
 						err2 = true; 
 						msg = "Sadly, the ingredients for this product couldn't be assessed. Please try another one."
 					}
+					//if at least one harmful ingredient is included, show categories, else all values are 0
 					if (harmful > 0){
 						colorant = ingrs[2];
 						restricted = ingrs[3] ;
@@ -111,7 +111,6 @@
 					ingredients[id] = { number: number, harmful: harmful, harmless: harmless,
 						colorant: colorant, restricted: restricted, perservatives: perservatives, uv_filter: uv_filter
 					};
-					console.log(ingredients);
 					loading = false;
 					dataComplete[id] = true;
 				})
@@ -217,14 +216,14 @@
 						
 						<br /> <br />
 						<!-- if the product contains at least one harmful ingredient, a list of the numbers per categories is shown-->
-						{#if harmful != 0}
+						{#if ingredients[row.id].harmful != 0}
 							<details open>
 								<summary>The product includes ...</summary>
 								<ul>
-								{#if colorant != ""} <li> {ingredients[row.id].colorant} <b>colorants</b></li> {/if}
-								{#if restricted != ""} <li> {ingredients[row.id].restricted} <b>restricted ingredients</b></li> {/if}
-								{#if perservatives != ""} <li>{ingredients[row.id].perservatives} <b>perservatives</b></li> {/if}
-								{#if uv_filter != ""} <li>{ingredients[row.id].uv_filter} <b>UV filter</b></li> {/if}
+								{#if ingredients[row.id].colorant != ""} <li> {ingredients[row.id].colorant} <b>colorants</b></li> {/if}
+								{#if ingredients[row.id].restricted != ""} <li> {ingredients[row.id].restricted} <b>restricted ingredients</b></li> {/if}
+								{#if ingredients[row.id].perservatives != ""} <li>{ingredients[row.id].perservatives} <b>perservatives</b></li> {/if}
+								{#if ingredients[row.id].uv_filter != ""} <li>{ingredients[row.id].uv_filter} <b>UV filter</b></li> {/if}
 								</ul>
 							</details>
 						{/if}
