@@ -216,6 +216,7 @@
 						- <b><mark> {ingredients[row.id].harmful} </mark></b> harmful
 						
 						<br /> <br />
+						<!-- if the product contains at least one harmful ingredient, a list of the numbers per categories is shown-->
 						{#if harmful != 0}
 							<details open>
 								<summary>The product includes ...</summary>

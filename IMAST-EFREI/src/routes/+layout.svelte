@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import '@picocss/pico';
 	
 </script>
 
